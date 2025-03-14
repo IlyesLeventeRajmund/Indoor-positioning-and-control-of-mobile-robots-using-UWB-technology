@@ -14,7 +14,6 @@ OptiTracker = OptitrackData.RobotLocationOptitrack()
 BeaconTracker = RobotLocationData.RobotLocationBeacon(0,0)
 
 
-
 # Define Robot Parameters
 L1 = 0.06  # Distance between the center and the wheels (meters)
 L2 = 0.07
@@ -48,6 +47,8 @@ def p_control(current_pose, desired_pose):
     w = Kd * error_theta
     
     return vx, vy, w
+
+
 
 def shapeGenerator(shape, size, num_points):
     points = []
@@ -85,6 +86,8 @@ def shapeGenerator(shape, size, num_points):
     
     return points
 
+
+
 try:
     GPIO.setmode(GPIO.BCM)
 
@@ -120,17 +123,13 @@ try:
     pwm7.start(0)
     pwm8.start(0)
 
-    while True:
-        # Your loop logic here
-        pass
-
 except Exception as e:
     print("Hiba történt:", e)
 
 finally:
     GPIO.cleanup()
 
-      
+print("igen")      
 while True:
         #delay 10ms
         sleep(0.1) #100ms
@@ -160,7 +159,7 @@ while True:
             json.dump(log_data, log_file)
             log_file.write("\n")
             log_file.write(old_content)
-
+        
         measure_mode = "Beacon"
 
         if measure_mode =='Beacon':
@@ -168,6 +167,7 @@ while True:
         else:
             Pc = Po
 
+        
         direction_response = requests.get('http://10.42.0.1:5001/current_direction')
         speed_response = requests.get('http://10.42.0.1:5001/current_speed')
         print("az irany:",direction_response.json().get("direction"))
