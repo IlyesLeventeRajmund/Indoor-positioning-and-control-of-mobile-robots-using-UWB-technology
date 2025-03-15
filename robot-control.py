@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from time import time as current_time
+from time import time
 from time import sleep
 from datetime import datetime
 import requests
@@ -13,6 +13,7 @@ import math
 OptiTracker = OptitrackData.RobotLocationOptitrack()
 BeaconTracker = RobotLocationData.RobotLocationBeacon(0,0)
 
+start_time = time()
 
 # Define Robot Parameters
 L1 = 0.06  # Distance between the center and the wheels (meters)
@@ -88,48 +89,47 @@ def shapeGenerator(shape, size, num_points):
 
 
 
-try:
-    GPIO.setmode(GPIO.BCM)
+'''try:'''
+GPIO.setmode(GPIO.BCM)
 
-    GPIO.setup(22, GPIO.OUT)
-    GPIO.setup(23, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
 
-    GPIO.setup(17, GPIO.OUT)
-    GPIO.setup(27, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
+GPIO.setup(27, GPIO.OUT)
 
-    GPIO.setup(12, GPIO.OUT)
-    GPIO.setup(16, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
 
-    GPIO.setup(20, GPIO.OUT)
-    GPIO.setup(21, GPIO.OUT)
+GPIO.setup(20, GPIO.OUT)
+GPIO.setup(21, GPIO.OUT)
 
-    pwm1 = GPIO.PWM(22, 1000)  
-    pwm2 = GPIO.PWM(17, 1000) 
-    pwm3 = GPIO.PWM(16, 1000)
-    pwm4 = GPIO.PWM(21, 1000)
+pwm1 = GPIO.PWM(22, 1000)  
+pwm2 = GPIO.PWM(17, 1000) 
+pwm3 = GPIO.PWM(16, 1000)
+pwm4 = GPIO.PWM(21, 1000)
 
-    pwm5 = GPIO.PWM(23, 1000) 
-    pwm6 = GPIO.PWM(27, 1000)  
-    pwm7 = GPIO.PWM(12, 1000) 
-    pwm8 = GPIO.PWM(20, 1000)  
+pwm5 = GPIO.PWM(23, 1000) 
+pwm6 = GPIO.PWM(27, 1000)  
+pwm7 = GPIO.PWM(12, 1000) 
+pwm8 = GPIO.PWM(20, 1000)  
 
-    pwm1.start(0)
-    pwm2.start(0)
-    pwm3.start(0)
-    pwm4.start(0)
+pwm1.start(0)
+pwm2.start(0)
+pwm3.start(0)
+pwm4.start(0)
 
-    pwm5.start(0)
-    pwm6.start(0)
-    pwm7.start(0)
-    pwm8.start(0)
-
+pwm5.start(0)
+pwm6.start(0)
+pwm7.start(0)
+pwm8.start(0)
+'''
 except Exception as e:
     print("Hiba történt:", e)
 
 finally:
-    GPIO.cleanup()
-
-print("igen")      
+    GPIO.cleanup()'''
+  
 while True:
         #delay 10ms
         sleep(0.1) #100ms
@@ -141,24 +141,34 @@ while True:
         BeaconTracker.update_position()
         Pb = BeaconTracker.get_coordinates()
 
+        Po = (Po[0] if Po[0] is not None else 0.0, Po[1] if Po[1] is not None else 0.0)
+        Pb = (Pb[0] if Pb[0] is not None else 0.0, Pb[1] if Pb[1] is not None else 0.0)
+
+        print(f"DEBUG - Po: {Po}, Pb: {Pb}")
+        
+        E = (Po[0] - Pb[0], Po[1] - Pb[1])
+
+        elapsed_time = time() - start_time
+
         log_data = {
-            'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f"),
+            'timestamp': f"{elapsed_time:.6f}",
             'Pr': Pr,
             'Po': Po,
-            'Pb': Pb
+            'Pb': Pb,
+            'ERROR': E
         }
-        """
+        
         with open('robot_log.json', 'a') as log_file:
             json.dump(log_data, log_file)
-            log_file.write("\n")"""
-        
+            log_file.write("\n")
+        '''
         with open('robot_log.json', 'r') as log_file:
             old_content = log_file.read()
 
         with open('robot_log.json', 'w') as log_file:
             json.dump(log_data, log_file)
             log_file.write("\n")
-            log_file.write(old_content)
+            log_file.write(old_content)'''
         
         measure_mode = "Beacon"
 
