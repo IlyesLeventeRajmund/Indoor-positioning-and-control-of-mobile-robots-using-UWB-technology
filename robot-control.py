@@ -7,8 +7,43 @@ import numpy as np
 import json
 import OptitrackData
 import RobotLocationData
+import ManualModeData
 import random
 import math
+
+def gpioInit():
+    GPIO.setmode(GPIO.BCM)
+
+    GPIO.setup(22, GPIO.OUT)
+    GPIO.setup(23, GPIO.OUT)
+    GPIO.setup(17, GPIO.OUT)
+    GPIO.setup(27, GPIO.OUT)
+    GPIO.setup(12, GPIO.OUT)
+    GPIO.setup(16, GPIO.OUT)
+    GPIO.setup(20, GPIO.OUT)
+    GPIO.setup(21, GPIO.OUT)
+
+    pwm1 = GPIO.PWM(22, 1000)  
+    pwm2 = GPIO.PWM(17, 1000) 
+    pwm3 = GPIO.PWM(16, 1000)
+    pwm4 = GPIO.PWM(21, 1000)
+    pwm5 = GPIO.PWM(23, 1000) 
+    pwm6 = GPIO.PWM(27, 1000)  
+    pwm7 = GPIO.PWM(12, 1000) 
+    pwm8 = GPIO.PWM(20, 1000)  
+
+    pwm1.start(0)
+    pwm2.start(0)
+    pwm3.start(0)
+    pwm4.start(0)
+    pwm5.start(0)
+    pwm6.start(0)
+    pwm7.start(0)
+    pwm8.start(0)
+
+    return pwm1, pwm2, pwm3, pwm4, pwm5, pwm6, pwm7, pwm8
+
+pwm= gpioInit()
 
 OptiTracker = OptitrackData.RobotLocationOptitrack()
 BeaconTracker = RobotLocationData.RobotLocationBeacon(0,0)
@@ -19,7 +54,7 @@ start_time = time()
 L1 = 0.06  # Distance between the center and the wheels (meters)
 L2 = 0.07
 R = 0.03  # Radius of the wheels (meters)
-Kp = 1.0  # Proportional gain for velocity control
+Kp = 2  # Proportional gain for velocity control
 Kd = 0.1  # Derivative gain for velocity control
 
 wheel_positions = np.array([
@@ -31,11 +66,13 @@ wheel_positions = np.array([
 
 def wheel_velocity_transform(vx, vy, w):
     wheel_velocities = np.array([
-        (1/R) * (vx - vy - L2 * w),  # Jobb első kerék
-        (1/R) * (vx + vy + L2 * w),  # Bal első kerék
-        (1/R) * (vx + vy - L1 * w),  # Bal hátsó kerék
-        (1/R) * (vx - vy + L1 * w),  # Jobb hátsó kerék
+        (1/R) * (vx + vy + L1 * w),  # Jobb hátsó kerék
+        (1/R) * (vx + vy - L2 * w),  # Jobb első kerék
+        (1/R) * (vx - vy - L1 * w),  # Bal hátsó kerék
+        (1/R) * (vx - vy + L2 * w),  # Bal első kerék
     ])
+    print("vx:",vx)
+    print("vy:",vy)
     return wheel_velocities
 
 def p_control(current_pose, desired_pose):
@@ -49,6 +86,18 @@ def p_control(current_pose, desired_pose):
     
     return vx, vy, w
 
+def automat_control(Pc,Pr):
+    vx, vy, w = p_control(Pc, Pr)
+
+    wheel_speeds = wheel_velocity_transform(vx, vy, w)
+
+    for i, pwm_forward, pwm_backward in zip(range(4), [pwm[0], pwm[1], pwm[2], pwm[3]], [pwm[4], pwm[5], pwm[6], pwm[7]]):
+        if wheel_speeds[i] > 0:
+            pwm_forward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] ))))
+            pwm_backward.ChangeDutyCycle(0)
+        else:
+            pwm_forward.ChangeDutyCycle(0)
+            pwm_backward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] ))))
 
 
 def shapeGenerator(shape, size, num_points):
@@ -87,49 +136,15 @@ def shapeGenerator(shape, size, num_points):
     
     return points
 
-
-
-'''try:'''
-GPIO.setmode(GPIO.BCM)
-
-GPIO.setup(22, GPIO.OUT)
-GPIO.setup(23, GPIO.OUT)
-
-GPIO.setup(17, GPIO.OUT)
-GPIO.setup(27, GPIO.OUT)
-
-GPIO.setup(12, GPIO.OUT)
-GPIO.setup(16, GPIO.OUT)
-
-GPIO.setup(20, GPIO.OUT)
-GPIO.setup(21, GPIO.OUT)
-
-pwm1 = GPIO.PWM(22, 1000)  
-pwm2 = GPIO.PWM(17, 1000) 
-pwm3 = GPIO.PWM(16, 1000)
-pwm4 = GPIO.PWM(21, 1000)
-
-pwm5 = GPIO.PWM(23, 1000) 
-pwm6 = GPIO.PWM(27, 1000)  
-pwm7 = GPIO.PWM(12, 1000) 
-pwm8 = GPIO.PWM(20, 1000)  
-
-pwm1.start(0)
-pwm2.start(0)
-pwm3.start(0)
-pwm4.start(0)
-
-pwm5.start(0)
-pwm6.start(0)
-pwm7.start(0)
-pwm8.start(0)
-'''
-except Exception as e:
-    print("Hiba történt:", e)
-
-finally:
-    GPIO.cleanup()'''
-  
+def direction_call():
+    direction_response = requests.get('http://10.42.0.1:5001/current_direction')
+    speed_response = requests.get('http://10.42.0.1:5001/current_speed')
+    #print("az irany:",direction_response.json().get("direction"))
+    #print("a sebesseg:",speed_response.json().get("speed"))
+    direction = direction_response.json().get("direction")
+    speed = speed_response.json().get("speed")
+    return speed, direction
+ 
 while True:
         #delay 10ms
         sleep(0.1) #100ms
@@ -161,204 +176,72 @@ while True:
         with open('robot_log.json', 'a') as log_file:
             json.dump(log_data, log_file)
             log_file.write("\n")
-        '''
-        with open('robot_log.json', 'r') as log_file:
-            old_content = log_file.read()
-
-        with open('robot_log.json', 'w') as log_file:
-            json.dump(log_data, log_file)
-            log_file.write("\n")
-            log_file.write(old_content)'''
         
-        measure_mode = "Beacon"
+        measure_mode = "Optitrack"
+        manual_mode = False
 
         if measure_mode =='Beacon':
             Pc = Pb
         else:
             Pc = Po
-
         
-        direction_response = requests.get('http://10.42.0.1:5001/current_direction')
-        speed_response = requests.get('http://10.42.0.1:5001/current_speed')
-        print("az irany:",direction_response.json().get("direction"))
-        print("a sebesseg:",speed_response.json().get("speed"))
+        speed, direction =direction_call()
 
-        if direction_response.ok:
+        if direction:
+            if manual_mode:
+                ManualModeData.Manual_Controling(pwm,direction,speed)
+            else:
+                if direction == 'stop' :
+                    pwm[0].ChangeDutyCycle(0)   #jh
+                    pwm[1].ChangeDutyCycle(0)   #je
+                    pwm[2].ChangeDutyCycle(0)   #bh
+                    pwm[3].ChangeDutyCycle(0)   #be
 
-            direction = direction_response.json().get("direction")
-            speed = speed_response.json().get("speed")
+                    pwm[0].ChangeDutyCycle(0)   #jh
+                    pwm[1].ChangeDutyCycle(0)   #je
+                    pwm[2].ChangeDutyCycle(0)   #bh
+                    pwm[3].ChangeDutyCycle(0)   #be
+                elif direction == 'circle':
+                    '''if not circle_path:
+                        circle_path = shapeGenerator('circle', 1, 12)
+                        count = 0
+                    
+                    Pr = circle_path[count]
+                    count += 1'''
 
-            if direction == 'up':
-                #hatra
-                pwm1.ChangeDutyCycle(0)   #jh
-                pwm2.ChangeDutyCycle(0)   #je
-                pwm3.ChangeDutyCycle(0)   #bh
-                pwm4.ChangeDutyCycle(0)   #be
+                    Pr = (0,0)
+                    automat_control(Pc, Pr)
+                    
+                elif direction == 'square':
+                    if not square_path:
+                        square_path = shapeGenerator('square', 1, 12)
+                        count = 0
 
-                #elore
-                pwm5.ChangeDutyCycle(speed)  #jh
-                pwm6.ChangeDutyCycle(speed)  #je
-                pwm7.ChangeDutyCycle(speed)  #bh
-                pwm8.ChangeDutyCycle(speed)  #be
-            elif direction == 'down':
-                pwm1.ChangeDutyCycle(speed)
-                pwm2.ChangeDutyCycle(speed)
-                pwm3.ChangeDutyCycle(speed)
-                pwm4.ChangeDutyCycle(speed)
+                    Pr = square_path[count]
+                    count += 1
 
-                pwm5.ChangeDutyCycle(0)
-                pwm6.ChangeDutyCycle(0)
-                pwm7.ChangeDutyCycle(0)
-                pwm8.ChangeDutyCycle(0)
-            elif direction == 'left':
-                pwm1.ChangeDutyCycle(0)
-                pwm2.ChangeDutyCycle(speed)
-                pwm3.ChangeDutyCycle(speed)
-                pwm4.ChangeDutyCycle(0)
+                    automat_control(Pc, Pr)
 
-                pwm5.ChangeDutyCycle(speed)
-                pwm6.ChangeDutyCycle(0)
-                pwm7.ChangeDutyCycle(0)
-                pwm8.ChangeDutyCycle(speed)
-            elif direction == 'right':
-                pwm1.ChangeDutyCycle(speed)
-                pwm2.ChangeDutyCycle(0)
-                pwm3.ChangeDutyCycle(0)
-                pwm4.ChangeDutyCycle(speed)
+                elif direction == 'triangle':
+                    if not triangle_path:
+                        triangle_path = shapeGenerator('triangle', 1, 12)
+                        count = 0
 
-                pwm5.ChangeDutyCycle(0)
-                pwm6.ChangeDutyCycle(speed)
-                pwm7.ChangeDutyCycle(speed)
-                pwm8.ChangeDutyCycle(0)
-            elif direction == 'stop' :
-                pwm1.ChangeDutyCycle(0)
-                pwm2.ChangeDutyCycle(0)
-                pwm3.ChangeDutyCycle(0)
-                pwm4.ChangeDutyCycle(0)
+                    Pr = triangle_path[count]
+                    count += 1
 
-                pwm5.ChangeDutyCycle(0)
-                pwm6.ChangeDutyCycle(0)
-                pwm7.ChangeDutyCycle(0)
-                pwm8.ChangeDutyCycle(0)
-            if direction == 'up-left':
-                #hatra
-                pwm1.ChangeDutyCycle(0)   #jh
-                pwm2.ChangeDutyCycle(0)   #je
-                pwm3.ChangeDutyCycle(0)   #bh
-                pwm4.ChangeDutyCycle(0)   #be
+                    automat_control(Pc, Pr)
 
-                #elore
-                pwm5.ChangeDutyCycle(speed)  #jh
-                pwm6.ChangeDutyCycle(0)  #je
-                pwm7.ChangeDutyCycle(0)  #bh
-                pwm8.ChangeDutyCycle(speed)  #be
-            elif direction == 'up-right':
-                #hatra
-                pwm1.ChangeDutyCycle(0)   #jh
-                pwm2.ChangeDutyCycle(0)   #je
-                pwm3.ChangeDutyCycle(0)   #bh
-                pwm4.ChangeDutyCycle(0)   #be
 
-                #elore
-                pwm5.ChangeDutyCycle(0)  #jh
-                pwm6.ChangeDutyCycle(speed)  #je
-                pwm7.ChangeDutyCycle(speed)  #bh
-                pwm8.ChangeDutyCycle(0)  #be
-            elif direction == 'down-left':
-                #hatra
-                pwm1.ChangeDutyCycle(0)   #jh
-                pwm2.ChangeDutyCycle(speed)   #je
-                pwm3.ChangeDutyCycle(speed)   #bh
-                pwm4.ChangeDutyCycle(0)   #be
+                elif direction == 'hexagon':
+                    if not hexagon_path:
+                        hexagon_path = shapeGenerator('hexagon', 1, 12)
+                        count = 0
 
-                #elore
-                pwm5.ChangeDutyCycle(0)  #jh
-                pwm6.ChangeDutyCycle(0)  #je
-                pwm7.ChangeDutyCycle(0)  #bh
-                pwm8.ChangeDutyCycle(0)  #be
-            elif direction == 'down-right':
-                #hatra
-                pwm1.ChangeDutyCycle(speed)   #jh
-                pwm2.ChangeDutyCycle(0)   #je
-                pwm3.ChangeDutyCycle(0)   #bh
-                pwm4.ChangeDutyCycle(speed)   #be
-
-                #elore
-                pwm5.ChangeDutyCycle(0)  #jh
-                pwm6.ChangeDutyCycle(0)  #je
-                pwm7.ChangeDutyCycle(0)  #bh
-                pwm8.ChangeDutyCycle(0)  #be
-            elif direction == 'circle':
-                if not circle_path:
-                    circle_path = shapeGenerator('circle', 1, 12)
-                count = 0
-                Pr = circle_path[count]
-                count += 1
-                vx, vy, w = p_control(Pc, Pr)
-
-                wheel_speeds = wheel_velocity_transform(vx, vy, w)
-
-                for i, pwm_forward, pwm_backward in zip(range(4), [pwm1, pwm2, pwm3, pwm4], [pwm5, pwm6, pwm7, pwm8]):
-                    if wheel_speeds[i] > 0:
-                        pwm_forward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-                        pwm_backward.ChangeDutyCycle(0)
-                    else:
-                        pwm_forward.ChangeDutyCycle(0)
-                        pwm_backward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-
-            elif direction == 'square':
-                if not square_path:
-                    square_path = shapeGenerator('square', 1, 12)
-                count = 0
-                Pr = square_path[count]
-                count += 1
-                vx, vy, w = p_control(Pc, Pr)
-
-                wheel_speeds = wheel_velocity_transform(vx, vy, w)
-
-                for i, pwm_forward, pwm_backward in zip(range(4), [pwm1, pwm2, pwm3, pwm4], [pwm5, pwm6, pwm7, pwm8]):
-                    if wheel_speeds[i] > 0:
-                        pwm_forward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-                        pwm_backward.ChangeDutyCycle(0)
-                    else:
-                        pwm_forward.ChangeDutyCycle(0)
-                        pwm_backward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-
-            elif direction == 'triangle':
-                if not triangle_path:
-                    triangle_path = shapeGenerator('triangle', 1, 12)
-                count = 0
-                Pr = triangle_path[count]
-                count += 1
-                vx, vy, w = p_control(Pc, Pr)
-
-                wheel_speeds = wheel_velocity_transform(vx, vy, w)
-
-                for i, pwm_forward, pwm_backward in zip(range(4), [pwm1, pwm2, pwm3, pwm4], [pwm5, pwm6, pwm7, pwm8]):
-                    if wheel_speeds[i] > 0:
-                        pwm_forward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-                        pwm_backward.ChangeDutyCycle(0)
-                    else:
-                        pwm_forward.ChangeDutyCycle(0)
-                        pwm_backward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-
-            elif direction == 'hexagon':
-                if not hexagon_path:
-                    hexagon_path = shapeGenerator('hexagon', 1, 12)
-                count = 0
-                Pr = hexagon_path[count]
-                count += 1
-                vx, vy, w = p_control(Pc, Pr)
-
-                wheel_speeds = wheel_velocity_transform(vx, vy, w)
-
-                for i, pwm_forward, pwm_backward in zip(range(4), [pwm1, pwm2, pwm3, pwm4], [pwm5, pwm6, pwm7, pwm8]):
-                    if wheel_speeds[i] > 0:
-                        pwm_forward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-                        pwm_backward.ChangeDutyCycle(0)
-                    else:
-                        pwm_forward.ChangeDutyCycle(0)
-                        pwm_backward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i] * speed))))
-
+                    Pr = hexagon_path[count]
+                    count += 1
+                    automat_control(Pc, Pr)
+                    
+                
         else:
             sleep(1)
