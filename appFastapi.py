@@ -34,23 +34,30 @@ class BeaconData(BaseModel):
     beacon3: Dict[str, float]
     beacon4: Dict[str, float]
 
+class OptiTrackInput(BaseModel):
+    data: dict
+
 @app.post("/Optitracking_data")
-async def reciev_Optitracking_data(data: dict):
+async def receive_Optitracking_data(data: OptiTrackInput):
     global optitrack_data
-    if not data.get("data"):
+    if not data.data:
         raise HTTPException(status_code=400, detail="Invalid data")
-    optitrack_data = data["data"]
+    optitrack_data = data.data
     return {"status": "success", "Opti Location": optitrack_data}
+
 
 @app.get("/Optitracking_data_forward")
 async def get_Optitracking_data():
     return {"Opti_data": optitrack_data}
 
+class SpeedInput(BaseModel):
+    speed: float
+
 @app.post("/speed")
-async def make_speed(speed: float):
+async def make_speed(data: SpeedInput):
     global current_speed
-    if isinstance(speed, (int, float)) and speed <= 100:
-        current_speed = speed
+    if 0 <= data.speed <= 100:
+        current_speed = data.speed
         return {"status": "success", "speed": current_speed}
     else:
         raise HTTPException(status_code=400, detail="Invalid speed")
@@ -59,14 +66,18 @@ async def make_speed(speed: float):
 async def get_current_speed():
     return {"speed": current_speed}
 
+class MoveInput(BaseModel):
+    direction: str
+
 @app.post("/move")
-async def move_robot(direction: str):
+async def move_robot(data: MoveInput):
     global current_direction
     valid_directions = ['up', 'down', 'left', 'right', 'stop', 'up-left', 'up-right', 'down-left', 'down-right', 'circle', 'square', 'triangle', 'hexagon']
-    if direction not in valid_directions:
+    if data.direction not in valid_directions:
         raise HTTPException(status_code=400, detail="Invalid direction")
-    current_direction = direction
+    current_direction = data.direction
     return {"status": "success", "direction": current_direction}
+
 
 @app.get("/current_direction")
 async def get_current_direction():
@@ -107,11 +118,14 @@ async def receive_position(data: Location):
 async def get_locations():
     return location
 
+class DistanceInput(BaseModel):
+    distance: float
+
 @app.post("/distance")
-async def receive_distance(distance: float):
+async def receive_distance(data: DistanceInput):
     global current_distance
-    if isinstance(distance, (int, float)) and distance >= 0:
-        current_distance = distance
+    if data.distance >= 0:
+        current_distance = data.distance
         return {"status": "success", "distance": current_distance}
     else:
         raise HTTPException(status_code=400, detail="Invalid distance")
