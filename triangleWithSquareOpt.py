@@ -14,6 +14,7 @@ from bleak.backends.scanner import AdvertisementData
 import requests
 from RobotLocationData import RobotLocationBeacon
 from scipy.optimize import least_squares
+import httpx
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +33,9 @@ device_positions = {
     "D0:FB:A6:16:7D:AC": (1.2901723384857178, -2.0813114643096924, 0.5793644785881042),    #cekla
     "C3:F0:97:50:8B:EA": (-1.4125473499298096, -0.4882330298423767, 0.6970527768135071), #zold
     "EC:7F:50:BE:D2:D1": (-1.2612544298171997, -1.9906595945358276, 0.7028661370277405),   #rozsaszin
+    "C0-0B-BD-29-25-9C": (1.9020336866378784, 1.0856691598892212, 0.6161160469055176), #sargazoldmarkerezett
+    "DA-53-A2-B5-96-75": (0.45428064465522766, 1.9725672006607056, 0.5662478804588318), #bordo15
+    "D6-7E-98-FA-DE-01": (-1.4703487157821655, 1.0286478996276855, 0.7123057246208191),#rozsaszin14es
 }
 
 #def initialize_kalman():
@@ -56,6 +60,17 @@ def send_location_to_server(x, y):
     except requests.exceptions.RequestException as e:
         logger.error(f"Failed to send data to server: {e}")
 
+async def send_location_to_server_fastapi(x, y):
+    url = "http://10.42.0.1:5001/position"
+    data = {"x": x, "y": y}
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=data)
+            response.raise_for_status()
+    except httpx.RequestError as e:
+        print(f"Failed to send data to server: {e}")
+
+
 def update_device_positions_manual():
     global device_positions
     try:
@@ -66,6 +81,19 @@ def update_device_positions_manual():
         else:
             print("Failed to update device positions.")
     except requests.exceptions.RequestException as e:
+        print(f"Error fetching beacon positions: {e}")
+
+async def update_device_positions_manual_fastapi():
+    global device_positions
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.get("http://10.42.0.1:5001/beacons")
+        
+        if response.status_code == 200:
+            device_positions = response.json()
+        else:
+            print("Failed to update device positions.")
+    except httpx.RequestError as e:
         print(f"Error fetching beacon positions: {e}")
 
 def load_target_devices(file_path: str):
@@ -171,7 +199,7 @@ def simple_callback(device: BLEDevice, advertisement_data: AdvertisementData):
                 return
 
 def process_all_devices(device_count, method):
-    update_device_positions_manual()
+    #update_device_positions_manual()
     global device_positions
 
     distances = {}
@@ -189,6 +217,7 @@ def process_all_devices(device_count, method):
         robot_location.set_coordinates(new_location[0], new_location[1])
         logger.info(f"Helymeghatározás Least Squares módszerrel: {robot_location.get_coordinates()}")
         send_location_to_server(*robot_location.get_coordinates())
+        #send_location_to_server_fastapi(*robot_location.get_coordinates())
     
     
     elif method == 'Trilateration' and device_count >= 3:
@@ -198,6 +227,7 @@ def process_all_devices(device_count, method):
             robot_location.set_coordinates(new_location[0], new_location[1])
             logger.info(f"Helymeghatározás Trilateration módszerrel {device_count} eszköz alapján: {robot_location.get_coordinates()}")
             send_location_to_server(*robot_location.get_coordinates())
+            #send_location_to_server_fastapi(*robot_location.get_coordinates())
 
 def reset_data():
     global complete_devices, rssi_data, start_time

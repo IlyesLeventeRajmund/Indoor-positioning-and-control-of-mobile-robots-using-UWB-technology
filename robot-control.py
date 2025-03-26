@@ -10,6 +10,7 @@ import RobotLocationData
 import ManualModeData
 import random
 import math
+import httpx
 
 def gpioInit():
     GPIO.setmode(GPIO.BCM)
@@ -139,109 +140,121 @@ def shapeGenerator(shape, size, num_points):
 def direction_call():
     direction_response = requests.get('http://10.42.0.1:5001/current_direction')
     speed_response = requests.get('http://10.42.0.1:5001/current_speed')
-    #print("az irany:",direction_response.json().get("direction"))
-    #print("a sebesseg:",speed_response.json().get("speed"))
+    print("az irany:",direction_response.json().get("direction"))
+    print("a sebesseg:",speed_response.json().get("speed"))
+    direction = direction_response.json().get("direction")
+    speed = speed_response.json().get("speed")
+    return speed, direction
+
+async def direction_call_fastapi():
+    async with httpx.AsyncClient() as client:
+        direction_response = await client.get('http://10.42.0.1:5001/current_direction')
+        speed_response = await client.get('http://10.42.0.1:5001/current_speed')
+    
     direction = direction_response.json().get("direction")
     speed = speed_response.json().get("speed")
     return speed, direction
  
 while True:
-        #delay 10ms
-        sleep(0.1) #100ms
-        #megmerni a teljes ciklus idot
+    #delay 10ms
+    sleep(0.1) #100ms
+    #megmerni a teljes ciklus idot
 
-        Pr = (0,0)
-        OptiTracker.update_position()
-        Po = OptiTracker.get_first_marker_coordinates()
-        BeaconTracker.update_position()
-        Pb = BeaconTracker.get_coordinates()
+    Pr = (0,0)
+    OptiTracker.update_position()
+    #OptiTracker.update_position_fastapi()
+    Po = OptiTracker.get_first_marker_coordinates()
+    BeaconTracker.update_position()
+    #BeaconTracker.update_position_fastapi()
+    Pb = BeaconTracker.get_coordinates()
 
-        Po = (Po[0] if Po[0] is not None else 0.0, Po[1] if Po[1] is not None else 0.0)
-        Pb = (Pb[0] if Pb[0] is not None else 0.0, Pb[1] if Pb[1] is not None else 0.0)
+    Po = (Po[0] if Po[0] is not None else 0.0, Po[1] if Po[1] is not None else 0.0)
+    Pb = (Pb[0] if Pb[0] is not None else 0.0, Pb[1] if Pb[1] is not None else 0.0)
 
-        print(f"DEBUG - Po: {Po}, Pb: {Pb}")
-        
-        E = (Po[0] - Pb[0], Po[1] - Pb[1])
+    print(f"DEBUG - Po: {Po}, Pb: {Pb}")
+    
+    E = (Po[0] - Pb[0], Po[1] - Pb[1])
 
-        elapsed_time = time() - start_time
+    elapsed_time = time() - start_time
 
-        log_data = {
-            'timestamp': f"{elapsed_time:.6f}",
-            'Pr': Pr,
-            'Po': Po,
-            'Pb': Pb,
-            'ERROR': E
-        }
-        
-        with open('robot_log.json', 'a') as log_file:
-            json.dump(log_data, log_file)
-            log_file.write("\n")
-        
-        measure_mode = "Optitrack"
-        manual_mode = False
+    log_data = {
+        'timestamp': f"{elapsed_time:.6f}",
+        'Pr': Pr,
+        'Po': Po,
+        'Pb': Pb,
+        'ERROR': E
+    }
+    
+    with open('robot_log.json', 'a') as log_file:
+        json.dump(log_data, log_file)
+        log_file.write("\n")
+    
+    measure_mode = "Optitrack"
+    manual_mode = False
 
-        if measure_mode =='Beacon':
-            Pc = Pb
+    if measure_mode =='Beacon':
+        Pc = Pb
+    else:
+        Pc = Po
+    
+    speed, direction =direction_call()
+    #speed, direction =direction_call_fastapi()
+
+    if direction:
+        if manual_mode:
+            ManualModeData.Manual_Controling(pwm,direction,speed)
         else:
-            Pc = Po
-        
-        speed, direction =direction_call()
+            if direction == 'stop' :
+                pwm[0].ChangeDutyCycle(0)   #jh
+                pwm[1].ChangeDutyCycle(0)   #je
+                pwm[2].ChangeDutyCycle(0)   #bh
+                pwm[3].ChangeDutyCycle(0)   #be
 
-        if direction:
-            if manual_mode:
-                ManualModeData.Manual_Controling(pwm,direction,speed)
-            else:
-                if direction == 'stop' :
-                    pwm[0].ChangeDutyCycle(0)   #jh
-                    pwm[1].ChangeDutyCycle(0)   #je
-                    pwm[2].ChangeDutyCycle(0)   #bh
-                    pwm[3].ChangeDutyCycle(0)   #be
-
-                    pwm[0].ChangeDutyCycle(0)   #jh
-                    pwm[1].ChangeDutyCycle(0)   #je
-                    pwm[2].ChangeDutyCycle(0)   #bh
-                    pwm[3].ChangeDutyCycle(0)   #be
-                elif direction == 'circle':
-                    '''if not circle_path:
-                        circle_path = shapeGenerator('circle', 1, 12)
-                        count = 0
-                    
-                    Pr = circle_path[count]
-                    count += 1'''
-
-                    Pr = (0,0)
-                    automat_control(Pc, Pr)
-                    
-                elif direction == 'square':
-                    if not square_path:
-                        square_path = shapeGenerator('square', 1, 12)
-                        count = 0
-
-                    Pr = square_path[count]
-                    count += 1
-
-                    automat_control(Pc, Pr)
-
-                elif direction == 'triangle':
-                    if not triangle_path:
-                        triangle_path = shapeGenerator('triangle', 1, 12)
-                        count = 0
-
-                    Pr = triangle_path[count]
-                    count += 1
-
-                    automat_control(Pc, Pr)
-
-
-                elif direction == 'hexagon':
-                    if not hexagon_path:
-                        hexagon_path = shapeGenerator('hexagon', 1, 12)
-                        count = 0
-
-                    Pr = hexagon_path[count]
-                    count += 1
-                    automat_control(Pc, Pr)
-                    
+                pwm[0].ChangeDutyCycle(0)   #jh
+                pwm[1].ChangeDutyCycle(0)   #je
+                pwm[2].ChangeDutyCycle(0)   #bh
+                pwm[3].ChangeDutyCycle(0)   #be
+            elif direction == 'circle':
+                '''if not circle_path:
+                    circle_path = shapeGenerator('circle', 1, 12)
+                    count = 0
                 
-        else:
-            sleep(1)
+                Pr = circle_path[count]
+                count += 1'''
+
+                Pr = (0,0)
+                automat_control(Pc, Pr)
+                
+            elif direction == 'square':
+                if not square_path:
+                    square_path = shapeGenerator('square', 1, 12)
+                    count = 0
+
+                Pr = square_path[count]
+                count += 1
+
+                automat_control(Pc, Pr)
+
+            elif direction == 'triangle':
+                if not triangle_path:
+                    triangle_path = shapeGenerator('triangle', 1, 12)
+                    count = 0
+
+                Pr = triangle_path[count]
+                count += 1
+
+                automat_control(Pc, Pr)
+
+
+            elif direction == 'hexagon':
+                if not hexagon_path:
+                    hexagon_path = shapeGenerator('hexagon', 1, 12)
+                    count = 0
+
+                Pr = hexagon_path[count]
+                count += 1
+                automat_control(Pc, Pr)
+                
+            
+    else:
+        sleep(1)

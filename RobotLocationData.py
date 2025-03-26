@@ -1,5 +1,6 @@
 import requests
 import time
+import httpx
 
 class RobotLocationBeacon:
     def __init__(self, x: float, y: float):
@@ -24,6 +25,21 @@ class RobotLocationBeacon:
             else:
                 print("Failed to update Beacon position")
         except requests.exceptions.RequestException as e:
+            print(f"Error fetching beacon position: {e}")
+
+    async def update_position_fastapi(self):
+        try:
+            async with httpx.AsyncClient() as client:
+                response = await client.get("http://10.42.0.1:5001/locations")
+            
+            if response.status_code == 200:
+                data = response.json()
+                if 'x' in data and 'y' in data:
+                    self.set_coordinates(data['x'], data['y'])
+                    print("Current Beacon Position:", (data['x'], data['y']))
+            else:
+                print("Failed to update Beacon position")
+        except httpx.RequestError as e:
             print(f"Error fetching beacon position: {e}")
 
 if __name__ == "__main__":
