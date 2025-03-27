@@ -190,7 +190,7 @@ while True:
         log_file.write("\n")
     
     measure_mode = "Optitrack"
-    manual_mode = False
+    manual_mode = True
 
     if measure_mode =='Beacon':
         Pc = Pb
