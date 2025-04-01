@@ -3,6 +3,8 @@ import time
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 from typing import Dict, Any
+import asyncio
+import httpx
 
 
 app = FastAPI()
@@ -23,6 +25,21 @@ class RobotLocationOptitrack:
             else:
                 print("Failed to update Opti positions")
         except requests.exceptions.RequestException as e:
+            print(f"Error fetching robot opti position: {e}")
+
+    async def update_position_fastapi(self):
+        try:
+            async with httpx.AsyncClient() as client:
+                response = await client.get("http://10.42.0.1:5001/Optitracking_data_forward")
+            
+            if response.status_code == 200:
+                data = response.json()
+                new_positions = extract_marker_positions(data)
+                if new_positions:
+                    self.last_positions = new_positions
+            else:
+                print("Failed to update Opti positions")
+        except httpx.RequestError as e:
             print(f"Error fetching robot opti position: {e}")
 
     def get_first_marker_coordinates(self):

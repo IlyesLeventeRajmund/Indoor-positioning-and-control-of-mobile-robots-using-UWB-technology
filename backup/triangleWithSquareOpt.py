@@ -12,7 +12,7 @@ from bleak import BleakScanner, BleakClient
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 import requests
-from RobotLocationData import RobotLocationBeacon
+from BeaconLocalization import RobotLocationBeacon
 from scipy.optimize import least_squares
 import httpx
 
