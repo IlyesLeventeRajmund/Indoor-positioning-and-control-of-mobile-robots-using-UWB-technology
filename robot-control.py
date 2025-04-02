@@ -11,6 +11,7 @@ import ManualModeData
 import random
 import math
 from appFastapi import RobotServer  # Import the server class we created
+import atexit
 
 def gpioInit():
     GPIO.setmode(GPIO.BCM)
@@ -42,7 +43,35 @@ def gpioInit():
     pwm7.start(0)
     pwm8.start(0)
 
+    atexit.register(safe_cleanup, [pwm1, pwm2, pwm3, pwm4, pwm5, pwm6, pwm7, pwm8])
+
     return pwm1, pwm2, pwm3, pwm4, pwm5, pwm6, pwm7, pwm8
+
+def safe_cleanup(pwm_list):
+    """Safely clean up GPIO resources while avoiding lgpio errors"""
+    try:
+        # First set all duty cycles to 0
+        for p in pwm_list:
+            try:
+                p.ChangeDutyCycle(0)
+            except:
+                pass
+        
+        # Then explicitly set all pins to input mode rather than calling stop()
+        pins = [22, 23, 17, 27, 12, 16, 20, 21]
+        for pin in pins:
+            try:
+                GPIO.setup(pin, GPIO.IN)
+            except:
+                pass
+        
+        # Call cleanup but catch any exceptions
+        try:
+            GPIO.cleanup()
+        except:
+            pass
+    except Exception as e:
+        print(f"Error during safe cleanup: {e}")
 
 def main():
     # Initialize the FastAPI server in a separate thread
@@ -72,6 +101,8 @@ def main():
     Kp = 2  # Proportional gain for velocity control
     Kd = 0.1  # Derivative gain for velocity control
 
+    Pr = (1, 1)
+
     wheel_positions = np.array([
         [L2, L1],   # Jobb első kerék
         [-L2, L1],  # Bal első kerék
@@ -81,28 +112,33 @@ def main():
 
     def wheel_velocity_transform(vx, vy, w):
         wheel_velocities = np.array([
-            (1/R) * (vx + vy + L1 * w),  # Jobb hátsó kerék
-            (1/R) * (vx + vy - L2 * w),  # Jobb első kerék
-            (1/R) * (vx - vy - L1 * w),  # Bal hátsó kerék
-            (1/R) * (vx - vy + L2 * w),  # Bal első kerék
+            (1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
+            (1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
+            (1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
+            (1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
         ])
         print("vx:", vx)
         print("vy:", vy)
         return wheel_velocities
 
-    def p_control(current_pose, desired_pose):
+    def p_control(current_pose, desired_pose, current_teta, desired_teta):
         error_x = desired_pose[0] - current_pose[0]
         error_y = desired_pose[1] - current_pose[1]
-        error_theta = 0  # desired_pose[2] - current_pose[2]
+        error_theta = desired_teta - current_teta
         
         vx = Kp * error_x
         vy = Kp * error_y
         w = Kd * error_theta
         
+        print("error",error_x,error_y,error_theta)
+        print("error szog",desired_teta,current_teta)
+        #print("elvart",desired_pose[0])
+        #print("jelenlegi",current_pose[0])
+
         return vx, vy, w
 
-    def automat_control(Pc, Pr):
-        vx, vy, w = p_control(Pc, Pr)
+    def automat_control(Pc, Pr, Tc, Tr):
+        vx, vy, w = p_control(Pc, Pr, Tc, Tr)
 
         wheel_speeds = wheel_velocity_transform(vx, vy, w)
 
@@ -171,7 +207,7 @@ def main():
             # delay 10ms
             sleep(0.1)  # 100ms
             
-            Pr = (0, 0)
+            
             OptiTracker.update_position()
             Po = OptiTracker.get_first_marker_coordinates()
             # BeaconTracker updates in its own thread, so we just need to get the coordinates
@@ -203,13 +239,17 @@ def main():
                 log_file.write("\n")
             
             measure_mode = "Optitrack"
-            manual_mode = True
+            manual_mode = False
 
             if measure_mode == 'Beacon':
                 Pc = Pb
             else:
                 Pc = Po
-            
+
+            Tc = OptiTracker.get_orientation_yaw()
+            #print("Tc",Tc)
+            Tr = math.atan2(Pr[0]-Pc[0],Pr[1]-Pc[1])
+            #print("Tr",Tr)
             # Get direction and speed directly from the server instance
             speed, direction = direction_call()
 
@@ -226,9 +266,9 @@ def main():
                             circle_path = shapeGenerator('circle', 1, 12)
                             count = 0
                         
-                        Pr = circle_path[count]
+                        Pr = (1,1) #circle_path[count]
                         count = (count + 1) % len(circle_path)
-                        automat_control(Pc, Pr)
+                        automat_control(Pc, Pr, Tc, Tr)
                         
                     elif direction == 'square':
                         if not square_path:
@@ -237,7 +277,7 @@ def main():
 
                         Pr = square_path[count]
                         count = (count + 1) % len(square_path)
-                        automat_control(Pc, Pr)
+                        automat_control(Pc, Pr, Tc, Tr)
 
                     elif direction == 'triangle':
                         if not triangle_path:
@@ -246,7 +286,7 @@ def main():
 
                         Pr = triangle_path[count]
                         count = (count + 1) % len(triangle_path)
-                        automat_control(Pc, Pr)
+                        automat_control(Pc, Pr, Tc, Tr)
 
                     elif direction == 'hexagon':
                         if not hexagon_path:
@@ -255,7 +295,7 @@ def main():
 
                         Pr = hexagon_path[count]
                         count = (count + 1) % len(hexagon_path)
-                        automat_control(Pc, Pr)
+                        automat_control(Pc, Pr, Tc, Tr)
             else:
                 sleep(1)
                 
@@ -266,14 +306,16 @@ def main():
     finally:
         print("Cleaning up resources...")
         # Stop the BeaconTracker
-        BeaconTracker.stop_tracking()
+        #BeaconTracker.stop_tracking()
         
-        # Cleanup GPIO
+        # Don't call pwm[i].stop() here anymore - that's handled by the atexit handler
+        # Just set duty cycles to 0 as a precaution
         for i in range(8):
-            pwm[i].stop()
-        GPIO.cleanup()
+            try:
+                pwm[i].ChangeDutyCycle(0)
+            except:
+                pass
         
-        # Note: We don't have a clean way to stop the FastAPI server once started
         print("Resources cleaned up")
 
 if __name__ == "__main__":

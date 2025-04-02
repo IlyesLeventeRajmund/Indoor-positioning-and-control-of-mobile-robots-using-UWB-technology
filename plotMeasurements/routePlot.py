@@ -2,7 +2,7 @@ import json
 import matplotlib.pyplot as plt
 
 # JSON fájl beolvasása
-file_path = "thrid_measurement_line_log.json" 
+file_path = "measurements/first_measurement_line_log.json" 
 
 data = []
 with open(file_path, "r") as f:
@@ -29,4 +29,4 @@ plt.grid()
 plt.xlim(min(min(Po_x), min(Pb_x)) - 1, max(max(Po_x), max(Pb_x)) + 1)
 plt.ylim(min(min(Po_y), min(Pb_y)) - 1, max(max(Po_y), max(Pb_y)) + 1)
 plt.show()
-plt.savefig("output.png")
+plt.savefig("output.jpg", dpi=300, bbox_inches="tight")

@@ -1,4 +1,3 @@
-# server.py
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from datetime import datetime
@@ -7,6 +6,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import threading
+import logging
 
 class Location(BaseModel):
     x: float
@@ -19,8 +19,8 @@ class BeaconData(BaseModel):
     beacon3: Dict[str, float]
     beacon4: Dict[str, float]
 
-class OptiTrackInput(BaseModel):
-    data: dict
+class OptiTrackData(BaseModel):
+    data: str
     
 class SpeedInput(BaseModel):
     speed: float
@@ -33,6 +33,10 @@ class DistanceInput(BaseModel):
 
 class RobotServer:
     def __init__(self, host="0.0.0.0", port=5001):
+
+        logging.getLogger("uvicorn.access").disabled = True
+        logging.getLogger("uvicorn.error").setLevel(logging.WARNING)
+
         self.app = FastAPI()
         self.host = host
         self.port = port
@@ -62,11 +66,46 @@ class RobotServer:
     def _setup_routes(self):
         # Optitrack data routes
         @self.app.post("/Optitracking_data")
-        async def receive_Optitracking_data(data: OptiTrackInput):
+        async def receive_Optitracking_data(data: OptiTrackData):
             if not data.data:
                 raise HTTPException(status_code=400, detail="Invalid data")
-            self.optitrack_data = data.data
-            return {"status": "success", "Opti Location": self.optitrack_data}
+            
+            # Parse the incoming data string and store in structured format
+            raw_data = data.data
+            #print(f"Received data: {raw_data}")
+            
+            # Parse the data string to extract rigid body information
+            parsed_data = {}
+            
+            # Check if there's a rigid body in the data
+            if "Rigid Body Count:" in raw_data:
+                # Extract position
+                position_match = raw_data.find("Position      :")
+                if position_match != -1:
+                    pos_str = raw_data[position_match:].split("\n")[0]
+                    pos_values = pos_str.split("[")[1].split("]")[0].split(",")
+                    position = [float(p.strip()) for p in pos_values]
+                    parsed_data["position"] = position
+                
+                # Extract orientation
+                orientation_match = raw_data.find("Orientation   :")
+                if orientation_match != -1:
+                    orient_str = raw_data[orientation_match:].split("\n")[0]
+                    orient_values = orient_str.split("[")[1].split("]")[0].split(",")
+                    orientation = [float(o.strip()) for o in orient_values]
+                    parsed_data["rotation"] = orientation
+                
+                # Store tracking validity
+                tracking_valid = "Tracking Valid: True" in raw_data
+                parsed_data["tracking_valid"] = tracking_valid
+                
+                # Structure the data in a format the client expects
+                self.optitrack_data = {
+                    "rigidbodies": [parsed_data],
+                    "markers": []
+                }
+    
+            return {"status": "success", "Opti Location": data.data}
         
         @self.app.get("/Optitracking_data_forward")
         async def get_Optitracking_data():
@@ -161,7 +200,7 @@ class RobotServer:
     
     def _run_server(self):
         """Internal method to run the server"""
-        uvicorn.run(self.app, host=self.host, port=self.port)
+        uvicorn.run(self.app, host=self.host, port=self.port, log_level="warning")
     
     def stop(self):
         """Stop the server - note: this is not fully implemented as uvicorn doesn't 
