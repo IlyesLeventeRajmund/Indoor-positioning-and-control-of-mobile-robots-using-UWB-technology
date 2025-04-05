@@ -22,7 +22,7 @@ def gpioInit():
     GPIO.setup(27, GPIO.OUT)
     GPIO.setup(12, GPIO.OUT)
     GPIO.setup(16, GPIO.OUT)
-    GPIO.setup(20, GPIO.OUT)
+    GPIO.setup(26, GPIO.OUT)
     GPIO.setup(21, GPIO.OUT)
 
     pwm1 = GPIO.PWM(22, 1000)  
@@ -32,7 +32,7 @@ def gpioInit():
     pwm5 = GPIO.PWM(23, 1000) 
     pwm6 = GPIO.PWM(27, 1000)  
     pwm7 = GPIO.PWM(12, 1000) 
-    pwm8 = GPIO.PWM(20, 1000)  
+    pwm8 = GPIO.PWM(26, 1000)  
 
     pwm1.start(0)
     pwm2.start(0)
@@ -98,8 +98,8 @@ def main():
     L1 = 0.06  # Distance between the center and the wheels (meters)
     L2 = 0.07
     R = 0.03  # Radius of the wheels (meters)
-    Kp = 2  # Proportional gain for velocity control
-    Kd = 0.1  # Derivative gain for velocity control
+    Kp = 1.5  # Proportional gain for velocity control
+    Kd = 1  # Derivative gain for velocity control
 
     Pr = (1, 1)
 
@@ -112,10 +112,21 @@ def main():
 
     def wheel_velocity_transform(vx, vy, w):
         wheel_velocities = np.array([
-            (1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
-            (1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
-            (1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
-            (1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
+            #(1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
+            #(1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
+            #(1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
+            #(1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
+
+            #(1/R) * (-vx - vy - (L1+L2) * w),  # Jobb hátsó kerék
+            #(1/R) * (-vx - vy - (L1+L2) * w),  # Jobb első kerék
+            #(1/R) * (-vx - vy + (L1+L2) * w),  # Bal hátsó kerék
+            #(1/R) * (-vx - vy + (L1+L2) * w),  # Bal első kerék
+
+            (1/R) * (+vx + vy - (L1+L2) * w),  # Jobb hátsó kerék
+            (1/R) * (-vx + vy - (L1+L2) * w),  # Jobb első kerék
+            (1/R) * (-vx + vy + (L1+L2) * w),  # Bal hátsó kerék
+            (1/R) * (+vx + vy + (L1+L2) * w),  # Bal első kerék
+
         ])
         print("vx:", vx)
         print("vy:", vy)
@@ -128,7 +139,7 @@ def main():
         
         vx = Kp * error_x
         vy = Kp * error_y
-        w = Kd * error_theta
+        w = 0#Kd * error_theta
         
         print("error",error_x,error_y,error_theta)
         print("error szog",desired_teta,current_teta)
@@ -144,11 +155,17 @@ def main():
 
         for i, pwm_forward, pwm_backward in zip(range(4), [pwm[0], pwm[1], pwm[2], pwm[3]], [pwm[4], pwm[5], pwm[6], pwm[7]]):
             if wheel_speeds[i] > 0:
-                pwm_forward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i]))))
+                duty = max(0, min(100, abs(wheel_speeds[i])))
+                if duty < 20:
+                    duty = 0
+                pwm_forward.ChangeDutyCycle(duty)
                 pwm_backward.ChangeDutyCycle(0)
             else:
+                duty = max(0, min(100, abs(wheel_speeds[i])))
+                if duty < 20:
+                    duty = 0
                 pwm_forward.ChangeDutyCycle(0)
-                pwm_backward.ChangeDutyCycle(max(0, min(100, abs(wheel_speeds[i]))))
+                pwm_backward.ChangeDutyCycle(duty)
 
     def shapeGenerator(shape, size, num_points):
         points = []
@@ -248,7 +265,8 @@ def main():
 
             Tc = OptiTracker.get_orientation_yaw()
             #print("Tc",Tc)
-            Tr = math.atan2(Pr[0]-Pc[0],Pr[1]-Pc[1])
+            Tr = math.atan2(Pr[1] - Pc[1], Pr[0] - Pc[0])
+
             #print("Tr",Tr)
             # Get direction and speed directly from the server instance
             speed, direction = direction_call()
