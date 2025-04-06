@@ -1,37 +1,15 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+
 from datetime import datetime
-from typing import Optional, Dict
+
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import threading
 import logging
+  
 
-class Location(BaseModel):
-    x: float
-    y: float
-    timestamp: Optional[datetime] = None
-
-class BeaconData(BaseModel):
-    beacon1: Dict[str, float]
-    beacon2: Dict[str, float]
-    beacon3: Dict[str, float]
-    beacon4: Dict[str, float]
-
-class OptiTrackData(BaseModel):
-    data: str
-    
-class SpeedInput(BaseModel):
-    speed: float
-    
-class MoveInput(BaseModel):
-    direction: str
-    
-class DistanceInput(BaseModel):
-    distance: float
-
-class RobotServer:
+class Server:
     def __init__(self, host="0.0.0.0", port=5001):
 
         logging.getLogger("uvicorn.access").disabled = True
@@ -42,14 +20,6 @@ class RobotServer:
         self.port = port
         self.thread = None
         self.server = None
-        
-        # State variables
-        self.location = {}
-        self.current_direction = None
-        self.current_speed = 50
-        self.current_distance = None
-        self.optitrack_data = None
-        self.device_positions = {}
         
         # Configure CORS
         self.app.add_middleware(
@@ -210,42 +180,4 @@ class RobotServer:
         if self.thread:
             print("Warning: Cannot fully stop uvicorn server once started.")
             print("You may need to restart your application to fully release the port.")
-            
-    # Methods to access server data directly from control code
-    def get_current_location(self):
-        return self.location
     
-    def get_direction(self):
-        return self.current_direction
-    
-    def set_direction(self, direction):
-        valid_directions = ['up', 'down', 'left', 'right', 'stop', 'up-left', 
-                           'up-right', 'down-left', 'down-right', 'circle', 
-                           'square', 'triangle', 'hexagon']
-        if direction not in valid_directions:
-            raise ValueError("Invalid direction")
-        self.current_direction = direction
-        
-    def get_speed(self):
-        return self.current_speed
-    
-    def set_speed(self, speed):
-        if 0 <= speed <= 100:
-            self.current_speed = speed
-        else:
-            raise ValueError("Invalid speed")
-            
-    def get_distance(self):
-        return self.current_distance
-    
-    def set_distance(self, distance):
-        if distance >= 0:
-            self.current_distance = distance
-        else:
-            raise ValueError("Invalid distance")
-    
-    def get_optitrack_data(self):
-        return self.optitrack_data
-    
-    def get_beacon_positions(self):
-        return self.device_positions
