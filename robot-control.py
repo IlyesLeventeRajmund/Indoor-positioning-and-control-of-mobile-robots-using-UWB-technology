@@ -10,7 +10,7 @@ import BeaconLocalization
 import ManualModeData
 import random
 import math
-from appFastapi import RobotServer  # Import the server class we created
+from main import RobotServer  # Import the server class we created
 import atexit
 
 def gpioInit():
