@@ -1,6 +1,6 @@
+from controller.robot_low_level_control import initialize_gpio, set_pwm_for_manual_control
 
-
-class Robot:
+class RobotController:
     def __init__(self):
         self.location = {}
         self.current_direction = None
@@ -8,6 +8,9 @@ class Robot:
         self.current_distance = None
         self.optitrack_data = None
         self.device_positions = {}
+
+        print("Initializing GPIO...")
+        self.pwms = initialize_gpio()
 
     def get_current_location(self):
         return self.location
@@ -17,14 +20,27 @@ class Robot:
     
     def set_direction(self, direction):
         # This should not be in a class method
+        # TODO: this is duplicated in the routes
         valid_directions = ['up', 'down', 'left', 'right', 'stop', 'up-left', 
                            'up-right', 'down-left', 'down-right', 'circle', 
                            'square', 'triangle', 'hexagon']
                 
         if direction not in valid_directions:
             raise ValueError("Invalid direction")
-        self.current_direction = direction
         
+        self.current_direction = direction
+
+        # TODO: implement direction here
+        # TODO: handle manual or predifined control
+        # the result is current_direction and current_speed
+
+        print("Setting direction to:", self.current_direction)
+        print("Setting speed to:", self.current_speed)
+        set_pwm_for_manual_control(
+            pwm=self.pwms,
+            direction=self.current_direction,
+            speed=self.current_speed)
+
     def get_speed(self):
         return self.current_speed
     
@@ -33,11 +49,13 @@ class Robot:
             self.current_speed = speed
         else:
             raise ValueError("Invalid speed")
-            
-    def get_distance(self):
-        return self.current_distance
+
+        # TODO: implement speed here 
+
+    # def get_distance(self):
+    #     return self.current_distance
     
-    def set_distance(self, distance):
+    # def set_distance(self, distance):
         if distance >= 0:
             self.current_distance = distance
         else:
@@ -48,3 +66,4 @@ class Robot:
     
     def get_beacon_positions(self):
         return self.device_positions
+    
