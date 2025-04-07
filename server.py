@@ -1,21 +1,19 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from routes import robot_routes
 
-from datetime import datetime
 from config import settings
-from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
+from uvicorn import Config as UviconrConfig
+from uvicorn import Server as UviconrServer
 import threading
 import logging
   
 
 class Server:
     def __init__(self):
-
         self.app = FastAPI()
         self.app.include_router(robot_routes.router)
-
+        self.server = None
         self.thread = None
        
         # Configure CORS
@@ -29,24 +27,19 @@ class Server:
         
    
     def start(self):
-        self.thread = threading.Thread(target=self._run_server)
-        self.thread.daemon = True  # Thread will exit when main program exits
+        config = UviconrConfig(app=self.app, host=settings.host_ip, port=settings.host_port, log_config=None)
+        
+        self.server = UviconrServer(config=config)
+
+        self.thread = threading.Thread(target=self.server.run)
+        self.thread.daemon = True
         self.thread.start()
         
         logging.info(f"Server started on http://{settings.host_ip}:{settings.host_port}")
-        
-        return self.thread
-    
-    def _run_server(self):
-        # Do not let uvicorn override the logging config
-        uvicorn.run(self.app, host=settings.host_ip, port=settings.host_port, log_config=None)
+
         
     def stop(self):
-        """Stop the server - note: this is not fully implemented as uvicorn doesn't 
-        provide a clean shutdown method when run this way"""
-        # This is a placeholder - proper shutdown would need a more complex approach
-        # with uvicorn's server instance
-        if self.thread:
-            logging.debug("Warning: Cannot fully stop uvicorn server once started.")
-            logging.debug("You may need to restart your application to fully release the port.")
-    
+        if self.server:
+            self.server.should_exit = True
+            self.thread.join()
+            logging.info("Server stopped.")
