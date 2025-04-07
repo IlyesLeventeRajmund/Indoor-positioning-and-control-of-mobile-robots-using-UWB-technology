@@ -13,8 +13,9 @@ import logging
 class Server:
     def __init__(self, host:str, port: int):
 
-        logging.getLogger("uvicorn.access").disabled = True
-        logging.getLogger("uvicorn.error").setLevel(logging.WARNING)
+        # TODO: is this needed?
+        # logging.getLogger("uvicorn.access").disabled = True
+        # logging.getLogger("uvicorn.error").setLevel(logging.WARNING)
 
         self.app = FastAPI()
         self.app.include_router(robot_routes.router)

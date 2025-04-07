@@ -69,10 +69,10 @@ class BeaconLocalization:
                     devices[mac.strip('"')] = ast.literal_eval(coords)
             return devices
         except FileNotFoundError:
-            logger.error(f"Target devices file not found: {file_path}")
+            logging.error(f"Target devices file not found: {file_path}")
             return {}
         except Exception as e:
-            logger.error(f"Error loading target devices: {e}")
+            logging.error(f"Error loading target devices: {e}")
             return {}
 
     def estimate_distance(self, rssi, rssi_0=-77.5, path_loss_exponent=3):
@@ -85,7 +85,7 @@ class BeaconLocalization:
         d1, d2, d3 = distances
 
         if any(d <= 0 for d in distances):
-            logger.error("Invalid distance values provided.")
+            logging.error("Invalid distance values provided.")
             return None
 
         A = 2 * (x2 - x1)
@@ -97,7 +97,7 @@ class BeaconLocalization:
         F = d1 ** 2 - d3 ** 2 - x1 ** 2 + x3 ** 2 - y1 ** 2 + y3 ** 2
 
         if B == 0 or E == 0:
-            logger.error("Zero division error in trilateration.")
+            logging.error("Zero division error in trilateration.")
             return None
 
         x = (C - B * F / E) / (A - B * D / E)
@@ -133,7 +133,7 @@ class BeaconLocalization:
             if device.address in self.complete_devices:
                 return
 
-            logger.info(f"Target device found: {device.address}, RSSI: {advertisement_data.rssi}")
+            logging.info(f"Target device found: {device.address}, RSSI: {advertisement_data.rssi}")
 
             if device.address not in self.rssi_data:
                 self.rssi_data[device.address] = []
@@ -141,21 +141,21 @@ class BeaconLocalization:
             self.rssi_data[device.address].append(advertisement_data.rssi)
 
             if len(self.rssi_data[device.address]) >= self.SAMPLE_SIZE:
-                logger.info(f"Elérte a minta méretét: {device.address}")
+                logging.info(f"Elérte a minta méretét: {device.address}")
                 self.complete_devices.add(device.address)
 
             if len(self.complete_devices) == 4:
-                logger.info("4 eszköz adata megvan, Least Squares Method használata")
+                logging.info("4 eszköz adata megvan, Least Squares Method használata")
                 self.process_all_devices(device_count=4, method='LSM') 
                 self.reset_data()
             
             elif time.time() - self.start_time >= self.TIME_LIMIT:
                 if len(self.complete_devices) >= 3:
-                    logger.info(f"Időkorlát lejárt, {len(self.complete_devices)} eszköz adata megvan, Trilateration használata")
+                    logging.info(f"Időkorlát lejárt, {len(self.complete_devices)} eszköz adata megvan, Trilateration használata")
                     self.process_all_devices(device_count=len(self.complete_devices), method='Trilateration')  
                     self.reset_data()  
                 else:
-                    logger.info("Időkorlát lejárt, de nincs meg három eszköz adata, további adatgyűjtés.")
+                    logging.info("Időkorlát lejárt, de nincs meg három eszköz adata, további adatgyűjtés.")
                     return
 
     def process_all_devices(self, device_count, method):
@@ -172,25 +172,25 @@ class BeaconLocalization:
         if method == 'LSM' and device_count == 4:
             new_location = self.least_squares_method(positions, list(distances.values()))
             self.set_coordinates(new_location[0], new_location[1])
-            logger.info(f"Helymeghatározás Least Squares módszerrel: {self.get_coordinates()}")
+            logging.info(f"Helymeghatározás Least Squares módszerrel: {self.get_coordinates()}")
         
         elif method == 'Trilateration' and device_count >= 3:
             new_location = self.trilateration(positions[:3], list(distances.values())[:3])
             if new_location:
                 self.set_coordinates(new_location[0], new_location[1])
-                logger.info(f"Helymeghatározás Trilateration módszerrel {device_count} eszköz alapján: {self.get_coordinates()}")
+                logging.info(f"Helymeghatározás Trilateration módszerrel {device_count} eszköz alapján: {self.get_coordinates()}")
 
     def reset_data(self):
         """Reset collected data"""
         self.complete_devices.clear()
         self.rssi_data.clear()
         self.start_time = None
-        logger.info("Az adatok nullázva.")
+        logging.info("Az adatok nullázva.")
 
     async def run_ble_scanning(self, scanner):
         """Run BLE scanning in an infinite loop"""
         while self.is_alive:
-            logger.info("Scanning started...")
+            logging.info("Scanning started...")
             async with scanner:
                 await asyncio.sleep(1.0)
             
@@ -200,27 +200,27 @@ class BeaconLocalization:
     def start_tracking(self, services=None, macos_use_bdaddr=False):
         """Start the BLE tracking process"""
         if self.is_alive:
-            logger.info("Tracking already running.")
+            logging.info("Tracking already running.")
             return
         
         self.is_alive = True
         self.tracking_thread = threading.Thread(target=self._tracking_thread, args=(services, macos_use_bdaddr))
         self.tracking_thread.daemon = True
         self.tracking_thread.start()
-        logger.info("BLE tracking started")
+        logging.info("BLE tracking started")
     
     def stop_tracking(self):
         """Stop the BLE tracking process"""
         if not self.is_alive:
-            logger.info("Tracking not running.")
+            logging.info("Tracking not running.")
             return
         
-        logger.info("Stopping BLE tracking...")
+        logging.info("Stopping BLE tracking...")
         self.is_alive = False
         if self.tracking_thread:
             self.tracking_thread.join(timeout=2.0)
             self.tracking_thread = None
-        logger.info("BLE tracking stopped")
+        logging.info("BLE tracking stopped")
     
     def _tracking_thread(self, services=None, macos_use_bdaddr=False):
         """Thread function that runs the asyncio event loop for BLE scanning"""
@@ -234,14 +234,14 @@ class BeaconLocalization:
             
             loop.run_until_complete(self._run_scanning(scanner))
         except Exception as e:
-            logger.error(f"Error in tracking thread: {e}")
+            logging.error(f"Error in tracking thread: {e}")
         finally:
             loop.close()
     
     async def _run_scanning(self, scanner):
         """Run the BLE scanning loop"""
         while self.is_alive:
-            logger.info("Scanning started...")
+            logging.info("Scanning started...")
             async with scanner:
                 await asyncio.sleep(1.0)
             
@@ -249,8 +249,6 @@ class BeaconLocalization:
                 break
 
 if __name__ == "__main__":
-
-    
     
     robot = BeaconLocalization()
 
