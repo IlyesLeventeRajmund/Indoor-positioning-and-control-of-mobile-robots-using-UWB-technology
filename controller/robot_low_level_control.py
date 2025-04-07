@@ -1,6 +1,7 @@
 import atexit
 from time import time
 import platform
+import logging
 
 # Check if the platform is Raspberry Pi
 if platform.machine().startswith('arm'):
@@ -191,3 +192,5 @@ def set_pwm_for_manual_control(pwm, direction, speed):
         pwm[5].ChangeDutyCycle(0)  #je
         pwm[6].ChangeDutyCycle(0)  #bh
         pwm[7].ChangeDutyCycle(0)  #be
+
+    logging.debug(f"Set PWM for direction: {direction}, speed: {speed}")

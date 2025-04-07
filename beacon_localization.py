@@ -13,7 +13,7 @@ from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 from scipy.optimize import least_squares
 
-logger = logging.getLogger(__name__)
+
 
 class BeaconLocalization:
     def __init__(self, x: float = 0, y: float = 0):
@@ -250,10 +250,7 @@ class BeaconLocalization:
 
 if __name__ == "__main__":
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)-15s %(name)-8s %(levelname)s: %(message)s",
-    )
+    
     
     robot = BeaconLocalization()
 

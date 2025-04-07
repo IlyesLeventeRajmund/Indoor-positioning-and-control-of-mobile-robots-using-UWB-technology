@@ -11,7 +11,7 @@ import logging
   
 
 class Server:
-    def __init__(self, host="0.0.0.0", port=5001):
+    def __init__(self, host:str, port: int):
 
         logging.getLogger("uvicorn.access").disabled = True
         logging.getLogger("uvicorn.error").setLevel(logging.WARNING)
@@ -35,23 +35,21 @@ class Server:
         
    
     def start(self):
-        """Start the server in a separate thread"""
         self.thread = threading.Thread(target=self._run_server)
         self.thread.daemon = True  # Thread will exit when main program exits
         self.thread.start()
-        print(f"Server started on http://{self.host}:{self.port}")
+        logging.info(f"Server started on http://{self.host}:{self.port}")
         return self.thread
     
     def _run_server(self):
-        """Internal method to run the server"""
         uvicorn.run(self.app, host=self.host, port=self.port, log_level="warning")
-    
+        
     def stop(self):
         """Stop the server - note: this is not fully implemented as uvicorn doesn't 
         provide a clean shutdown method when run this way"""
         # This is a placeholder - proper shutdown would need a more complex approach
         # with uvicorn's server instance
         if self.thread:
-            print("Warning: Cannot fully stop uvicorn server once started.")
-            print("You may need to restart your application to fully release the port.")
+            logging.debug("Warning: Cannot fully stop uvicorn server once started.")
+            logging.debug("You may need to restart your application to fully release the port.")
     

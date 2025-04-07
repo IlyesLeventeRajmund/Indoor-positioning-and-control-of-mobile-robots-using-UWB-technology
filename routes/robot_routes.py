@@ -4,6 +4,7 @@ from models.move_input import MoveInput
 from models.speed_input import SpeedInput
 from models.optitrack_data import OptiTrackData  
 from fastapi import HTTPException
+import logging
 
 router = APIRouter()
 robot_controller = RobotController() 
@@ -79,7 +80,7 @@ async def move_robot(data: MoveInput):
     #     raise HTTPException(status_code=400, detail="Invalid direction")
     
     # TODO: transfor MoveInput to a usable format
-    print(f"Received direction: {data.direction}")
+    logging.debug(f"Received direction: {data.direction}")
     robot_controller.set_direction(data.direction)
 
     return {"status": "success", "direction": data.direction}

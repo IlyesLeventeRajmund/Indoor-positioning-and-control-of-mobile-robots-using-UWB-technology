@@ -1,4 +1,5 @@
 from controller.robot_low_level_control import initialize_gpio, set_pwm_for_manual_control
+import logging
 
 class RobotController:
     def __init__(self):
@@ -33,9 +34,9 @@ class RobotController:
         # TODO: implement direction here
         # TODO: handle manual or predifined control
         # the result is current_direction and current_speed
-
-        print("Setting direction to:", self.current_direction)
-        print("Setting speed to:", self.current_speed)
+        logging.info("Setting direction to: %s", self.current_direction)
+        # print("Setting direction to:", self.current_direction)
+        # print("Setting speed to:", self.current_speed)
         set_pwm_for_manual_control(
             pwm=self.pwms,
             direction=self.current_direction,

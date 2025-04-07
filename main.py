@@ -1,13 +1,25 @@
 from time import sleep
 from server import Server
 
+import logging.config
+from configparser import ConfigParser 
+
 
 def main():
 
-    print("Initializing Server...")
-    robot_server = Server(host="0.0.0.0", port=5001)
-    robot_server.start()
+    config_object = ConfigParser()
+    config_object.read('config.ini')
+    config = config_object['DEFAULT']
+    
+    logging.config.fileConfig('log_config.ini') 
 
+    logging.info("Initializing Server...")
+
+    host_ip = config.get('HOST_IP')
+    host_port = config.getint('HOST_PORT')
+
+    server = Server(host=host_ip, port=host_port)
+    server.start()
 
     try:
         
@@ -17,13 +29,13 @@ def main():
             pass
 
     except KeyboardInterrupt:
-        print("Program terminated by user")
+        logging.error("Program terminated by user")
 
     except Exception as e:
-        print(f"Error in main loop: {e}")
+        logging.error(f"Error in main loop: {e}")
     
     finally:
-        print("Cleaning up resources...")
+        logging.error("Cleaning up resources...")
 
 
 ############################################
