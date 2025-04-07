@@ -1,5 +1,6 @@
 from controller.robot_low_level_control import initialize_gpio, set_pwm_for_manual_control
 from controller.beacon_localization import BeaconLocalization
+from controller.optitrack_stream_receiver import OptitrackStreamReceiver
 
 import logging
 
@@ -21,6 +22,10 @@ class RobotController:
         # TODO: stop
         # beacon_localization.stop_tracking()
 
+        self.optitrack_stream_receiver = OptitrackStreamReceiver()
+        # TODO: stop
+        # optitrack_stream_receiver.stop_streaming()
+    
     def get_current_location(self):
         return self.location
     

@@ -31,6 +31,7 @@ class OptitrackStreamReceiver:
 
     def update_position(self):
         try:
+            # TODO: read this from config
             response = requests.get("http://10.42.0.1:5001/Optitracking_data_forward")
             if response.status_code == 200:
                 data = response.json()

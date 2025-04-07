@@ -46,7 +46,7 @@ def main():
 
     # # Initialize and start OptiTracker
     # print("Initializing OptiTracker...")
-    # OptiTracker = optitrack_stream_receiver.RobotLocationOptitrack()
+    # OptiTracker = 
     
     # # Initialize and start BeaconTracker in a separate thread
     # print("Initializing and starting BeaconTracker...")
