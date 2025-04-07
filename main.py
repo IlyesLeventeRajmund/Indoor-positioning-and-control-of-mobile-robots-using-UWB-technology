@@ -1,24 +1,16 @@
 from time import sleep
-
 import logging.config
-from configparser import ConfigParser 
+from config import settings
 
 from server import Server
 
 def main():
 
-    config_object = ConfigParser()
-    config_object.read('config.ini')
-    config = config_object['DEFAULT']
-    
     logging.config.fileConfig('log_config.ini') 
 
     logging.info("Starting the main program...")
 
-    host_ip = config.get('HOST_IP')
-    host_port = config.getint('HOST_PORT')
-
-    server = Server(host=host_ip, port=host_port)
+    server = Server(host=settings.host_ip, port=settings.host_port)
     server.start()
 
     try:

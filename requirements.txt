@@ -6,3 +6,5 @@ scipy
 numpy
 bleak
 RPi.GPIO
+pydantic
+pydantic-settings

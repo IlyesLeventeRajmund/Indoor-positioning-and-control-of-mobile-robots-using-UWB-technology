@@ -1,8 +1,10 @@
+import logging
+from config import settings
+
 from controller.robot_low_level_control import initialize_gpio, set_pwm_for_manual_control
 from controller.beacon_localization import BeaconLocalization
 from controller.optitrack_stream_receiver import OptitrackStreamReceiver
 
-import logging
 
 class RobotController:
     def __init__(self):
@@ -48,8 +50,7 @@ class RobotController:
         # TODO: handle manual or predifined control
         # the result is current_direction and current_speed
         logging.info("Setting direction to: %s", self.current_direction)
-        # print("Setting direction to:", self.current_direction)
-        # print("Setting speed to:", self.current_speed)
+        logging.info(f"config: {settings.host_ip}:{settings.host_port}")
         set_pwm_for_manual_control(
             pwm=self.pwms,
             direction=self.current_direction,
