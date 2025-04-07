@@ -1,16 +1,17 @@
 from time import sleep
+import logging
 import logging.config
 from config import settings
-
+from logging_config import LOGGING_CONFIG
 from server import Server
 
 def main():
 
-    logging.config.fileConfig('log_config.ini') 
+    logging.config.dictConfig(LOGGING_CONFIG)
 
     logging.info("Starting the main program...")
 
-    server = Server(host=settings.host_ip, port=settings.host_port)
+    server = Server()
     server.start()
 
     try:
