@@ -5,7 +5,7 @@ from datetime import datetime
 import numpy as np
 import json
 import threading
-import OptitrackData
+import optitrack_stream_receiver
 from beacon_localization import BeaconLocalization
 import random
 import math
@@ -191,7 +191,7 @@ def main():
 
     # Initialize and start OptiTracker
     print("Initializing OptiTracker...")
-    OptiTracker = OptitrackData.RobotLocationOptitrack()
+    OptiTracker = optitrack_stream_receiver.RobotLocationOptitrack()
     
     # Initialize and start BeaconTracker in a separate thread
     print("Initializing and starting BeaconTracker...")

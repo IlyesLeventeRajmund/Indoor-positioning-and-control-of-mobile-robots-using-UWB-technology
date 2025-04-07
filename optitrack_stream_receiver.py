@@ -8,7 +8,7 @@ from typing import Dict, Any, List, Tuple, Optional
 
 app = FastAPI()
 
-class RobotLocationOptitrack:
+class OptitrackStreamReceiver:
     def __init__(self):
         # Position data
         self.position_x = 0.0
@@ -129,7 +129,7 @@ class RobotLocationOptitrack:
         return yaw, pitch, roll
 
 if __name__ == "__main__":
-    tracker = RobotLocationOptitrack()
+    tracker = OptitrackStreamReceiver()
     while True:
         tracker.update_position()
         x, z = tracker.get_first_marker_coordinates()
