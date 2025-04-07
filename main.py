@@ -7,6 +7,8 @@ from server import Server
 
 def main():
 
+    print("Press Enter to stop the server...")
+
     logging.config.dictConfig(LOGGING_CONFIG)
 
     logging.info("Starting the main program...")
@@ -14,12 +16,10 @@ def main():
     server = Server()
     server.start()
 
+    # Wait for user input or some exit signal
     try:
-        
-        while True:
-            # Simulate some work
-            sleep(0.1)  # 100ms
-            pass
+
+        input()  # waits for user to press Enter
 
     except KeyboardInterrupt:
         logging.error("Program terminated by user")
@@ -30,7 +30,8 @@ def main():
     finally:
         logging.error("Cleaning up resources...")
         server.stop()
-        
+
+    logging.info("Shutting down...")
 
 ############################################
 
