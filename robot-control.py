@@ -6,7 +6,7 @@ import numpy as np
 import json
 import threading
 import OptitrackData
-import BeaconLocalization
+from beacon_localization import BeaconLocalization
 import ManualModeData
 import random
 import math
@@ -89,7 +89,7 @@ def main():
     
     # Initialize and start BeaconTracker in a separate thread
     print("Initializing and starting BeaconTracker...")
-    BeaconTracker = BeaconLocalization.RobotLocationBeacon(0, 0)
+    BeaconTracker = BeaconLocalization(0, 0)
     BeaconTracker.start_tracking()  # This starts its own thread
     
     start_time = time()

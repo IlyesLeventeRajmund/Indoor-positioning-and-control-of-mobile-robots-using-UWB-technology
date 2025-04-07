@@ -15,7 +15,7 @@ from scipy.optimize import least_squares
 
 logger = logging.getLogger(__name__)
 
-class RobotLocationBeacon:
+class BeaconLocalization:
     def __init__(self, x: float = 0, y: float = 0):
         self.x = x
         self.y = y
@@ -31,6 +31,8 @@ class RobotLocationBeacon:
         self.kalman_filters = {}
         
         # Device positions (beacons)
+        # TODO: These should be in config
+        # TODO: remove hungarian 
         self.device_positions = {
             "DC:C7:ED:2C:04:D1": (1.9146842956542969, -0.40974411368370056, 0.5664147138595581),  #kek
             "D1:DC:74:F2:C7:05": (-0.12133240699768066, -3.605344772, 0.889655590057373), #sarga
@@ -43,6 +45,7 @@ class RobotLocationBeacon:
         }
         
         # Load target devices
+        # TODO: This shoud be in config
         self.TARGET_DEVICES = self.load_target_devices("eszkozok.txt")
     
     def set_coordinates(self, x: float, y: float):
@@ -252,7 +255,7 @@ if __name__ == "__main__":
         format="%(asctime)-15s %(name)-8s %(levelname)s: %(message)s",
     )
     
-    robot = RobotLocationBeacon()
+    robot = BeaconLocalization()
 
     robot.start_tracking()
     
