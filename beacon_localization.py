@@ -46,7 +46,7 @@ class BeaconLocalization:
         
         # Load target devices
         # TODO: This shoud be in config
-        self.TARGET_DEVICES = self.load_target_devices("eszkozok.txt")
+        self.TARGET_DEVICES = self.load_target_devices("beacon-devices.txt")
     
     def set_coordinates(self, x: float, y: float):
         """Set robot coordinates with thread safety"""
