@@ -4,7 +4,6 @@ import logging.config
 from configparser import ConfigParser 
 
 from server import Server
-from beacon_localization import BeaconLocalization
 
 def main():
 
@@ -22,9 +21,6 @@ def main():
     server = Server(host=host_ip, port=host_port)
     server.start()
 
-    beacon_localization = BeaconLocalization(0, 0)
-    beacon_localization.start_tracking()  # This starts its own thread
-
     try:
         
         while True:
@@ -41,8 +37,7 @@ def main():
     finally:
         logging.error("Cleaning up resources...")
         server.stop()
-        beacon_localization.stop_tracking()
-
+        
 
 ############################################
 

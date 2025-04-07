@@ -1,4 +1,6 @@
 from controller.robot_low_level_control import initialize_gpio, set_pwm_for_manual_control
+from controller.beacon_localization import BeaconLocalization
+
 import logging
 
 class RobotController:
@@ -12,6 +14,12 @@ class RobotController:
 
         print("Initializing GPIO...")
         self.pwms = initialize_gpio()
+
+        self.beacon_localization = BeaconLocalization(0, 0)
+        self.beacon_localization.start_tracking()  # This starts its own thread
+
+        # TODO: stop
+        # beacon_localization.stop_tracking()
 
     def get_current_location(self):
         return self.location
