@@ -4,6 +4,7 @@ import numpy as np
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 from typing import Dict, Any, List, Tuple, Optional
+from scipy.spatial.transform import rotation as R
 
 
 app = FastAPI()
@@ -31,17 +32,31 @@ class RobotLocationOptitrack:
 
     def update_position(self):
         try:
-            response = requests.get("http://10.42.0.1:5001/Optitracking_data_forward")
-            if response.status_code == 200:
-                data = response.json()
+            response_rigid_body = requests.get("http://10.42.0.1:5001/Optitracking_data_forward")
+            if response_rigid_body.status_code == 200:
+                data = response_rigid_body.json()
                 self._parse_optitrack_data(data)
                 print(f"Updated position: ({self.position_x}, {self.position_y}, {self.position_z})")
                 print(f"Orientation (yaw, pitch, roll): ({self.yaw}, {self.pitch}, {self.roll})")
             else:
                 print("Failed to update Opti positions")
+            '''response_markers = requests.get("http://10.42.0.1:5001/Optitracking_marker_data_forward")
+            if response_markers.status_code == 200:
+                data = response_markers.json()
+                self.extract_marker_positions(data)
+                print("Updated position:",)
+            else:
+                print("Failed to update Opti positions")'''
         except requests.exceptions.RequestException as e:
             print(f"Error fetching robot opti position: {e}")
     
+    '''def extract_marker_positions(data):
+        opti_data = data.get("Opti_data")
+        if opti_data is None:
+            return []  
+        markers = opti_data.get("markers", [])
+        return [{"id": marker["id"], "position": marker["position"]} for marker in markers]'''
+
     def _parse_optitrack_data(self, data: Dict[str, Any]) -> None:
         """Parse the received OptiTrack data and update object attributes"""
         opti_data = data.get("Opti_data")
@@ -102,6 +117,14 @@ class RobotLocationOptitrack:
         if norm > 0:
             self.q = self.q / norm
     
+    def _calculate_yaw_pitch_roll_with_rotation(self) -> Tuple[float, float, float]:
+
+        r = R.from_quat(self.q)
+
+        yaw, pitch, roll = r.as_euler('xyz', degrees= False)
+
+        return yaw, pitch, roll
+
     def _calculate_yaw_pitch_roll(self) -> Tuple[float, float, float]:
         """Calculate the yaw, pitch, roll angles from the quaternion"""
         #self._normalise()
@@ -114,19 +137,20 @@ class RobotLocationOptitrack:
         test = 2 * (qx * qz - qw * qy)
         
         if test >= 0.95:  # North pole gimbal lock
-            yaw = np.arctan2(qx * qy - qw * qz, qx * qz + qw * qy)
-            pitch = np.pi / 2  # 90 degrees
+            pitch = np.arctan2(qx * qy - qw * qz, qx * qz + qw * qy)
+            yaw = np.pi / 2  # 90 degrees
             roll = 0
         elif test <= -0.95:  # South pole gimbal lock
-            yaw = -np.arctan2(qx * qy - qw * qz, qx * qz + qw * qy)
-            pitch = -np.pi / 2  # -90 degrees
+            pitch = -np.arctan2(qx * qy - qw * qz, qx * qz + qw * qy)
+            yaw = -np.pi / 2  # -90 degrees
             roll = 0
         else:
-            yaw = np.arctan2(2 * (qy * qz + qw * qx), 1 - 2 * (qx**2 + qy**2))
-            pitch = np.arcsin(test)
+            pitch = np.arctan2(2 * (qy * qz + qw * qx), 1 - 2 * (qx**2 + qy**2))
+            yaw = np.arcsin(test)
             roll = np.arctan2(2 * (qx * qy + qw * qz), 1 - 2 * (qy**2 + qz**2))
         
         return yaw, pitch, roll
+        
 
 if __name__ == "__main__":
     tracker = RobotLocationOptitrack()

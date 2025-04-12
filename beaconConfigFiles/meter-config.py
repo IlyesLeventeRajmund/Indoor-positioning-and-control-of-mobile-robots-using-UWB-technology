@@ -13,7 +13,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-TARGET_DEVICE = "C3:F0:97:50:8B:EA"
+TARGET_DEVICE = "DA-53-A2-B5-96-75"
 
 
 rssi_values = []

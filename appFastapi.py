@@ -21,6 +21,9 @@ class BeaconData(BaseModel):
 
 class OptiTrackData(BaseModel):
     data: str
+
+class OptiTrackMarkerData(BaseModel):
+    data: str
     
 class SpeedInput(BaseModel):
     speed: float
@@ -49,6 +52,7 @@ class RobotServer:
         self.current_speed = 50
         self.current_distance = None
         self.optitrack_data = None
+        self.optitrack_marker_data = None
         self.device_positions = {}
         
         # Configure CORS
@@ -65,6 +69,17 @@ class RobotServer:
         
     def _setup_routes(self):
         # Optitrack data routes
+        @self.app.post("/Optitracking_marker_data")
+        async def receive_Optitracking_marker_data(data: OptiTrackMarkerData):
+            if not data.data:
+                raise HTTPException(status_code=400, detail="Invalid data")
+            self.optitrack_marker_data = data.data
+            return {"status": "success", "Opti Location": self.optitrack_marker_data}
+        
+        @self.app.get("/Optitracking_marker_data_forward")
+        async def get_Optitracking_marker_data():
+            return {"Opti_data": self.optitrack_marker_data}
+
         @self.app.post("/Optitracking_data")
         async def receive_Optitracking_data(data: OptiTrackData):
             if not data.data:

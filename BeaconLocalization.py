@@ -41,6 +41,18 @@ class RobotLocationBeacon:
             "DA-53-A2-B5-96-75": (0.45428064465522766, 1.9725672006607056, 0.5662478804588318), #bordo15
             "D6-7E-98-FA-DE-01": (-1.4703487157821655, 1.0286478996276855, 0.7123057246208191),#rozsaszin14es
         }
+
+        self.beacon_parameters = {
+            "DC:C7:ED:2C:04:D1": {"rssi_0": -62, "n": -1.32},
+            "D1:DC:74:F2:C7:05": {"rssi_0": -29, "n": 2.98},
+            "D0:FB:A6:16:7D:AC": {"rssi_0": -25, "n": 3.98},
+            "C3:F0:97:50:8B:EA": {"rssi_0": -75, "n": 2.32},
+            "EC:7F:50:BE:D2:D1": {"rssi_0": -33, "n": 2.32},
+            "C0-0B-BD-29-25-9C": {"rssi_0": -0, "n": 0},
+            "DA-53-A2-B5-96-75": {"rssi_0": -0, "n": 0},
+            "D6-7E-98-FA-DE-01": {"rssi_0": -0, "n": 0},
+        }
+
         
         # Load target devices
         self.TARGET_DEVICES = self.load_target_devices("eszkozok.txt")
@@ -55,6 +67,17 @@ class RobotLocationBeacon:
         """Get current robot coordinates with thread safety"""
         with self.position_lock:
             return self.x, self.y
+
+    def get_all_beacon_distances(self):
+        beacon_data = {}
+
+        for mac, rssi_list in self.rssi_data.items():
+            if rssi_list:
+                rssi = rssi_list[-1]
+                distance  = self.estimate_distance(rssi,self.beacon_parameters[mac]["rssi_0"],self.beacon_parameters[mac]["n"])
+                beacon_data[mac] = {'rssi': rssi, 'distance': distance}
+
+        return beacon_data
 
     def load_target_devices(self, file_path: str):
         """Load target devices from a file"""
@@ -72,9 +95,9 @@ class RobotLocationBeacon:
             logger.error(f"Error loading target devices: {e}")
             return {}
 
-    def estimate_distance(self, rssi, rssi_0=-77.5, path_loss_exponent=3):
-        """Estimate distance based on RSSI value"""
+    def estimate_distance(self, rssi, rssi_0, path_loss_exponent):
         return 10 ** ((rssi_0 - rssi) / (10 * path_loss_exponent))
+
 
     def trilateration(self, known_positions, distances):
         """Calculate position using trilateration"""
@@ -163,7 +186,7 @@ class RobotLocationBeacon:
         for dev in self.complete_devices: 
             avg_rssi = self.calculate_average_rssi(dev)
             if avg_rssi is not None:
-                distances[dev] = self.estimate_distance(avg_rssi)
+                distances[dev] = self.estimate_distance(avg_rssi,self.beacon_parameters[dev]["rssi_0"],self.beacon_parameters[dev]["n"])
                 positions.append(self.device_positions[dev][:2])    
 
         if method == 'LSM' and device_count == 4:
