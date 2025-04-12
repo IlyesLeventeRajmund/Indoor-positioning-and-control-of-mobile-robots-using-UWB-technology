@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+requests
+scipy
+numpy
+bleak
+RPi.GPIO
