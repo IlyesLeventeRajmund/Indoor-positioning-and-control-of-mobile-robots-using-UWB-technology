@@ -110,24 +110,38 @@ def main():
         [L2, -L1],  # Jobb hátsó kerék
     ])
 
+    def quaternion_multiply(q1, q2):
+        w1, x1, y1, z1 = q1
+        w2, x2, y2, z2 = q2
+        return np.array([
+            w1*w2 - x1*x2 - y1*y2 - z1*z2,
+            w1*x2 + x1*w2 + y1*z2 - z1*y2,
+            w1*y2 - x1*z2 + y1*w2 + z1*x2,
+            w1*z2 + x1*y2 - y1*x2 + z1*w2
+        ])
+
+    def quaternion_conjugate(q):
+        w, x, y, z = q
+        return np.array([w, -x, -y, -z])
+
+    def rotate_vector(v, q):
+        v_quat = np.array([0, *v])
+        q_conj = quaternion_conjugate(q)
+        return quaternion_multiply(quaternion_multiply(q, v_quat), q_conj)[1:]
 
     def wheel_velocity_transform(vx, vy, w):
+        
         wheel_velocities = np.array([
             
+            #(1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
+            #(1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
+            #(1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
+            #(1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
+
             (1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
-            (1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
-            (1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
+            (1/R) * (-vx + vy + (L1+L2) * w),  # Jobb első kerék
+            (1/R) * (-vx + vy - (L1+L2) * w),  # Bal hátsó kerék
             (1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
-
-            #(1/R) * (-vx - vy - (L1+L2) * w),  # Jobb hátsó kerék
-            #(1/R) * (-vx - vy - (L1+L2) * w),  # Jobb első kerék
-            #(1/R) * (-vx - vy + (L1+L2) * w),  # Bal hátsó kerék
-            #(1/R) * (-vx - vy + (L1+L2) * w),  # Bal első kerék
-
-            #(1/R) * (+vx + vy - (L1+L2) * w),  # Jobb hátsó kerék
-            #(1/R) * (-vx + vy - (L1+L2) * w),  # Jobb első kerék
-            #(1/R) * (-vx + vy + (L1+L2) * w),  # Bal hátsó kerék
-            #(1/R) * (+vx + vy + (L1+L2) * w),  # Bal első kerék
 
         ])
         print("vx:", vx)
@@ -139,13 +153,26 @@ def main():
         error_y = desired_pose[1] - current_pose[1]
         error_theta = desired_teta - current_teta
         
-        vx_world = Kp * error_x
-        vy_world = Kp * error_y
+        vx_world = 1# Kp * error_x
+        vy_world = 0#Kp * error_y
         w = 0#Kd * error_theta
 
-        vx= math.cos(current_teta)*vx_world +math.sin(current_teta)*vy_world
-        vy = -math.sin(current_teta)*vx_world + math.cos(current_teta)*vy_world
+        q = OptiTracker.get_quaternion()
+        v = [vx_world, 0, vy_world]
+        v_robot = rotate_vector(v,q)
+        v_robot = -v_robot  #!!!!!!!!!!
+        print("quaternion:",q)
+        print("v_robot:",v_robot)
+
+        #vx= math.cos(current_teta)*vx_world +math.sin(current_teta)*vy_world
+        #vy = -math.sin(current_teta)*vx_world + math.cos(current_teta)*vy_world
         
+        vx = v_robot[0] # velocity rotated to robot coordinate system
+        vy = v_robot[2] 
+
+        vx = 30
+        vy = 0
+
         #print("error",error_x,error_y,error_theta)
         print("szog",current_teta)
         #print("elvart",desired_pose[0])
@@ -156,7 +183,7 @@ def main():
     def automat_control(Pc, Pr, Tc, Tr):
         vx, vy, w = p_control(Pc, Pr, Tc, Tr)
 
-        wheel_speeds = wheel_velocity_transform(vy, vx, w)
+        wheel_speeds = wheel_velocity_transform(vx, vy, w)
         duty_start = 20
         for i, pwm_forward, pwm_backward in zip(range(4), [pwm[0], pwm[1], pwm[2], pwm[3]], [pwm[4], pwm[5], pwm[6], pwm[7]]):
             if wheel_speeds[i] > 0:
@@ -213,7 +240,7 @@ def main():
         return math.sqrt((pos2[0] - pos1[0])**2 + (pos2[1] - pos1[1])**2)
 
     def log_beacon_data(beacon_data, optitrack_position, beacon_positions):
-        target_macs = ["D1:DC:74:F2:C7:05", "D0:FB:A6:16:7D:AC", "EC:7F:50:BE:D2:D1"]
+        target_macs = ["FC:CC:D6:C3:D1:4A", "CF:C9:25:A0:81:53", "E0:68:8A:9D:06:A2"]
 
         log_entry = {
             "timestamp": datetime.now().isoformat(),

@@ -30,6 +30,9 @@ class RobotLocationOptitrack:
         # Rigid body data
         self.rigid_body_data = None
 
+    def get_quaternion(self):
+        return self.q
+
     def update_position(self):
         try:
             response_rigid_body = requests.get("http://10.42.0.1:5001/Optitracking_data_forward")
