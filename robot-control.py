@@ -99,7 +99,7 @@ def main():
     L2 = 0.07
     R = 0.03  # Radius of the wheels (meters)
     Kp = 1.5  # Proportional gain for velocity control
-    Kd = 1  # Derivative gain for velocity control
+    Kd = 5  # Derivative gain for velocity control
 
     Pr = (1, 1)
 
@@ -130,17 +130,11 @@ def main():
         return quaternion_multiply(quaternion_multiply(q, v_quat), q_conj)[1:]
 
     def wheel_velocity_transform(vx, vy, w):
-        
         wheel_velocities = np.array([
             
-            #(1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
-            #(1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
-            #(1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
-            #(1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
-
             (1/R) * (vx + vy + (L1+L2) * w),  # Jobb hátsó kerék
-            (1/R) * (-vx + vy + (L1+L2) * w),  # Jobb első kerék
-            (1/R) * (-vx + vy - (L1+L2) * w),  # Bal hátsó kerék
+            (1/R) * (vx - vy + (L1+L2) * w),  # Jobb első kerék
+            (1/R) * (vx - vy - (L1+L2) * w),  # Bal hátsó kerék
             (1/R) * (vx + vy - (L1+L2) * w),  # Bal első kerék
 
         ])
@@ -153,9 +147,9 @@ def main():
         error_y = desired_pose[1] - current_pose[1]
         error_theta = desired_teta - current_teta
         
-        vx_world = 1# Kp * error_x
-        vy_world = 0#Kp * error_y
-        w = 0#Kd * error_theta
+        vx_world = Kp * error_x
+        vy_world = Kp * error_y
+        w = Kd * error_theta
 
         q = OptiTracker.get_quaternion()
         v = [vx_world, 0, vy_world]
@@ -169,9 +163,6 @@ def main():
         
         vx = v_robot[0] # velocity rotated to robot coordinate system
         vy = v_robot[2] 
-
-        vx = 30
-        vy = 0
 
         #print("error",error_x,error_y,error_theta)
         print("szog",current_teta)
@@ -240,7 +231,7 @@ def main():
         return math.sqrt((pos2[0] - pos1[0])**2 + (pos2[1] - pos1[1])**2)
 
     def log_beacon_data(beacon_data, optitrack_position, beacon_positions):
-        target_macs = ["FC:CC:D6:C3:D1:4A", "CF:C9:25:A0:81:53", "E0:68:8A:9D:06:A2"]
+        target_macs = ["DC:C7:ED:2C:04:D1"]
 
         log_entry = {
             "timestamp": datetime.now().isoformat(),
@@ -319,8 +310,8 @@ def main():
 
             print(f"DEBUG - Po: {Po}, Pb: {Pb}")
             Beacon_data = BeaconTracker.get_all_beacon_distances()
-            print("Beacon adatok:",Beacon_data)
-            log_beacon_data(Beacon_data, Po, beacon_positions)
+            #print("Beacon adatok:",Beacon_data)
+            #log_beacon_data(Beacon_data, Po, beacon_positions)
 
             # Update the server with the position data
             if Po[0] is not None and Po[1] is not None:
@@ -343,7 +334,7 @@ def main():
                 log_file.write("\n")
             
             measure_mode = "Optitrack"
-            manual_mode = True
+            manual_mode = False
 
             if measure_mode == 'Beacon':
                 Pc = Pb
@@ -354,7 +345,7 @@ def main():
             #teszt = OptiTracker.get_orientation()
             #print("orientaciok:",teszt)
             #print("Tc",Tc)
-            Tr = math.atan2(Pr[1] - Pc[1], Pr[0] - Pc[0])
+            Tr = 0 # math.atan2(Pr[1] - Pc[1], Pr[0] - Pc[0])
 
             #print("Tr",Tr)
             # Get direction and speed directly from the server instance
@@ -376,7 +367,7 @@ def main():
                         Pr = (0,0) #circle_path[count]
                         count = (count + 1) % len(circle_path)
                         automat_control(Pc, Pr, Tc, Tr)
-                        
+                        print("circle")
                     elif direction == 'square':
                         if not square_path:
                             square_path = shapeGenerator('square', 1, 12)

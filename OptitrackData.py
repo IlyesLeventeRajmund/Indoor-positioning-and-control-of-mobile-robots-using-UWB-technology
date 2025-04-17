@@ -162,5 +162,5 @@ if __name__ == "__main__":
         x, z = tracker.get_first_marker_coordinates()
         print(f"2D position: ({x}, {z})")
         yaw, pitch, roll = tracker.get_orientation()
-        print(f"Orientation (yaw, pitch, roll): ({yaw}, {pitch}, {roll})")
+        #print(f"Orientation (yaw, pitch, roll): ({yaw}, {pitch}, {roll})")
         time.sleep(1)
