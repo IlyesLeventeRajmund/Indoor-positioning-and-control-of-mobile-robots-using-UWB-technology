@@ -23,8 +23,8 @@ class RobotLocationBeacon:
         self.position_lock = threading.Lock()
         self.tracking_thread = None
         self.rssi_data = {}
-        self.SAMPLE_SIZE = 3
-        self.TIME_LIMIT = 25
+        self.SAMPLE_SIZE = 2
+        self.TIME_LIMIT = 5
         self.complete_devices = set()
         self.start_time = None
         self.method = 'Trilateration'
