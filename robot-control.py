@@ -98,8 +98,8 @@ def main():
     L1 = 0.06  # Distance between the center and the wheels (meters)
     L2 = 0.07
     R = 0.03  # Radius of the wheels (meters)
-    Kp = 1.5  # Proportional gain for velocity control
-    Kd = 5  # Derivative gain for velocity control
+    Kp = 1.9  # Proportional gain for velocity control
+    Kd = 0  # Derivative gain for velocity control
 
     Pr = (1, 1)
 
@@ -146,7 +146,7 @@ def main():
         error_x = desired_pose[0] - current_pose[0]
         error_y = desired_pose[1] - current_pose[1]
         error_theta = desired_teta - current_teta
-        
+
         vx_world = Kp * error_x
         vy_world = Kp * error_y
         w = Kd * error_theta
@@ -175,7 +175,7 @@ def main():
         vx, vy, w = p_control(Pc, Pr, Tc, Tr)
 
         wheel_speeds = wheel_velocity_transform(vx, vy, w)
-        duty_start = 20
+        duty_start = 0
         for i, pwm_forward, pwm_backward in zip(range(4), [pwm[0], pwm[1], pwm[2], pwm[3]], [pwm[4], pwm[5], pwm[6], pwm[7]]):
             if wheel_speeds[i] > 0:
                 duty = max(0, min(100, abs(wheel_speeds[i]+duty_start)))
@@ -184,7 +184,7 @@ def main():
                 pwm_backward.ChangeDutyCycle(duty)
                 
             else:
-                duty = max(0, min(100, abs(wheel_speeds[i]+duty_start)))
+                duty = max(0, min(100, abs(wheel_speeds[i]+1.2*duty_start)))
                 
                 pwm_forward.ChangeDutyCycle(duty)
                 pwm_backward.ChangeDutyCycle(0)
@@ -334,7 +334,7 @@ def main():
                 log_file.write("\n")
             
             measure_mode = "Optitrack"
-            manual_mode = False
+            manual_mode = True
 
             if measure_mode == 'Beacon':
                 Pc = Pb
