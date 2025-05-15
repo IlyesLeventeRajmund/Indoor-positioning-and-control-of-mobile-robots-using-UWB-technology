@@ -2,7 +2,7 @@ import json
 import matplotlib.pyplot as plt
 
 # JSON fájl beolvasása
-file_path = "measurements/fourth_measurement_line_log.json"
+file_path = "measurements/m9.json"
 
 data = []
 with open(file_path, "r") as f:
@@ -14,6 +14,12 @@ timestamps = [float(entry["timestamp"]) for entry in data]
 Po_x, Po_y = zip(*[entry["Po"] for entry in data])
 Pb_x, Pb_y = zip(*[entry["Pb"] for entry in data])
 
+# Közös határok kiszámítása
+x_min = min(min(Po_x), min(Pb_x)) - 1
+x_max = max(max(Po_x), max(Pb_x)) + 1
+y_min = min(min(Po_y), min(Pb_y)) - 1
+y_max = max(max(Po_y), max(Pb_y)) + 1
+
 # 1. ábra - Po pontok
 plt.figure(figsize=(6, 6))
 plt.plot(Po_x, Po_y, 'bx-', label="Po pontok")
@@ -22,7 +28,9 @@ plt.ylabel("Y koordináta")
 plt.title("Po pontok ábrázolása")
 plt.grid()
 plt.legend()
-plt.savefig("plot_1_Po.png", dpi=300, bbox_inches="tight")
+plt.xlim(x_min, x_max)
+plt.ylim(y_min, y_max)
+plt.savefig("plot_m9_1_Po.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 2. ábra - Pb pontok
@@ -33,8 +41,11 @@ plt.ylabel("Y koordináta")
 plt.title("Pb pontok ábrázolása")
 plt.grid()
 plt.legend()
-plt.savefig("plot_2_Pb.png", dpi=300, bbox_inches="tight")
+plt.xlim(x_min, x_max)
+plt.ylim(y_min, y_max)
+plt.savefig("plot_m9_2_Pb.png", dpi=300, bbox_inches="tight")
 plt.close()
+
 
 # 3. ábra - Xo idő függvényében
 plt.figure(figsize=(8, 4))
@@ -44,7 +55,7 @@ plt.ylabel("Xo koordináta")
 plt.title("Xo idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_3_Xo_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m9_3_Xo_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 4. ábra - Yo idő függvényében
@@ -55,7 +66,7 @@ plt.ylabel("Yo koordináta")
 plt.title("Yo idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_4_Yo_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m9_4_Yo_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 5. ábra - Xb idő függvényében
@@ -66,7 +77,7 @@ plt.ylabel("Xb koordináta")
 plt.title("Xb idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_5_Xb_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m9_5_Xb_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 6. ábra - Yb idő függvényében
@@ -77,5 +88,5 @@ plt.ylabel("Yb koordináta")
 plt.title("Yb idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_6_Yb_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m9_6_Yb_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
