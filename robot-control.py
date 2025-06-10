@@ -100,6 +100,7 @@ def main():
     R = 0.03  # Radius of the wheels (meters)
     Kp = 1.9  # Proportional gain for velocity control
     Kd = 0  # Derivative gain for velocity control
+    max_pwm = 100
 
     Pr = (1, 1)
 
@@ -178,13 +179,13 @@ def main():
         duty_start = 0
         for i, pwm_forward, pwm_backward in zip(range(4), [pwm[0], pwm[1], pwm[2], pwm[3]], [pwm[4], pwm[5], pwm[6], pwm[7]]):
             if wheel_speeds[i] > 0:
-                duty = max(0, min(100, abs(wheel_speeds[i]+duty_start)))
+                duty = max(0, min(max_pwm, abs(wheel_speeds[i]+duty_start)))
                 
                 pwm_forward.ChangeDutyCycle(0)
                 pwm_backward.ChangeDutyCycle(duty)
                 
             else:
-                duty = max(0, min(100, abs(wheel_speeds[i]+1.2*duty_start)))
+                duty = max(0, min(max_pwm, abs(wheel_speeds[i]+1.2*duty_start)))
                 
                 pwm_forward.ChangeDutyCycle(duty)
                 pwm_backward.ChangeDutyCycle(0)
@@ -231,7 +232,7 @@ def main():
         return math.sqrt((pos2[0] - pos1[0])**2 + (pos2[1] - pos1[1])**2)
 
     def log_beacon_data(beacon_data, optitrack_position, beacon_positions):
-        target_macs = ["DC:C7:ED:2C:04:D1"]
+        target_macs = ["EC:7F:50:BE:D2:D1"]
 
         log_entry = {
             "timestamp": datetime.now().isoformat(),
@@ -311,7 +312,7 @@ def main():
             print(f"DEBUG - Po: {Po}, Pb: {Pb}")
             Beacon_data = BeaconTracker.get_all_beacon_distances()
             #print("Beacon adatok:",Beacon_data)
-            #log_beacon_data(Beacon_data, Po, beacon_positions)
+            log_beacon_data(Beacon_data, Po, beacon_positions)
 
             # Update the server with the position data
             if Po[0] is not None and Po[1] is not None:
@@ -334,7 +335,7 @@ def main():
                 log_file.write("\n")
             
             measure_mode = "Optitrack"
-            manual_mode = True
+            control_mode = robot_server.get_control_mode()
 
             if measure_mode == 'Beacon':
                 Pc = Pb
@@ -352,7 +353,7 @@ def main():
             speed, direction = direction_call()
 
             if direction:
-                if manual_mode:
+                if control_mode:
                     ManualModeData.Manual_Controling(pwm, direction, speed)
                 else:
                     if direction == 'stop':

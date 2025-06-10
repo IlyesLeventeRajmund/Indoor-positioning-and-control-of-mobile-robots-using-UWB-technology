@@ -34,6 +34,9 @@ class MoveInput(BaseModel):
 class DistanceInput(BaseModel):
     distance: float
 
+class ControlMode(BaseModel):
+    manual: bool
+
 class RobotServer:
     def __init__(self, host="0.0.0.0", port=5001):
 
@@ -54,7 +57,8 @@ class RobotServer:
         self.optitrack_data = None
         self.optitrack_marker_data = None
         self.device_positions = {}
-        
+        self.control_mode = True
+
         # Configure CORS
         self.app.add_middleware(
             CORSMiddleware,
@@ -204,6 +208,16 @@ class RobotServer:
                 return {"distance": self.current_distance}
             else:
                 raise HTTPException(status_code=400, detail="No distance recorded")
+        
+        # Control mode
+        @self.app.post("/controll_mode")
+        async def set_control_mode(data: ControlMode):
+            self.control_mode = data.manual
+            return {"status": "success", "manual": self.control_mode}
+
+        @self.app.get("/controll_mode")
+        async def get_control_mode():
+            return {"manual": self.control_mode}
     
     def start(self):
         """Start the server in a separate thread"""
@@ -264,3 +278,6 @@ class RobotServer:
     
     def get_beacon_positions(self):
         return self.device_positions
+    
+    def get_control_mode(self):
+        return self.control_mode

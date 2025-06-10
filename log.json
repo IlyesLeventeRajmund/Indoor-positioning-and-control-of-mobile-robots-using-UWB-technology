@@ -1,572 +1,1043 @@
-{"timestamp": "2025-04-15T15:11:49.958922", "beacons": []}
-{"timestamp": "2025-04-15T15:11:51.074794", "beacons": []}
-{"timestamp": "2025-04-15T15:11:52.184636", "beacons": []}
-{"timestamp": "2025-04-15T15:11:53.291453", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 1.0009626680720227}]}
-{"timestamp": "2025-04-15T15:11:54.398714", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -78, "calculated_distance": 0.061359072734131756, "distance_from_optitrack": 1.0009626680720227}]}
-{"timestamp": "2025-04-15T15:11:55.504686", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -78, "calculated_distance": 0.061359072734131756, "distance_from_optitrack": 1.0009626680720227}]}
-{"timestamp": "2025-04-15T15:11:56.609312", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -78, "calculated_distance": 0.061359072734131756, "distance_from_optitrack": 1.0044500728194252}]}
-{"timestamp": "2025-04-15T15:11:57.715052", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -78, "calculated_distance": 0.061359072734131756, "distance_from_optitrack": 1.0044500728194252}]}
-{"timestamp": "2025-04-15T15:11:58.818452", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -78, "calculated_distance": 0.061359072734131756, "distance_from_optitrack": 1.0044500728194252}]}
-{"timestamp": "2025-04-15T15:11:59.923321", "beacons": []}
-{"timestamp": "2025-04-15T15:12:01.031439", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -76, "calculated_distance": 0.08697490026177834, "distance_from_optitrack": 1.1813562311287484}]}
-{"timestamp": "2025-04-15T15:12:02.139259", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -76, "calculated_distance": 0.08697490026177834, "distance_from_optitrack": 1.5517050305714957}]}
-{"timestamp": "2025-04-15T15:12:03.243730", "beacons": []}
-{"timestamp": "2025-04-15T15:12:04.359319", "beacons": []}
-{"timestamp": "2025-04-15T15:12:05.464708", "beacons": []}
-{"timestamp": "2025-04-15T15:12:06.570834", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 0.9851490144972909}]}
-{"timestamp": "2025-04-15T15:12:07.697350", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 0.9848926149782308}]}
-{"timestamp": "2025-04-15T15:12:08.801781", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 0.9848926149782308}]}
-{"timestamp": "2025-04-15T15:12:09.907348", "beacons": []}
-{"timestamp": "2025-04-15T15:12:11.017449", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 0.9848926149782308}]}
-{"timestamp": "2025-04-15T15:12:12.125370", "beacons": []}
-{"timestamp": "2025-04-15T15:12:13.229950", "beacons": []}
-{"timestamp": "2025-04-15T15:12:14.341722", "beacons": []}
-{"timestamp": "2025-04-15T15:12:15.451731", "beacons": []}
-{"timestamp": "2025-04-15T15:12:16.560493", "beacons": []}
-{"timestamp": "2025-04-15T15:12:17.666428", "beacons": []}
-{"timestamp": "2025-04-15T15:12:18.772749", "beacons": []}
-{"timestamp": "2025-04-15T15:12:19.876244", "beacons": []}
-{"timestamp": "2025-04-15T15:12:20.982281", "beacons": []}
-{"timestamp": "2025-04-15T15:12:22.087289", "beacons": []}
-{"timestamp": "2025-04-15T15:12:23.193710", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0146843279194095}]}
-{"timestamp": "2025-04-15T15:12:24.298897", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0146843279194095}]}
-{"timestamp": "2025-04-15T15:12:25.402671", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0146843279194095}]}
-{"timestamp": "2025-04-15T15:12:26.515186", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 2.392147081462638, "distance_from_optitrack": 1.0146843279194095}]}
-{"timestamp": "2025-04-15T15:12:27.620831", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 2.392147081462638, "distance_from_optitrack": 1.0146843279194095}]}
-{"timestamp": "2025-04-15T15:12:28.730570", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 2.392147081462638, "distance_from_optitrack": 1.0146843279194095}]}
-{"timestamp": "2025-04-15T15:12:29.837313", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 2.392147081462638, "distance_from_optitrack": 1.004684328240556}]}
-{"timestamp": "2025-04-15T15:12:30.940514", "beacons": []}
-{"timestamp": "2025-04-15T15:12:32.044808", "beacons": []}
-{"timestamp": "2025-04-15T15:12:33.151449", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:34.255862", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:35.360834", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:36.466811", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:37.570827", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:38.676723", "beacons": []}
-{"timestamp": "2025-04-15T15:12:39.782778", "beacons": []}
-{"timestamp": "2025-04-15T15:12:40.894758", "beacons": []}
-{"timestamp": "2025-04-15T15:12:41.999949", "beacons": []}
-{"timestamp": "2025-04-15T15:12:43.106383", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:44.216763", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:45.322009", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:46.428109", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:47.532189", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:48.642588", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:49.755132", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:50.862349", "beacons": []}
-{"timestamp": "2025-04-15T15:12:51.973656", "beacons": []}
-{"timestamp": "2025-04-15T15:12:53.080645", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 0.41803449618514543, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:54.190239", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 0.41803449618514543, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:55.298348", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 0.41803449618514543, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:56.404383", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 0.41803449618514543, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:57.509611", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:58.616322", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:12:59.722551", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:00.842244", "beacons": []}
-{"timestamp": "2025-04-15T15:13:01.948805", "beacons": []}
-{"timestamp": "2025-04-15T15:13:03.055814", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:04.162125", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:05.275049", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:06.384957", "beacons": []}
-{"timestamp": "2025-04-15T15:13:07.493205", "beacons": []}
-{"timestamp": "2025-04-15T15:13:08.598569", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:09.707486", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:10.812102", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:11.919146", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:13.028277", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:14.132892", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:15.242443", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:16.348609", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:17.458134", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:18.563839", "beacons": []}
-{"timestamp": "2025-04-15T15:13:19.670946", "beacons": []}
-{"timestamp": "2025-04-15T15:13:20.777140", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:21.882471", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:22.987465", "beacons": []}
-{"timestamp": "2025-04-15T15:13:24.093649", "beacons": []}
-{"timestamp": "2025-04-15T15:13:25.198970", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:26.306149", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:27.440914", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -69, "calculated_distance": 0.2949150729647068, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:28.545755", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -69, "calculated_distance": 0.2949150729647068, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:29.666990", "beacons": []}
-{"timestamp": "2025-04-15T15:13:30.773103", "beacons": []}
-{"timestamp": "2025-04-15T15:13:31.880835", "beacons": []}
-{"timestamp": "2025-04-15T15:13:32.986752", "beacons": []}
-{"timestamp": "2025-04-15T15:13:34.092954", "beacons": []}
-{"timestamp": "2025-04-15T15:13:35.198602", "beacons": []}
-{"timestamp": "2025-04-15T15:13:36.305334", "beacons": []}
-{"timestamp": "2025-04-15T15:13:37.424928", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:38.532573", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:39.636767", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:40.741889", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:41.855500", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:42.970657", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:44.076305", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:45.181081", "beacons": []}
-{"timestamp": "2025-04-15T15:13:46.286888", "beacons": []}
-{"timestamp": "2025-04-15T15:13:47.392395", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:48.498032", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:49.602985", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:50.713796", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:51.825591", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:52.935832", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:13:54.062860", "beacons": []}
-{"timestamp": "2025-04-15T15:13:55.168636", "beacons": []}
-{"timestamp": "2025-04-15T15:13:56.278345", "beacons": []}
-{"timestamp": "2025-04-15T15:13:57.386557", "beacons": []}
-{"timestamp": "2025-04-15T15:13:58.601009", "beacons": []}
-{"timestamp": "2025-04-15T15:13:59.705366", "beacons": []}
-{"timestamp": "2025-04-15T15:14:00.810902", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:01.918417", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:03.022596", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:04.126715", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:05.232708", "beacons": []}
-{"timestamp": "2025-04-15T15:14:06.344680", "beacons": []}
-{"timestamp": "2025-04-15T15:14:07.450419", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:08.555199", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:09.660628", "beacons": []}
-{"timestamp": "2025-04-15T15:14:10.766444", "beacons": []}
-{"timestamp": "2025-04-15T15:14:11.872915", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:12.983046", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:14.088944", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:15.194839", "beacons": []}
-{"timestamp": "2025-04-15T15:14:16.301512", "beacons": []}
-{"timestamp": "2025-04-15T15:14:17.407644", "beacons": []}
-{"timestamp": "2025-04-15T15:14:18.513711", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:19.620228", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:20.733951", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:21.844901", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:22.950866", "beacons": []}
-{"timestamp": "2025-04-15T15:14:24.056460", "beacons": []}
-{"timestamp": "2025-04-15T15:14:25.164252", "beacons": []}
-{"timestamp": "2025-04-15T15:14:26.271235", "beacons": []}
-{"timestamp": "2025-04-15T15:14:27.448024", "beacons": []}
-{"timestamp": "2025-04-15T15:14:28.553329", "beacons": []}
-{"timestamp": "2025-04-15T15:14:29.660171", "beacons": []}
-{"timestamp": "2025-04-15T15:14:30.772064", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -76, "calculated_distance": 0.08697490026177834, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:31.878387", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -76, "calculated_distance": 0.08697490026177834, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:32.992949", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:34.099424", "beacons": []}
-{"timestamp": "2025-04-15T15:14:35.205149", "beacons": []}
-{"timestamp": "2025-04-15T15:14:36.310417", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:37.416085", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:38.520660", "beacons": []}
-{"timestamp": "2025-04-15T15:14:39.624944", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:40.728371", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:41.835538", "beacons": []}
-{"timestamp": "2025-04-15T15:14:42.941435", "beacons": []}
-{"timestamp": "2025-04-15T15:14:44.049746", "beacons": []}
-{"timestamp": "2025-04-15T15:14:45.161512", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 0.41803449618514543, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:14:46.267086", "beacons": []}
-{"timestamp": "2025-04-15T15:14:47.372462", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.1653622197052076}]}
-{"timestamp": "2025-04-15T15:14:48.478213", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.604713879939663}]}
-{"timestamp": "2025-04-15T15:14:49.582275", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.7347116628826604}]}
-{"timestamp": "2025-04-15T15:14:50.687041", "beacons": []}
-{"timestamp": "2025-04-15T15:14:51.792874", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.734684314527416}]}
-{"timestamp": "2025-04-15T15:14:52.903541", "beacons": []}
-{"timestamp": "2025-04-15T15:14:54.009327", "beacons": []}
-{"timestamp": "2025-04-15T15:14:55.132631", "beacons": []}
-{"timestamp": "2025-04-15T15:14:56.237915", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -63, "calculated_distance": 0.8399287059458466, "distance_from_optitrack": 1.734684314527416}]}
-{"timestamp": "2025-04-15T15:14:57.351430", "beacons": []}
-{"timestamp": "2025-04-15T15:14:58.459536", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.734684314527416}]}
-{"timestamp": "2025-04-15T15:14:59.575559", "beacons": []}
-{"timestamp": "2025-04-15T15:15:00.680900", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.734684314527416}]}
-{"timestamp": "2025-04-15T15:15:01.788328", "beacons": []}
-{"timestamp": "2025-04-15T15:15:02.894622", "beacons": []}
-{"timestamp": "2025-04-15T15:15:04.000129", "beacons": []}
-{"timestamp": "2025-04-15T15:15:05.106879", "beacons": []}
-{"timestamp": "2025-04-15T15:15:06.211989", "beacons": []}
-{"timestamp": "2025-04-15T15:15:07.318301", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.734684314527416}]}
-{"timestamp": "2025-04-15T15:15:08.425536", "beacons": []}
-{"timestamp": "2025-04-15T15:15:09.536643", "beacons": []}
-{"timestamp": "2025-04-15T15:15:10.640246", "beacons": []}
-{"timestamp": "2025-04-15T15:15:11.747643", "beacons": []}
-{"timestamp": "2025-04-15T15:15:12.931515", "beacons": []}
-{"timestamp": "2025-04-15T15:15:14.037409", "beacons": []}
-{"timestamp": "2025-04-15T15:15:15.143424", "beacons": []}
-{"timestamp": "2025-04-15T15:15:16.251065", "beacons": []}
-{"timestamp": "2025-04-15T15:15:17.359688", "beacons": []}
-{"timestamp": "2025-04-15T15:15:18.466710", "beacons": []}
-{"timestamp": "2025-04-15T15:15:19.571009", "beacons": []}
-{"timestamp": "2025-04-15T15:15:20.678258", "beacons": []}
-{"timestamp": "2025-04-15T15:15:21.785062", "beacons": []}
-{"timestamp": "2025-04-15T15:15:22.893170", "beacons": []}
-{"timestamp": "2025-04-15T15:15:24.009451", "beacons": []}
-{"timestamp": "2025-04-15T15:15:25.115487", "beacons": []}
-{"timestamp": "2025-04-15T15:15:26.228004", "beacons": []}
-{"timestamp": "2025-04-15T15:15:27.353021", "beacons": []}
-{"timestamp": "2025-04-15T15:15:28.458112", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:29.563761", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:30.669392", "beacons": []}
-{"timestamp": "2025-04-15T15:15:31.777608", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -76, "calculated_distance": 0.08697490026177834, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:32.884424", "beacons": []}
-{"timestamp": "2025-04-15T15:15:33.990886", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:35.100249", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:36.210887", "beacons": []}
-{"timestamp": "2025-04-15T15:15:37.315798", "beacons": []}
-{"timestamp": "2025-04-15T15:15:38.422349", "beacons": []}
-{"timestamp": "2025-04-15T15:15:39.527909", "beacons": []}
-{"timestamp": "2025-04-15T15:15:40.635432", "beacons": []}
-{"timestamp": "2025-04-15T15:15:41.741303", "beacons": []}
-{"timestamp": "2025-04-15T15:15:42.847229", "beacons": []}
-{"timestamp": "2025-04-15T15:15:43.954115", "beacons": []}
-{"timestamp": "2025-04-15T15:15:45.059738", "beacons": []}
-{"timestamp": "2025-04-15T15:15:46.165166", "beacons": []}
-{"timestamp": "2025-04-15T15:15:47.279311", "beacons": []}
-{"timestamp": "2025-04-15T15:15:48.386581", "beacons": []}
-{"timestamp": "2025-04-15T15:15:49.490658", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:50.595257", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:51.698917", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:52.805496", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:53.909980", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:55.017386", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:56.126491", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:57.231936", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:58.337468", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:15:59.442537", "beacons": []}
-{"timestamp": "2025-04-15T15:16:00.555655", "beacons": []}
-{"timestamp": "2025-04-15T15:16:01.661601", "beacons": []}
-{"timestamp": "2025-04-15T15:16:02.774077", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:03.880087", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:04.992154", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:06.098593", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:07.207776", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:08.313525", "beacons": []}
-{"timestamp": "2025-04-15T15:16:09.419369", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:10.525668", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:11.632257", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:12.738980", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:13.847675", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:14.953299", "beacons": []}
-{"timestamp": "2025-04-15T15:16:16.058903", "beacons": []}
-{"timestamp": "2025-04-15T15:16:17.167997", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:18.274218", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:19.386189", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:20.492306", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:21.597261", "beacons": []}
-{"timestamp": "2025-04-15T15:16:22.702398", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:23.808129", "beacons": []}
-{"timestamp": "2025-04-15T15:16:24.914540", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -75, "calculated_distance": 0.10355033664891311, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:26.032720", "beacons": []}
-{"timestamp": "2025-04-15T15:16:27.137944", "beacons": []}
-{"timestamp": "2025-04-15T15:16:28.245482", "beacons": []}
-{"timestamp": "2025-04-15T15:16:29.352313", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:30.458350", "beacons": []}
-{"timestamp": "2025-04-15T15:16:31.563177", "beacons": []}
-{"timestamp": "2025-04-15T15:16:32.667578", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:33.779780", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:34.884812", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:35.990441", "beacons": []}
-{"timestamp": "2025-04-15T15:16:37.096700", "beacons": []}
-{"timestamp": "2025-04-15T15:16:38.214956", "beacons": []}
-{"timestamp": "2025-04-15T15:16:39.322001", "beacons": []}
-{"timestamp": "2025-04-15T15:16:40.426570", "beacons": []}
-{"timestamp": "2025-04-15T15:16:41.620568", "beacons": []}
-{"timestamp": "2025-04-15T15:16:42.726478", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:43.837258", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:44.941638", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:46.047885", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:47.154052", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:48.260659", "beacons": []}
-{"timestamp": "2025-04-15T15:16:49.366207", "beacons": []}
-{"timestamp": "2025-04-15T15:16:50.478298", "beacons": []}
-{"timestamp": "2025-04-15T15:16:51.587242", "beacons": []}
-{"timestamp": "2025-04-15T15:16:52.692484", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:53.801875", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:54.907114", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:56.013199", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:57.120844", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:58.232464", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:16:59.338470", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:00.452543", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:01.557417", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:02.671436", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:03.776263", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:04.883636", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:05.991381", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:07.101770", "beacons": []}
-{"timestamp": "2025-04-15T15:17:08.207265", "beacons": []}
-{"timestamp": "2025-04-15T15:17:09.312351", "beacons": []}
-{"timestamp": "2025-04-15T15:17:10.417333", "beacons": []}
-{"timestamp": "2025-04-15T15:17:11.523928", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 2.8480358684358014, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:12.629120", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:13.735816", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:14.842894", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:15.950246", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:17.054227", "beacons": []}
-{"timestamp": "2025-04-15T15:17:18.159708", "beacons": []}
-{"timestamp": "2025-04-15T15:17:19.266772", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:20.373311", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:21.479886", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:22.585531", "beacons": []}
-{"timestamp": "2025-04-15T15:17:23.691107", "beacons": []}
-{"timestamp": "2025-04-15T15:17:24.804678", "beacons": []}
-{"timestamp": "2025-04-15T15:17:25.910879", "beacons": []}
-{"timestamp": "2025-04-15T15:17:27.020823", "beacons": []}
-{"timestamp": "2025-04-15T15:17:28.127226", "beacons": []}
-{"timestamp": "2025-04-15T15:17:29.235083", "beacons": []}
-{"timestamp": "2025-04-15T15:17:30.341345", "beacons": []}
-{"timestamp": "2025-04-15T15:17:31.542214", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -65, "calculated_distance": 0.5925530975545678, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:32.647928", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:33.753399", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:34.859465", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:35.967283", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:37.073303", "beacons": []}
-{"timestamp": "2025-04-15T15:17:38.179910", "beacons": []}
-{"timestamp": "2025-04-15T15:17:39.291164", "beacons": []}
-{"timestamp": "2025-04-15T15:17:40.400429", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:41.509835", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:42.615444", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:43.721997", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:44.828760", "beacons": []}
-{"timestamp": "2025-04-15T15:17:45.937623", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -75, "calculated_distance": 0.10355033664891311, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:47.044021", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -75, "calculated_distance": 0.10355033664891311, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:48.148955", "beacons": []}
-{"timestamp": "2025-04-15T15:17:49.254995", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:50.362652", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:51.468631", "beacons": []}
-{"timestamp": "2025-04-15T15:17:52.575819", "beacons": []}
-{"timestamp": "2025-04-15T15:17:53.688603", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:54.797330", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:55.955954", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:17:57.063106", "beacons": []}
-{"timestamp": "2025-04-15T15:17:58.170042", "beacons": []}
-{"timestamp": "2025-04-15T15:17:59.276611", "beacons": []}
-{"timestamp": "2025-04-15T15:18:00.382621", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:01.495974", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 2.8480358684358014, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:02.601789", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 2.8480358684358014, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:03.712914", "beacons": []}
-{"timestamp": "2025-04-15T15:18:04.823523", "beacons": []}
-{"timestamp": "2025-04-15T15:18:05.938587", "beacons": []}
-{"timestamp": "2025-04-15T15:18:07.044119", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:08.148729", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:09.255051", "beacons": []}
-{"timestamp": "2025-04-15T15:18:10.362089", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -64, "calculated_distance": 0.7054802310718644, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:11.470580", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 1.6876124757881477, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:12.575496", "beacons": []}
-{"timestamp": "2025-04-15T15:18:13.681867", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -54, "calculated_distance": 4.037017258596554, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:14.787091", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -53, "calculated_distance": 4.8063808630643905, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:15.893849", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -53, "calculated_distance": 4.8063808630643905, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:17.004660", "beacons": []}
-{"timestamp": "2025-04-15T15:18:18.117618", "beacons": []}
-{"timestamp": "2025-04-15T15:18:19.223910", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:20.337075", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:21.472982", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:22.579163", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:23.684225", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:24.789539", "beacons": []}
-{"timestamp": "2025-04-15T15:18:25.895199", "beacons": []}
-{"timestamp": "2025-04-15T15:18:27.000741", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -61, "calculated_distance": 1.1905772393787835, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:28.107145", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -54, "calculated_distance": 4.037017258596554, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:29.212652", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -54, "calculated_distance": 4.037017258596554, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:30.329484", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:31.436833", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 0.35111917342151316, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:32.543450", "beacons": []}
-{"timestamp": "2025-04-15T15:18:33.648121", "beacons": []}
-{"timestamp": "2025-04-15T15:18:34.754171", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:35.860504", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:36.966393", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:38.072981", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:39.179221", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -62, "calculated_distance": 1.0, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:40.285199", "beacons": []}
-{"timestamp": "2025-04-15T15:18:41.395300", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -69, "calculated_distance": 0.2949150729647068, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:42.503049", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:43.607759", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 1.417474162926805, "distance_from_optitrack": 1.9747830001113695}]}
-{"timestamp": "2025-04-15T15:18:44.714431", "beacons": []}
-{"timestamp": "2025-04-15T15:18:45.818717", "beacons": []}
-{"timestamp": "2025-04-15T15:18:46.931009", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.6749484178355933}]}
-{"timestamp": "2025-04-15T15:18:48.037104", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 1.7523134133447738}]}
-{"timestamp": "2025-04-15T15:18:49.142958", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040038982390371}]}
-{"timestamp": "2025-04-15T15:18:50.249568", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:51.355745", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:52.462107", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:53.567129", "beacons": []}
-{"timestamp": "2025-04-15T15:18:54.676239", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:55.785577", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:56.893734", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:58.000105", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:18:59.106375", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:00.212661", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:01.325425", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:02.430362", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:03.536803", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:04.643302", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:05.822694", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:06.940250", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:08.047242", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:09.159875", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:10.269327", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:11.381773", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:12.486818", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:13.600237", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:14.706360", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:15.811950", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -70, "calculated_distance": 0.24770763559917114, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:16.916643", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:18.022588", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:19.128898", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:20.235032", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:21.340340", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:22.445803", "beacons": []}
-{"timestamp": "2025-04-15T15:19:23.557742", "beacons": []}
-{"timestamp": "2025-04-15T15:19:24.662788", "beacons": []}
-{"timestamp": "2025-04-15T15:19:25.788073", "beacons": []}
-{"timestamp": "2025-04-15T15:19:26.893124", "beacons": []}
-{"timestamp": "2025-04-15T15:19:27.997841", "beacons": []}
-{"timestamp": "2025-04-15T15:19:29.103786", "beacons": []}
-{"timestamp": "2025-04-15T15:19:30.212596", "beacons": []}
-{"timestamp": "2025-04-15T15:19:31.317926", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:32.423554", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:33.529927", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:34.635071", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:35.743296", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:36.853161", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:37.959821", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:39.065485", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -77, "calculated_distance": 0.07305271542664456, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:40.171302", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:41.276719", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:42.389419", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:43.501741", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:44.611621", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:45.717044", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:46.824455", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -80, "calculated_distance": 0.04328761281083059, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:47.931006", "beacons": []}
-{"timestamp": "2025-04-15T15:19:49.037031", "beacons": []}
-{"timestamp": "2025-04-15T15:19:50.142497", "beacons": []}
-{"timestamp": "2025-04-15T15:19:51.253260", "beacons": []}
-{"timestamp": "2025-04-15T15:19:52.365512", "beacons": []}
-{"timestamp": "2025-04-15T15:19:53.473419", "beacons": []}
-{"timestamp": "2025-04-15T15:19:54.578389", "beacons": []}
-{"timestamp": "2025-04-15T15:19:55.689958", "beacons": []}
-{"timestamp": "2025-04-15T15:19:56.795891", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:57.901954", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -75, "calculated_distance": 0.10355033664891311, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:19:59.007200", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -75, "calculated_distance": 0.10355033664891311, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:00.113994", "beacons": []}
-{"timestamp": "2025-04-15T15:20:01.218181", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:02.322840", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:03.428976", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:04.534376", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:05.645648", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 0.17475284000076838, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:06.755548", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:07.875056", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:08.980528", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:10.087469", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:11.194756", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 0.14677992676220697, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:12.300191", "beacons": []}
-{"timestamp": "2025-04-15T15:20:13.405216", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:14.515635", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:15.621377", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:16.751213", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:17.857916", "beacons": []}
-{"timestamp": "2025-04-15T15:20:18.973386", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:20.079704", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 0.2080567538217171, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:21.187351", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:22.296119", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:20:23.402306", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -74, "calculated_distance": 0.12328467394420663, "distance_from_optitrack": 2.040247426751876}]}
-{"timestamp": "2025-04-15T15:21:02.040460", "beacons": []}
-{"timestamp": "2025-04-15T15:21:03.158316", "beacons": []}
-{"timestamp": "2025-04-15T15:21:04.263175", "beacons": []}
-{"timestamp": "2025-04-15T15:21:05.371341", "beacons": []}
-{"timestamp": "2025-04-15T15:21:06.477522", "beacons": []}
-{"timestamp": "2025-04-15T15:21:07.583595", "beacons": []}
-{"timestamp": "2025-04-15T15:21:08.688206", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 1.7834308769319096, "distance_from_optitrack": 1.9157659097952537}]}
-{"timestamp": "2025-04-15T15:21:09.792376", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 1.7834308769319096, "distance_from_optitrack": 1.4103134206643233}]}
-{"timestamp": "2025-04-15T15:21:10.899127", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -60, "calculated_distance": 0.890735463861044, "distance_from_optitrack": 0.9754942699819491}]}
-{"timestamp": "2025-04-15T15:21:12.004445", "beacons": []}
-{"timestamp": "2025-04-15T15:21:13.110857", "beacons": []}
-{"timestamp": "2025-04-15T15:21:14.215531", "beacons": []}
-{"timestamp": "2025-04-15T15:21:15.322200", "beacons": []}
-{"timestamp": "2025-04-15T15:21:16.449780", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 1.414991297434576, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:17.556627", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -69, "calculated_distance": 1.4992684327860457, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:18.662188", "beacons": []}
-{"timestamp": "2025-04-15T15:21:19.826954", "beacons": []}
-{"timestamp": "2025-04-15T15:21:20.935447", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:22.042080", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:23.146528", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:24.251072", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:25.363891", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:26.474099", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 0.9748947518196883}]}
-{"timestamp": "2025-04-15T15:21:27.580939", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.0047366406867537}]}
-{"timestamp": "2025-04-15T15:21:28.687327", "beacons": []}
-{"timestamp": "2025-04-15T15:21:29.823185", "beacons": []}
-{"timestamp": "2025-04-15T15:21:30.930829", "beacons": []}
-{"timestamp": "2025-04-15T15:21:32.038230", "beacons": []}
-{"timestamp": "2025-04-15T15:21:33.145588", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:34.252400", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:35.358247", "beacons": []}
-{"timestamp": "2025-04-15T15:21:36.465207", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:37.572082", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:38.680469", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:39.786476", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:40.891826", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:41.998335", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:43.103837", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:44.208199", "beacons": []}
-{"timestamp": "2025-04-15T15:21:45.317274", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:46.422700", "beacons": []}
-{"timestamp": "2025-04-15T15:21:47.532295", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:48.638036", "beacons": []}
-{"timestamp": "2025-04-15T15:21:49.741746", "beacons": []}
-{"timestamp": "2025-04-15T15:21:50.851958", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 1.3354515629298989, "distance_from_optitrack": 1.0148864570866614}]}
-{"timestamp": "2025-04-15T15:21:51.962130", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -67, "calculated_distance": 1.3354515629298989, "distance_from_optitrack": 1.2847212488521618}]}
-{"timestamp": "2025-04-15T15:21:53.070827", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 0.8406652885618325, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:21:54.179497", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 0.8406652885618325, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:21:55.286340", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 0.8406652885618325, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:21:56.390868", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -59, "calculated_distance": 0.8406652885618325, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:21:57.495600", "beacons": []}
-{"timestamp": "2025-04-15T15:21:58.600930", "beacons": []}
-{"timestamp": "2025-04-15T15:21:59.706618", "beacons": []}
-{"timestamp": "2025-04-15T15:22:00.819347", "beacons": []}
-{"timestamp": "2025-04-15T15:22:01.928991", "beacons": []}
-{"timestamp": "2025-04-15T15:22:03.042918", "beacons": []}
-{"timestamp": "2025-04-15T15:22:04.158542", "beacons": []}
-{"timestamp": "2025-04-15T15:22:05.275206", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 1.414991297434576, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:06.381319", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -68, "calculated_distance": 1.414991297434576, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:07.487076", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:08.591114", "beacons": []}
-{"timestamp": "2025-04-15T15:22:09.701879", "beacons": []}
-{"timestamp": "2025-04-15T15:22:10.900178", "beacons": []}
-{"timestamp": "2025-04-15T15:22:12.006195", "beacons": []}
-{"timestamp": "2025-04-15T15:22:13.110948", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -76, "calculated_distance": 2.2478058335487257, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:14.217092", "beacons": []}
-{"timestamp": "2025-04-15T15:22:15.323326", "beacons": []}
-{"timestamp": "2025-04-15T15:22:16.435110", "beacons": []}
-{"timestamp": "2025-04-15T15:22:17.541671", "beacons": []}
-{"timestamp": "2025-04-15T15:22:18.648626", "beacons": []}
-{"timestamp": "2025-04-15T15:22:19.759213", "beacons": []}
-{"timestamp": "2025-04-15T15:22:20.863237", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 1.6831803533309568, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:21.980922", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 1.6831803533309568, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:23.087654", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -71, "calculated_distance": 1.6831803533309568, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:24.193858", "beacons": []}
-{"timestamp": "2025-04-15T15:22:25.305070", "beacons": []}
-{"timestamp": "2025-04-15T15:22:26.412438", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 1.7834308769319096, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:27.519241", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -72, "calculated_distance": 1.7834308769319096, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:28.639493", "beacons": []}
-{"timestamp": "2025-04-15T15:22:29.749318", "beacons": []}
-{"timestamp": "2025-04-15T15:22:30.861498", "beacons": []}
-{"timestamp": "2025-04-15T15:22:31.975263", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:33.080997", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:34.187210", "beacons": []}
-{"timestamp": "2025-04-15T15:22:35.297430", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -57, "calculated_distance": 0.7488103857590023, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:36.402652", "beacons": []}
-{"timestamp": "2025-04-15T15:22:37.508066", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:38.618911", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -56, "calculated_distance": 0.7067181273927491, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:39.727030", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 1.88965233969121, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:40.831373", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -73, "calculated_distance": 1.88965233969121, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:41.944358", "beacons": []}
-{"timestamp": "2025-04-15T15:22:43.055659", "beacons": []}
-{"timestamp": "2025-04-15T15:22:44.161414", "beacons": []}
-{"timestamp": "2025-04-15T15:22:45.268464", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -63, "calculated_distance": 1.059560179277616, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:46.374510", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -63, "calculated_distance": 1.059560179277616, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:47.480099", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -63, "calculated_distance": 1.059560179277616, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:22:48.586963", "beacons": []}
-{"timestamp": "2025-04-15T15:23:15.973588", "beacons": []}
-{"timestamp": "2025-04-15T15:23:17.083775", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -54, "calculated_distance": 0.6294988990221887, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:23:18.189978", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -54, "calculated_distance": 0.6294988990221887, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:23:19.296388", "beacons": [{"id": "DC:C7:ED:2C:04:D1", "rssi": -54, "calculated_distance": 0.6294988990221887, "distance_from_optitrack": 1.6654427214129819}]}
-{"timestamp": "2025-04-15T15:23:20.402462", "beacons": []}
-{"timestamp": "2025-04-15T15:23:21.506328", "beacons": []}
-{"timestamp": "2025-04-15T15:23:22.612092", "beacons": []}
-{"timestamp": "2025-04-15T15:23:23.717207", "beacons": []}
-{"timestamp": "2025-04-15T15:23:24.825355", "beacons": []}
-{"timestamp": "2025-04-15T15:23:25.934851", "beacons": []}
-{"timestamp": "2025-04-15T15:23:27.040800", "beacons": []}
+{"timestamp": "2025-06-06T11:06:18.074026", "beacons": []}
+{"timestamp": "2025-06-06T11:06:19.185625", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:20.291920", "beacons": []}
+{"timestamp": "2025-06-06T11:06:21.397308", "beacons": []}
+{"timestamp": "2025-06-06T11:06:22.505435", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:23.611669", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:24.717827", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:25.822744", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:26.930919", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:28.035737", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:29.140098", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -44, "calculated_distance": 2.9794625503580114, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:30.245240", "beacons": []}
+{"timestamp": "2025-06-06T11:06:31.352676", "beacons": []}
+{"timestamp": "2025-06-06T11:06:32.459000", "beacons": []}
+{"timestamp": "2025-06-06T11:06:33.562200", "beacons": []}
+{"timestamp": "2025-06-06T11:06:34.667686", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -41, "calculated_distance": 2.2122162910704493, "distance_from_optitrack": 2.808545546147546}]}
+{"timestamp": "2025-06-06T11:06:35.772200", "beacons": []}
+{"timestamp": "2025-06-06T11:06:36.882495", "beacons": []}
+{"timestamp": "2025-06-06T11:06:37.987755", "beacons": []}
+{"timestamp": "2025-06-06T11:06:39.095573", "beacons": []}
+{"timestamp": "2025-06-06T11:06:40.200649", "beacons": []}
+{"timestamp": "2025-06-06T11:06:41.305948", "beacons": []}
+{"timestamp": "2025-06-06T11:06:42.410993", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -46, "calculated_distance": 3.633664513567943, "distance_from_optitrack": 2.769533270879612}]}
+{"timestamp": "2025-06-06T11:06:43.522295", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 3.2903445623126686, "distance_from_optitrack": 2.1709547862989376}]}
+{"timestamp": "2025-06-06T11:06:44.628987", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 3.2903445623126686, "distance_from_optitrack": 1.658804733486353}]}
+{"timestamp": "2025-06-06T11:06:45.735629", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.3442266005226815}]}
+{"timestamp": "2025-06-06T11:06:46.844883", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.0033362653645994}]}
+{"timestamp": "2025-06-06T11:06:47.950218", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -47, "calculated_distance": 4.012807031942776, "distance_from_optitrack": 1.0288271531050523}]}
+{"timestamp": "2025-06-06T11:06:49.058967", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -47, "calculated_distance": 4.012807031942776, "distance_from_optitrack": 1.0684075146224385}]}
+{"timestamp": "2025-06-06T11:06:50.163801", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -31, "calculated_distance": 0.8199608244604943, "distance_from_optitrack": 0.994424579629567}]}
+{"timestamp": "2025-06-06T11:06:51.268727", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -31, "calculated_distance": 0.8199608244604943, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:06:52.376107", "beacons": []}
+{"timestamp": "2025-06-06T11:06:53.480290", "beacons": []}
+{"timestamp": "2025-06-06T11:06:54.585549", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -35, "calculated_distance": 1.2195704601594413, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:06:55.698330", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -41, "calculated_distance": 2.2122162910704493, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:06:56.806655", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.3468224433499252, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:06:57.911130", "beacons": []}
+{"timestamp": "2025-06-06T11:06:59.018037", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.3468224433499252, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:00.124785", "beacons": []}
+{"timestamp": "2025-06-06T11:07:01.232143", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.3468224433499252, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:02.343495", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:03.448895", "beacons": []}
+{"timestamp": "2025-06-06T11:07:04.554823", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -35, "calculated_distance": 1.2195704601594413, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:05.660043", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:06.765420", "beacons": []}
+{"timestamp": "2025-06-06T11:07:07.883559", "beacons": []}
+{"timestamp": "2025-06-06T11:07:08.994077", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:10.222424", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 0.9512546584967652}]}
+{"timestamp": "2025-06-06T11:07:11.327319", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:12.432754", "beacons": []}
+{"timestamp": "2025-06-06T11:07:13.539031", "beacons": []}
+{"timestamp": "2025-06-06T11:07:14.644964", "beacons": []}
+{"timestamp": "2025-06-06T11:07:15.753535", "beacons": []}
+{"timestamp": "2025-06-06T11:07:16.866644", "beacons": []}
+{"timestamp": "2025-06-06T11:07:17.980452", "beacons": []}
+{"timestamp": "2025-06-06T11:07:19.092137", "beacons": []}
+{"timestamp": "2025-06-06T11:07:20.198848", "beacons": []}
+{"timestamp": "2025-06-06T11:07:21.312568", "beacons": []}
+{"timestamp": "2025-06-06T11:07:22.420486", "beacons": []}
+{"timestamp": "2025-06-06T11:07:23.530926", "beacons": []}
+{"timestamp": "2025-06-06T11:07:24.635609", "beacons": []}
+{"timestamp": "2025-06-06T11:07:25.741908", "beacons": []}
+{"timestamp": "2025-06-06T11:07:26.850616", "beacons": []}
+{"timestamp": "2025-06-06T11:07:27.960348", "beacons": []}
+{"timestamp": "2025-06-06T11:07:29.066484", "beacons": []}
+{"timestamp": "2025-06-06T11:07:30.171714", "beacons": []}
+{"timestamp": "2025-06-06T11:07:31.283107", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:32.390081", "beacons": []}
+{"timestamp": "2025-06-06T11:07:33.497926", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:34.603632", "beacons": []}
+{"timestamp": "2025-06-06T11:07:35.713570", "beacons": []}
+{"timestamp": "2025-06-06T11:07:36.818763", "beacons": []}
+{"timestamp": "2025-06-06T11:07:37.925260", "beacons": []}
+{"timestamp": "2025-06-06T11:07:39.031379", "beacons": []}
+{"timestamp": "2025-06-06T11:07:40.138231", "beacons": []}
+{"timestamp": "2025-06-06T11:07:41.246312", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 4.893900918477494, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:42.352673", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 4.893900918477494, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:43.458090", "beacons": []}
+{"timestamp": "2025-06-06T11:07:44.564317", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:45.671613", "beacons": []}
+{"timestamp": "2025-06-06T11:07:46.778578", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:47.885301", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:48.993190", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 4.893900918477494, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:50.108647", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:51.215004", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 4.893900918477494, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:52.321372", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:53.427027", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:54.532659", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:55.640907", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:56.746468", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 4.893900918477494, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:07:57.854050", "beacons": []}
+{"timestamp": "2025-06-06T11:07:58.960175", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -55, "calculated_distance": 8.877197088985865, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:00.067688", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -55, "calculated_distance": 8.877197088985865, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:01.173683", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -55, "calculated_distance": 8.877197088985865, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:02.279192", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:03.384933", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:04.494166", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:05.600103", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -41, "calculated_distance": 2.2122162910704493, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:06.706952", "beacons": []}
+{"timestamp": "2025-06-06T11:08:07.813133", "beacons": []}
+{"timestamp": "2025-06-06T11:08:08.918594", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:10.104884", "beacons": []}
+{"timestamp": "2025-06-06T11:08:11.209503", "beacons": []}
+{"timestamp": "2025-06-06T11:08:12.316354", "beacons": []}
+{"timestamp": "2025-06-06T11:08:13.422400", "beacons": []}
+{"timestamp": "2025-06-06T11:08:14.528273", "beacons": []}
+{"timestamp": "2025-06-06T11:08:15.633373", "beacons": []}
+{"timestamp": "2025-06-06T11:08:16.739092", "beacons": []}
+{"timestamp": "2025-06-06T11:08:17.845607", "beacons": []}
+{"timestamp": "2025-06-06T11:08:18.963629", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:20.076477", "beacons": []}
+{"timestamp": "2025-06-06T11:08:21.266085", "beacons": []}
+{"timestamp": "2025-06-06T11:08:22.377004", "beacons": []}
+{"timestamp": "2025-06-06T11:08:23.481788", "beacons": []}
+{"timestamp": "2025-06-06T11:08:24.595100", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:25.700804", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:26.807522", "beacons": []}
+{"timestamp": "2025-06-06T11:08:27.913381", "beacons": []}
+{"timestamp": "2025-06-06T11:08:29.030370", "beacons": []}
+{"timestamp": "2025-06-06T11:08:30.139415", "beacons": []}
+{"timestamp": "2025-06-06T11:08:31.244863", "beacons": []}
+{"timestamp": "2025-06-06T11:08:32.351481", "beacons": []}
+{"timestamp": "2025-06-06T11:08:33.459000", "beacons": []}
+{"timestamp": "2025-06-06T11:08:34.564317", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 2.697953640073, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:35.671470", "beacons": []}
+{"timestamp": "2025-06-06T11:08:36.778364", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 2.697953640073, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:37.884480", "beacons": []}
+{"timestamp": "2025-06-06T11:08:38.990138", "beacons": []}
+{"timestamp": "2025-06-06T11:08:40.095961", "beacons": []}
+{"timestamp": "2025-06-06T11:08:41.201571", "beacons": []}
+{"timestamp": "2025-06-06T11:08:42.316161", "beacons": []}
+{"timestamp": "2025-06-06T11:08:43.427548", "beacons": []}
+{"timestamp": "2025-06-06T11:08:44.534764", "beacons": []}
+{"timestamp": "2025-06-06T11:08:45.640152", "beacons": []}
+{"timestamp": "2025-06-06T11:08:46.745058", "beacons": []}
+{"timestamp": "2025-06-06T11:08:47.849991", "beacons": []}
+{"timestamp": "2025-06-06T11:08:48.957329", "beacons": []}
+{"timestamp": "2025-06-06T11:08:50.064480", "beacons": []}
+{"timestamp": "2025-06-06T11:08:51.170621", "beacons": []}
+{"timestamp": "2025-06-06T11:08:52.277797", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 2.697953640073, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:08:53.382955", "beacons": []}
+{"timestamp": "2025-06-06T11:08:54.490014", "beacons": []}
+{"timestamp": "2025-06-06T11:08:55.595743", "beacons": []}
+{"timestamp": "2025-06-06T11:08:56.699928", "beacons": []}
+{"timestamp": "2025-06-06T11:08:57.804219", "beacons": []}
+{"timestamp": "2025-06-06T11:08:58.911729", "beacons": []}
+{"timestamp": "2025-06-06T11:09:00.018824", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:09:01.124529", "beacons": []}
+{"timestamp": "2025-06-06T11:09:02.229866", "beacons": []}
+{"timestamp": "2025-06-06T11:09:03.335231", "beacons": []}
+{"timestamp": "2025-06-06T11:09:04.442236", "beacons": []}
+{"timestamp": "2025-06-06T11:09:05.546083", "beacons": []}
+{"timestamp": "2025-06-06T11:09:06.659906", "beacons": []}
+{"timestamp": "2025-06-06T11:09:07.765768", "beacons": []}
+{"timestamp": "2025-06-06T11:09:08.875648", "beacons": []}
+{"timestamp": "2025-06-06T11:09:10.066060", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:09:11.172574", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:09:12.280773", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:09:13.386790", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:09:14.492980", "beacons": []}
+{"timestamp": "2025-06-06T11:09:15.599283", "beacons": []}
+{"timestamp": "2025-06-06T11:09:16.704905", "beacons": []}
+{"timestamp": "2025-06-06T11:09:17.811666", "beacons": []}
+{"timestamp": "2025-06-06T11:09:18.917351", "beacons": []}
+{"timestamp": "2025-06-06T11:09:20.024404", "beacons": []}
+{"timestamp": "2025-06-06T11:09:21.137951", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.001441203721958}]}
+{"timestamp": "2025-06-06T11:09:22.250376", "beacons": []}
+{"timestamp": "2025-06-06T11:09:23.355587", "beacons": []}
+{"timestamp": "2025-06-06T11:09:24.461679", "beacons": []}
+{"timestamp": "2025-06-06T11:09:25.566960", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 0.991688562011796}]}
+{"timestamp": "2025-06-06T11:09:26.674048", "beacons": []}
+{"timestamp": "2025-06-06T11:09:27.781143", "beacons": []}
+{"timestamp": "2025-06-06T11:09:28.887075", "beacons": []}
+{"timestamp": "2025-06-06T11:09:29.992335", "beacons": []}
+{"timestamp": "2025-06-06T11:09:31.101276", "beacons": []}
+{"timestamp": "2025-06-06T11:09:32.211418", "beacons": []}
+{"timestamp": "2025-06-06T11:09:33.317918", "beacons": []}
+{"timestamp": "2025-06-06T11:09:34.425816", "beacons": []}
+{"timestamp": "2025-06-06T11:09:35.532685", "beacons": []}
+{"timestamp": "2025-06-06T11:09:36.636854", "beacons": []}
+{"timestamp": "2025-06-06T11:09:37.745691", "beacons": []}
+{"timestamp": "2025-06-06T11:09:38.853234", "beacons": []}
+{"timestamp": "2025-06-06T11:09:39.960925", "beacons": []}
+{"timestamp": "2025-06-06T11:09:41.079975", "beacons": []}
+{"timestamp": "2025-06-06T11:09:42.187738", "beacons": []}
+{"timestamp": "2025-06-06T11:09:43.296172", "beacons": []}
+{"timestamp": "2025-06-06T11:09:44.402900", "beacons": []}
+{"timestamp": "2025-06-06T11:09:45.508451", "beacons": []}
+{"timestamp": "2025-06-06T11:09:46.615581", "beacons": []}
+{"timestamp": "2025-06-06T11:09:47.721462", "beacons": []}
+{"timestamp": "2025-06-06T11:09:48.832501", "beacons": []}
+{"timestamp": "2025-06-06T11:09:49.937554", "beacons": []}
+{"timestamp": "2025-06-06T11:09:51.042986", "beacons": []}
+{"timestamp": "2025-06-06T11:09:52.148254", "beacons": []}
+{"timestamp": "2025-06-06T11:09:53.254655", "beacons": []}
+{"timestamp": "2025-06-06T11:09:54.360633", "beacons": []}
+{"timestamp": "2025-06-06T11:09:55.476016", "beacons": []}
+{"timestamp": "2025-06-06T11:09:56.585657", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.5013790042255433}]}
+{"timestamp": "2025-06-06T11:09:57.695109", "beacons": []}
+{"timestamp": "2025-06-06T11:09:58.802907", "beacons": []}
+{"timestamp": "2025-06-06T11:09:59.911346", "beacons": []}
+{"timestamp": "2025-06-06T11:10:01.016856", "beacons": []}
+{"timestamp": "2025-06-06T11:10:02.121217", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -41, "calculated_distance": 2.2122162910704493, "distance_from_optitrack": 1.5013790042255433}]}
+{"timestamp": "2025-06-06T11:10:03.234282", "beacons": []}
+{"timestamp": "2025-06-06T11:10:04.341989", "beacons": []}
+{"timestamp": "2025-06-06T11:10:05.447799", "beacons": []}
+{"timestamp": "2025-06-06T11:10:06.554836", "beacons": []}
+{"timestamp": "2025-06-06T11:10:07.660404", "beacons": []}
+{"timestamp": "2025-06-06T11:10:08.768515", "beacons": []}
+{"timestamp": "2025-06-06T11:10:09.992936", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -41, "calculated_distance": 2.2122162910704493, "distance_from_optitrack": 1.5013790042255433}]}
+{"timestamp": "2025-06-06T11:10:11.100119", "beacons": []}
+{"timestamp": "2025-06-06T11:10:12.206194", "beacons": []}
+{"timestamp": "2025-06-06T11:10:13.318337", "beacons": []}
+{"timestamp": "2025-06-06T11:10:14.423431", "beacons": []}
+{"timestamp": "2025-06-06T11:10:15.534983", "beacons": []}
+{"timestamp": "2025-06-06T11:10:16.640948", "beacons": []}
+{"timestamp": "2025-06-06T11:10:17.746470", "beacons": []}
+{"timestamp": "2025-06-06T11:10:18.851497", "beacons": []}
+{"timestamp": "2025-06-06T11:10:19.962159", "beacons": []}
+{"timestamp": "2025-06-06T11:10:21.072498", "beacons": []}
+{"timestamp": "2025-06-06T11:10:22.181603", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 2.003199199266707, "distance_from_optitrack": 1.611370500192016}]}
+{"timestamp": "2025-06-06T11:10:23.303936", "beacons": []}
+{"timestamp": "2025-06-06T11:10:24.413346", "beacons": []}
+{"timestamp": "2025-06-06T11:10:25.525549", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 2.4430425692407223, "distance_from_optitrack": 1.7313624554220863}]}
+{"timestamp": "2025-06-06T11:10:26.630844", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7313624554220863}]}
+{"timestamp": "2025-06-06T11:10:27.745145", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7313624554220863}]}
+{"timestamp": "2025-06-06T11:10:28.851158", "beacons": []}
+{"timestamp": "2025-06-06T11:10:29.957279", "beacons": []}
+{"timestamp": "2025-06-06T11:10:31.115197", "beacons": []}
+{"timestamp": "2025-06-06T11:10:32.225099", "beacons": []}
+{"timestamp": "2025-06-06T11:10:33.331217", "beacons": []}
+{"timestamp": "2025-06-06T11:10:34.441478", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -50, "calculated_distance": 5.404538571452932, "distance_from_optitrack": 1.7313624554220863}]}
+{"timestamp": "2025-06-06T11:10:35.546438", "beacons": []}
+{"timestamp": "2025-06-06T11:10:36.652431", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -46, "calculated_distance": 3.633664513567943, "distance_from_optitrack": 1.7313624554220863}]}
+{"timestamp": "2025-06-06T11:10:37.758613", "beacons": []}
+{"timestamp": "2025-06-06T11:10:38.864379", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -35, "calculated_distance": 1.2195704601594413, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:39.968684", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:41.119132", "beacons": []}
+{"timestamp": "2025-06-06T11:10:42.232215", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:43.337876", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:44.444725", "beacons": []}
+{"timestamp": "2025-06-06T11:10:45.569040", "beacons": []}
+{"timestamp": "2025-06-06T11:10:46.675622", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:47.783075", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:48.889694", "beacons": []}
+{"timestamp": "2025-06-06T11:10:49.995225", "beacons": []}
+{"timestamp": "2025-06-06T11:10:51.101485", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:52.206111", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:53.315461", "beacons": []}
+{"timestamp": "2025-06-06T11:10:54.421020", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:55.528016", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:56.638734", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:57.745689", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:10:58.857598", "beacons": []}
+{"timestamp": "2025-06-06T11:10:59.964017", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:01.070639", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:02.175973", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:03.282796", "beacons": []}
+{"timestamp": "2025-06-06T11:11:04.387153", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:05.496115", "beacons": []}
+{"timestamp": "2025-06-06T11:11:06.602987", "beacons": []}
+{"timestamp": "2025-06-06T11:11:07.707369", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:08.818862", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:09.924965", "beacons": []}
+{"timestamp": "2025-06-06T11:11:11.031060", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:12.138654", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:13.246742", "beacons": []}
+{"timestamp": "2025-06-06T11:11:14.352963", "beacons": []}
+{"timestamp": "2025-06-06T11:11:15.596316", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:16.704349", "beacons": []}
+{"timestamp": "2025-06-06T11:11:17.810331", "beacons": []}
+{"timestamp": "2025-06-06T11:11:18.916001", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:20.022146", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:21.129351", "beacons": []}
+{"timestamp": "2025-06-06T11:11:22.236159", "beacons": []}
+{"timestamp": "2025-06-06T11:11:23.342414", "beacons": []}
+{"timestamp": "2025-06-06T11:11:24.449770", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:25.557619", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:26.667310", "beacons": []}
+{"timestamp": "2025-06-06T11:11:27.773983", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:28.897775", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:30.004032", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:31.117568", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:32.226035", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:33.359662", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:34.465765", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:35.573159", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:36.680722", "beacons": []}
+{"timestamp": "2025-06-06T11:11:37.788220", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:38.898537", "beacons": []}
+{"timestamp": "2025-06-06T11:11:40.004604", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:41.110525", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:42.217764", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:43.322589", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:44.430181", "beacons": []}
+{"timestamp": "2025-06-06T11:11:45.545328", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:46.652552", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:47.758028", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:48.865140", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:49.971359", "beacons": []}
+{"timestamp": "2025-06-06T11:11:51.076801", "beacons": []}
+{"timestamp": "2025-06-06T11:11:52.181241", "beacons": []}
+{"timestamp": "2025-06-06T11:11:53.294360", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:54.404054", "beacons": []}
+{"timestamp": "2025-06-06T11:11:55.511990", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:56.657511", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:11:57.771783", "beacons": []}
+{"timestamp": "2025-06-06T11:11:58.878083", "beacons": []}
+{"timestamp": "2025-06-06T11:11:59.985484", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:01.091413", "beacons": []}
+{"timestamp": "2025-06-06T11:12:02.197582", "beacons": []}
+{"timestamp": "2025-06-06T11:12:03.302500", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:04.409172", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:05.515206", "beacons": []}
+{"timestamp": "2025-06-06T11:12:06.619752", "beacons": []}
+{"timestamp": "2025-06-06T11:12:07.739786", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:08.845511", "beacons": []}
+{"timestamp": "2025-06-06T11:12:09.951600", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -39, "calculated_distance": 1.8139306939110624, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:11.056980", "beacons": []}
+{"timestamp": "2025-06-06T11:12:12.162777", "beacons": []}
+{"timestamp": "2025-06-06T11:12:13.268294", "beacons": []}
+{"timestamp": "2025-06-06T11:12:14.380780", "beacons": []}
+{"timestamp": "2025-06-06T11:12:15.497059", "beacons": []}
+{"timestamp": "2025-06-06T11:12:16.604932", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:17.712512", "beacons": []}
+{"timestamp": "2025-06-06T11:12:18.818969", "beacons": []}
+{"timestamp": "2025-06-06T11:12:19.925542", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:21.030564", "beacons": []}
+{"timestamp": "2025-06-06T11:12:22.136009", "beacons": []}
+{"timestamp": "2025-06-06T11:12:23.242432", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:24.348379", "beacons": []}
+{"timestamp": "2025-06-06T11:12:25.456904", "beacons": []}
+{"timestamp": "2025-06-06T11:12:26.562545", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:27.670976", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:28.777446", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:29.884457", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:30.992591", "beacons": []}
+{"timestamp": "2025-06-06T11:12:32.099395", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:33.206890", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:34.319114", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:35.425171", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:36.541097", "beacons": []}
+{"timestamp": "2025-06-06T11:12:37.647795", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:38.759616", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:39.870427", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:40.984090", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:42.090423", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:43.197522", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:44.302827", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:45.407763", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:46.514550", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:47.620343", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:48.726379", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.4873521072935114, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:49.832398", "beacons": []}
+{"timestamp": "2025-06-06T11:12:50.942730", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:52.049503", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:53.156071", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:54.260306", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:55.365578", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:56.472096", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:57.577298", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:58.683743", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:12:59.798834", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -34, "calculated_distance": 1.1043416410511022, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:13:00.908079", "beacons": []}
+{"timestamp": "2025-06-06T11:13:02.023971", "beacons": []}
+{"timestamp": "2025-06-06T11:13:03.128946", "beacons": []}
+{"timestamp": "2025-06-06T11:13:04.234563", "beacons": []}
+{"timestamp": "2025-06-06T11:13:05.338999", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -38, "calculated_distance": 1.6425448669893314, "distance_from_optitrack": 1.7613606154999117}]}
+{"timestamp": "2025-06-06T11:13:06.445500", "beacons": []}
+{"timestamp": "2025-06-06T11:13:07.557701", "beacons": []}
+{"timestamp": "2025-06-06T11:13:08.663367", "beacons": []}
+{"timestamp": "2025-06-10T14:58:36.931052", "beacons": []}
+{"timestamp": "2025-06-10T14:58:38.034044", "beacons": []}
+{"timestamp": "2025-06-10T14:58:39.138786", "beacons": []}
+{"timestamp": "2025-06-10T14:58:40.243512", "beacons": []}
+{"timestamp": "2025-06-10T14:58:41.347102", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -58, "calculated_distance": 3.72759372031494, "distance_from_optitrack": 2.3565840443427972}]}
+{"timestamp": "2025-06-10T14:58:42.453559", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -58, "calculated_distance": 3.72759372031494, "distance_from_optitrack": 2.3565840443427972}]}
+{"timestamp": "2025-06-10T14:58:43.558617", "beacons": []}
+{"timestamp": "2025-06-10T14:58:44.662688", "beacons": []}
+{"timestamp": "2025-06-10T14:58:45.768741", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -52, "calculated_distance": 2.603660866342388, "distance_from_optitrack": 2.3565840443427972}]}
+{"timestamp": "2025-06-10T14:58:46.875902", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -52, "calculated_distance": 2.603660866342388, "distance_from_optitrack": 4.635069948585418}]}
+{"timestamp": "2025-06-10T14:58:47.981841", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -52, "calculated_distance": 2.603660866342388, "distance_from_optitrack": 3.7258898633290958}]}
+{"timestamp": "2025-06-10T14:58:49.087208", "beacons": []}
+{"timestamp": "2025-06-10T14:58:50.191829", "beacons": []}
+{"timestamp": "2025-06-10T14:58:51.303057", "beacons": []}
+{"timestamp": "2025-06-10T14:58:52.409215", "beacons": []}
+{"timestamp": "2025-06-10T14:58:53.515434", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:54.621242", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:55.727815", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:56.832328", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:57.936866", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:59.043626", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:59.149512", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.7218589948902743}]}
+{"timestamp": "2025-06-10T14:58:59.254189", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.6955475904522523}]}
+{"timestamp": "2025-06-10T14:58:59.359180", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.6557106311181067}]}
+{"timestamp": "2025-06-10T14:58:59.464657", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.6208292940729403}]}
+{"timestamp": "2025-06-10T14:58:59.569697", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.5687870751244772}]}
+{"timestamp": "2025-06-10T14:58:59.682473", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.517099101343105}]}
+{"timestamp": "2025-06-10T14:58:59.786707", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.460565716667942}]}
+{"timestamp": "2025-06-10T14:58:59.894076", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.4095444579209}]}
+{"timestamp": "2025-06-10T14:58:59.999668", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.336722891353455}]}
+{"timestamp": "2025-06-10T14:59:00.108119", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.272742052927232}]}
+{"timestamp": "2025-06-10T14:59:00.215076", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.2091715658392244}]}
+{"timestamp": "2025-06-10T14:59:00.318348", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.143719541401533}]}
+{"timestamp": "2025-06-10T14:59:00.423463", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.073283108614142}]}
+{"timestamp": "2025-06-10T14:59:00.526872", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 2.0115132156248343}]}
+{"timestamp": "2025-06-10T14:59:00.631869", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 1.942563973955886}]}
+{"timestamp": "2025-06-10T14:59:00.736163", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 1.8745463902473067}]}
+{"timestamp": "2025-06-10T14:59:00.842607", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 1.8075656407077259}]}
+{"timestamp": "2025-06-10T14:59:00.997222", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 1.7859849028167494}]}
+{"timestamp": "2025-06-10T14:59:01.104110", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -45, "calculated_distance": 1.7130349897073645, "distance_from_optitrack": 1.7058385227171549}]}
+{"timestamp": "2025-06-10T14:59:01.208972", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.6277641602445692}]}
+{"timestamp": "2025-06-10T14:59:01.314010", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.5518888986886912}]}
+{"timestamp": "2025-06-10T14:59:01.418378", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.4648767408497647}]}
+{"timestamp": "2025-06-10T14:59:01.524103", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.3874010846841571}]}
+{"timestamp": "2025-06-10T14:59:01.628288", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.3384185959375399}]}
+{"timestamp": "2025-06-10T14:59:01.736772", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.2830127893063699}]}
+{"timestamp": "2025-06-10T14:59:01.842410", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.2281604137533984}]}
+{"timestamp": "2025-06-10T14:59:01.947661", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.177597334186527}]}
+{"timestamp": "2025-06-10T14:59:02.052784", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.134594578587937}]}
+{"timestamp": "2025-06-10T14:59:02.157961", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.093423764706141}]}
+{"timestamp": "2025-06-10T14:59:02.261244", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.070325965799644}]}
+{"timestamp": "2025-06-10T14:59:02.366080", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0608760989827186}]}
+{"timestamp": "2025-06-10T14:59:02.469658", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0483414600719227}]}
+{"timestamp": "2025-06-10T14:59:02.576849", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:02.680739", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:02.786800", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:02.891687", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:02.996415", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.100855", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.206268", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.309559", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.418098", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.524657", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.627606", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.737663", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.845194", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:03.950013", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.054877", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.159562", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.268572", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.374794", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.478024", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.584030", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.689794", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.795276", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:04.900119", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.004855", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.109123", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.213233", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.318294", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.423023", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.526361", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.642686", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.747771", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0454217450459953}]}
+{"timestamp": "2025-06-10T14:59:05.852513", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.0550031818015326}]}
+{"timestamp": "2025-06-10T14:59:05.960002", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -40, "calculated_distance": 1.2702701826031997, "distance_from_optitrack": 1.074188945578964}]}
+{"timestamp": "2025-06-10T14:59:06.063989", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.168457", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.274410", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.380524", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.488541", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.592881", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.698115", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.805359", "beacons": []}
+{"timestamp": "2025-06-10T14:59:06.910271", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.015216", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.120915", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.226808", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.333846", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.440810", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.547415", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.652625", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.758026", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.864764", "beacons": []}
+{"timestamp": "2025-06-10T14:59:07.968164", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.074463", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.179163", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.283101", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.387792", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.496969", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.605997", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.711913", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.817195", "beacons": []}
+{"timestamp": "2025-06-10T14:59:08.925365", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.030087", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.138182", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.243950", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.348072", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.453375", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.558203", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.663642", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.767119", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.872579", "beacons": []}
+{"timestamp": "2025-06-10T14:59:09.978732", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.084220", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.190601", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.366827", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.471848", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.577489", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.682429", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.786446", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.894055", "beacons": []}
+{"timestamp": "2025-06-10T14:59:10.999625", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.105160", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.211139", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.315169", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.422111", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.526047", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.630962", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.736378", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.843707", "beacons": []}
+{"timestamp": "2025-06-10T14:59:11.947889", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.051934", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.155455", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.260670", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.363931", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.468103", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.572086", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.675240", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.778500", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.883171", "beacons": []}
+{"timestamp": "2025-06-10T14:59:12.986313", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.089540", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.193877", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.297100", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.402409", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.505920", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.608940", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.714164", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.818708", "beacons": []}
+{"timestamp": "2025-06-10T14:59:13.925749", "beacons": []}
+{"timestamp": "2025-06-10T14:59:14.030016", "beacons": []}
+{"timestamp": "2025-06-10T14:59:14.134187", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.238254", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.342433", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.446680", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.551144", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.655344", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.759340", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.867870", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:14.972120", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.076110", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.180182", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.284567", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.388429", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.492492", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.596516", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.700500", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.804486", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:15.908633", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.013401", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.117564", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.221566", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.325598", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.429578", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.533548", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.639730", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.743695", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.848555", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:16.955119", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 1.4173374702590347}]}
+{"timestamp": "2025-06-10T14:59:17.071321", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.175400", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.279560", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.383998", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.488085", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.592128", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.696105", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.801704", "beacons": []}
+{"timestamp": "2025-06-10T14:59:17.909421", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.014763", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.118362", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.223851", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.328359", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.434614", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.538396", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.642901", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.746691", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.851676", "beacons": []}
+{"timestamp": "2025-06-10T14:59:18.955949", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.059846", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.165505", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.268766", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.373022", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.477246", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.580898", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.684797", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.788526", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.892424", "beacons": []}
+{"timestamp": "2025-06-10T14:59:19.998406", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.103811", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.209607", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.315190", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.429837", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.535840", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.723231", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.828475", "beacons": []}
+{"timestamp": "2025-06-10T14:59:20.940310", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.044778", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.149143", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.256284", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.361381", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.466183", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.572156", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.677117", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.782489", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.887907", "beacons": []}
+{"timestamp": "2025-06-10T14:59:21.993409", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.098034", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.202356", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.309323", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.414539", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.521023", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.628096", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.732661", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.840995", "beacons": []}
+{"timestamp": "2025-06-10T14:59:22.947596", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.052998", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.157378", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.262502", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.367168", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.472510", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.578127", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.682640", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.791090", "beacons": []}
+{"timestamp": "2025-06-10T14:59:23.898071", "beacons": []}
+{"timestamp": "2025-06-10T14:59:24.002745", "beacons": []}
+{"timestamp": "2025-06-10T14:59:24.107231", "beacons": []}
+{"timestamp": "2025-06-10T14:59:24.212731", "beacons": []}
+{"timestamp": "2025-06-10T14:59:24.319637", "beacons": []}
+{"timestamp": "2025-06-10T14:59:24.423833", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:24.529511", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:24.634145", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:24.741014", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:24.845835", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:24.951178", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.057262", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.161900", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.361684", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.465919", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.570542", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.674577", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.778570", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.883187", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:25.988861", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.094003", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.200143", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.305096", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.409839", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.517012", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.625001", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.729167", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.834200", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:26.942661", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.049997", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.155261", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.261417", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.365616", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.470562", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.576468", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.681024", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.785017", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.892013", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:27.996402", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.104120", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.208421", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.312193", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.418439", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.524653", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.629945", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.735738", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.841440", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:28.947238", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:29.056752", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:29.163173", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:29.268659", "beacons": []}
+{"timestamp": "2025-06-10T14:59:29.375548", "beacons": []}
+{"timestamp": "2025-06-10T14:59:29.479837", "beacons": []}
+{"timestamp": "2025-06-10T14:59:29.584794", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:29.689052", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:29.794676", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:29.902342", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.054763", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.165405", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.271287", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.377068", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.483672", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.588017", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.696505", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.803144", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:30.907488", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:31.051886", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.158851", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.262825", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.369625", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.475941", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.581273", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.686153", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.792069", "beacons": []}
+{"timestamp": "2025-06-10T14:59:31.897447", "beacons": []}
+{"timestamp": "2025-06-10T14:59:32.002611", "beacons": []}
+{"timestamp": "2025-06-10T14:59:32.108260", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.215727", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.320608", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.427539", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.533070", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.637431", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.743806", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.849272", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:32.955381", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:33.061883", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:33.166030", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:33.272243", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -49, "calculated_distance": 2.1760172691812443, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:33.377984", "beacons": []}
+{"timestamp": "2025-06-10T14:59:33.484196", "beacons": []}
+{"timestamp": "2025-06-10T14:59:33.590467", "beacons": []}
+{"timestamp": "2025-06-10T14:59:33.694645", "beacons": []}
+{"timestamp": "2025-06-10T14:59:33.802167", "beacons": []}
+{"timestamp": "2025-06-10T14:59:33.908921", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.014358", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.124938", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.231451", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.336844", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.443590", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.549747", "beacons": []}
+{"timestamp": "2025-06-10T14:59:34.744029", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -47, "calculated_distance": 1.93069772888325, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:34.849220", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -47, "calculated_distance": 1.93069772888325, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:34.957201", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -47, "calculated_distance": 1.93069772888325, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:35.062545", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.168186", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.274407", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.380555", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.486239", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.591141", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.696050", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.799846", "beacons": []}
+{"timestamp": "2025-06-10T14:59:35.904165", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.009374", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.115122", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.220628", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.324609", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.431544", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.540608", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.645737", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.750999", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.856742", "beacons": []}
+{"timestamp": "2025-06-10T14:59:36.960745", "beacons": []}
+{"timestamp": "2025-06-10T14:59:37.068521", "beacons": []}
+{"timestamp": "2025-06-10T14:59:37.175391", "beacons": []}
+{"timestamp": "2025-06-10T14:59:37.280586", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:37.383551", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:37.488722", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:37.592325", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:37.698172", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:37.802394", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:37.906966", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.012164", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.118473", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.223530", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.329923", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.434726", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.540626", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.645021", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.750348", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.857466", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:38.962767", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.068007", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.173736", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.278977", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.418519", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.524396", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.630801", "beacons": []}
+{"timestamp": "2025-06-10T14:59:39.734900", "beacons": []}
+{"timestamp": "2025-06-10T14:59:39.839937", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:39.944051", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.049151", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.154372", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.260528", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.366089", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.470343", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.580423", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.686587", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.791757", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:40.896105", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:41.003149", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -42, "calculated_distance": 1.4316740588229713, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:41.107285", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.212021", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.317891", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.424837", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.530895", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.640171", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.745377", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.850453", "beacons": []}
+{"timestamp": "2025-06-10T14:59:41.958125", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.062646", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.169524", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.274353", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.379880", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.487986", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.600001", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.708224", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.814085", "beacons": []}
+{"timestamp": "2025-06-10T14:59:42.920975", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.026476", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.131273", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.238578", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.347588", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.453342", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.559208", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.664274", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.770155", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.875849", "beacons": []}
+{"timestamp": "2025-06-10T14:59:43.980969", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.133814", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.238917", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.344027", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.448131", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.553224", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.657220", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.763198", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.870146", "beacons": []}
+{"timestamp": "2025-06-10T14:59:44.974049", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.079547", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.184623", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.295214", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.401140", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.507981", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.612621", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.719698", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.825577", "beacons": []}
+{"timestamp": "2025-06-10T14:59:45.932044", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.037190", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.141701", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.247968", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.351767", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.457318", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.564389", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.668842", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.772814", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.877210", "beacons": []}
+{"timestamp": "2025-06-10T14:59:46.982914", "beacons": []}
+{"timestamp": "2025-06-10T14:59:47.089037", "beacons": []}
+{"timestamp": "2025-06-10T14:59:47.193988", "beacons": []}
+{"timestamp": "2025-06-10T14:59:47.308286", "beacons": []}
+{"timestamp": "2025-06-10T14:59:47.416654", "beacons": []}
+{"timestamp": "2025-06-10T14:59:47.522240", "beacons": []}
+{"timestamp": "2025-06-10T14:59:47.629876", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:47.734361", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:47.843617", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:47.951112", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.056082", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.159537", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.266054", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.376719", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.481833", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.588772", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.697603", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.867670", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:48.971600", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -48, "calculated_distance": 2.0496906107066404, "distance_from_optitrack": 1.8383355582776757}]}
+{"timestamp": "2025-06-10T14:59:49.078447", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.183792", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.290479", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.395519", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.501373", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.607101", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.711656", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.816533", "beacons": []}
+{"timestamp": "2025-06-10T14:59:49.921408", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.026721", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.133692", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.239286", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.347388", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.452016", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.555858", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.659321", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.765319", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.870147", "beacons": []}
+{"timestamp": "2025-06-10T14:59:50.976593", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.081784", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.189321", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.292929", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.398565", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.503806", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.609151", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.714577", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.819388", "beacons": []}
+{"timestamp": "2025-06-10T14:59:51.925207", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.029285", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.135582", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.239737", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.345394", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.452286", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.558290", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.669796", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.779308", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.886173", "beacons": []}
+{"timestamp": "2025-06-10T14:59:52.992660", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.099950", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.209006", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.315317", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.546318", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.651721", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.759227", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.868279", "beacons": []}
+{"timestamp": "2025-06-10T14:59:53.978002", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.088273", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.196171", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.304703", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.412649", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.519569", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.625359", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.733930", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.841166", "beacons": []}
+{"timestamp": "2025-06-10T14:59:54.947214", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.053468", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.159219", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.265835", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.370342", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.475542", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.581056", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.687824", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.792913", "beacons": []}
+{"timestamp": "2025-06-10T14:59:55.898743", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.004686", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.110959", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.217525", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.322977", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.429836", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.537590", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.644148", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.750297", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.857501", "beacons": []}
+{"timestamp": "2025-06-10T14:59:56.962576", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.069467", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.174095", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.279556", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.383939", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.490403", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.611606", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.717194", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.820895", "beacons": []}
+{"timestamp": "2025-06-10T14:59:57.926303", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.035008", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.218582", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.323550", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.429279", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.535435", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.641618", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.749434", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.855460", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:58.961136", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.073824", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.178342", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.283200", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.387482", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.493463", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.599151", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.705963", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.809456", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T14:59:59.914097", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T15:00:00.021648", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T15:00:00.126368", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -37, "calculated_distance": 1.0616320618413002, "distance_from_optitrack": 2.2313495873699325}]}
+{"timestamp": "2025-06-10T15:00:00.231247", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.335643", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.441050", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.546440", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.653963", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.759514", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.865880", "beacons": []}
+{"timestamp": "2025-06-10T15:00:00.971365", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.078232", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.184620", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.294569", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.400267", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.509399", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.616231", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.721507", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.827011", "beacons": []}
+{"timestamp": "2025-06-10T15:00:01.934420", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.040859", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.146276", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.252794", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.359884", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.465944", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.571360", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.677027", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.783593", "beacons": []}
+{"timestamp": "2025-06-10T15:00:02.932574", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.038524", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.144211", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.249548", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.353116", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.458467", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.563530", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.670596", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.776890", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.883754", "beacons": []}
+{"timestamp": "2025-06-10T15:00:03.990433", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.095038", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.201259", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.307945", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.413077", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.529590", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.636629", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.739906", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.844129", "beacons": []}
+{"timestamp": "2025-06-10T15:00:04.949007", "beacons": []}
+{"timestamp": "2025-06-10T15:00:05.056248", "beacons": []}
+{"timestamp": "2025-06-10T15:00:05.164054", "beacons": []}
+{"timestamp": "2025-06-10T15:00:05.267818", "beacons": []}
+{"timestamp": "2025-06-10T15:00:05.373321", "beacons": []}
+{"timestamp": "2025-06-10T15:00:05.479234", "beacons": []}
+{"timestamp": "2025-06-10T15:00:05.585727", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:05.690907", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:05.795655", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:05.899708", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.004527", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.109640", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.214496", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.319471", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.425066", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.529993", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.637722", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.744339", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -36, "calculated_distance": 1.0, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:06.857725", "beacons": []}
+{"timestamp": "2025-06-10T15:00:06.962564", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.067956", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.174256", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.279627", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.385508", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.612333", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.719463", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.828178", "beacons": []}
+{"timestamp": "2025-06-10T15:00:07.933985", "beacons": []}
+{"timestamp": "2025-06-10T15:00:08.039527", "beacons": []}
+{"timestamp": "2025-06-10T15:00:08.145524", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.253285", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.357545", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.463331", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.567747", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.674149", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.780787", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}
+{"timestamp": "2025-06-10T15:00:08.884995", "beacons": [{"id": "EC:7F:50:BE:D2:D1", "rssi": -43, "calculated_distance": 1.5199110829529336, "distance_from_optitrack": 2.2226578209803804}]}

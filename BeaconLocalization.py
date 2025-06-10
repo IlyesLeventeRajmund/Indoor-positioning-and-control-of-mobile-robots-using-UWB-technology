@@ -43,6 +43,17 @@ class RobotLocationBeacon:
         }
 
         self.beacon_parameters = {
+            "DC:C7:ED:2C:04:D1": {"rssi_0": -1, "n": 1},
+            "D1:DC:74:F2:C7:05": {"rssi_0": -31, "n": 3.54},
+            "D0:FB:A6:16:7D:AC": {"rssi_0": -24, "n": 4.68},
+            "C3:F0:97:50:8B:EA": {"rssi_0": -73, "n": 2.56},
+            "EC:7F:50:BE:D2:D1": {"rssi_0": -36, "n": 3.85},
+            "FC:CC:D6:C3:D1:4A": {"rssi_0": -1, "n": 1},
+            "CF:C9:25:A0:81:53": {"rssi_0": -1, "n": 1},
+            "E0:68:8A:9D:06:A2": {"rssi_0": -1, "n": 1},
+        }
+
+        self.beacon_parameters_backup = {
             "DC:C7:ED:2C:04:D1": {"rssi_0": -62, "n": 3.98},
             "D1:DC:74:F2:C7:05": {"rssi_0": -29, "n": 2.98},
             "D0:FB:A6:16:7D:AC": {"rssi_0": -25, "n": 3.98},
@@ -52,7 +63,6 @@ class RobotLocationBeacon:
             "CF:C9:25:A0:81:53": {"rssi_0": -1, "n": 1},
             "E0:68:8A:9D:06:A2": {"rssi_0": -1, "n": 1},
         }
-
         
         # Load target devices
         self.TARGET_DEVICES = self.load_target_devices("eszkozok.txt")
