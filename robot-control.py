@@ -369,32 +369,12 @@ def main():
                         count = (count + 1) % len(circle_path)
                         automat_control(Pc, Pr, Tc, Tr)
                         print("circle")
-                    elif direction == 'square':
-                        if not square_path:
-                            square_path = shapeGenerator('square', 1, 12)
-                            count = 0
 
-                        Pr = square_path[count]
-                        count = (count + 1) % len(square_path)
+                    elif direction == 'point':
+                        Pr = (0,0)
                         automat_control(Pc, Pr, Tc, Tr)
+                        print("point")
 
-                    elif direction == 'triangle':
-                        if not triangle_path:
-                            triangle_path = shapeGenerator('triangle', 1, 12)
-                            count = 0
-
-                        Pr = triangle_path[count]
-                        count = (count + 1) % len(triangle_path)
-                        automat_control(Pc, Pr, Tc, Tr)
-
-                    elif direction == 'hexagon':
-                        if not hexagon_path:
-                            hexagon_path = shapeGenerator('hexagon', 1, 12)
-                            count = 0
-
-                        Pr = hexagon_path[count]
-                        count = (count + 1) % len(hexagon_path)
-                        automat_control(Pc, Pr, Tc, Tr)
             else:
                 sleep(1)
                 

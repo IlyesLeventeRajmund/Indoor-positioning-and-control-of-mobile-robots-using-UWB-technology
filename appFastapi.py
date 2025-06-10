@@ -37,6 +37,18 @@ class DistanceInput(BaseModel):
 class ControlMode(BaseModel):
     manual: bool
 
+class PointData(BaseModel):
+    x: float
+    y: float
+    theta: float
+
+class CircleData(BaseModel):
+    x: float
+    y: float
+    theta: float
+    radius: float
+
+
 class RobotServer:
     def __init__(self, host="0.0.0.0", port=5001):
 
@@ -58,6 +70,9 @@ class RobotServer:
         self.optitrack_marker_data = None
         self.device_positions = {}
         self.control_mode = True
+        self.point = None  
+        self.circle = None  
+
 
         # Configure CORS
         self.app.add_middleware(
@@ -148,7 +163,7 @@ class RobotServer:
         async def move_robot(data: MoveInput):
             valid_directions = ['up', 'down', 'left', 'right', 'stop', 'up-left', 
                                'up-right', 'down-left', 'down-right', 'circle', 
-                               'square', 'triangle', 'hexagon']
+                               'point']
             if data.direction not in valid_directions:
                 raise HTTPException(status_code=400, detail="Invalid direction")
             self.current_direction = data.direction
@@ -218,6 +233,32 @@ class RobotServer:
         @self.app.get("/controll_mode")
         async def get_control_mode():
             return {"manual": self.control_mode}
+        
+        # point
+        @self.app.post("/point")
+        async def update_point(data: PointData):
+            self.point = data.dict()
+            return {"status": "success", "point": self.point}
+
+        @self.app.get("/point")
+        async def get_point():
+            if self.point is None:
+                raise HTTPException(status_code=404, detail="No point data")
+            return self.point
+        
+        # Circle
+        @self.app.post("/circle")
+        async def update_circle(data: CircleData):
+            self.circle = data.dict()
+            return {"status": "success", "circle": self.circle}
+
+        @self.app.get("/circle")
+        async def get_circle():
+            if self.circle is None:
+                raise HTTPException(status_code=404, detail="No circle data")
+            return self.circle
+
+
     
     def start(self):
         """Start the server in a separate thread"""
@@ -281,3 +322,9 @@ class RobotServer:
     
     def get_control_mode(self):
         return self.control_mode
+    
+    def get_point(self):
+        return self.point
+    
+    def get_circle(self):
+        return self.circle
