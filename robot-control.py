@@ -190,40 +190,16 @@ def main():
                 pwm_forward.ChangeDutyCycle(duty)
                 pwm_backward.ChangeDutyCycle(0)
 
-    def shapeGenerator(shape, size, num_points):
+    def circleGenerator(center, radius, num_points):
         points = []
-        
-        if shape == 'circle':
-            radius = math.sqrt(size)
-            for _ in range(num_points):
-                angle = random.uniform(0, 2 * math.pi)
-                r = random.uniform(0, radius)
-                x = r * math.cos(angle)
-                y = r * math.sin(angle)
-                points.append((x, y))
-        
-        elif shape == 'triangle':
-            for _ in range(num_points):
-                x = random.uniform(0, size)
-                y = random.uniform(0, (size * math.sqrt(3)) / 2)
-                if y > (math.sqrt(3) * x) or y > (-math.sqrt(3) * x + size * math.sqrt(3)):
-                    continue
-                points.append((x, y))
-        
-        elif shape == 'hexagon':
-            for _ in range(num_points):
-                angle = random.randint(0, 5) * math.pi / 3
-                r = random.uniform(0, size)
-                x = r * math.cos(angle)
-                y = r * math.sin(angle)
-                points.append((x, y))
-        
-        elif shape == 'square':
-            for _ in range(num_points):
-                x = random.uniform(-size / 2, size / 2)
-                y = random.uniform(-size / 2, size / 2)
-                points.append((x, y))
-        
+        cx, cy = center
+
+        for i in range(num_points):
+            angle = 2 * math.pi * i / num_points
+            x = cx + radius * math.cos(angle)
+            y = cy + radius * math.sin(angle)
+            points.append((x, y))
+
         return points
 
     LOG_FILE = "log.json"
@@ -347,7 +323,7 @@ def main():
             #print("orientaciok:",teszt)
             #print("Tc",Tc)
             Tr = 0 # math.atan2(Pr[1] - Pc[1], Pr[0] - Pc[0])
-
+            last_target = None
             #print("Tr",Tr)
             # Get direction and speed directly from the server instance
             speed, direction = direction_call()
@@ -360,20 +336,41 @@ def main():
                         for i in range(8):
                             pwm[i].ChangeDutyCycle(0)
                             
-                    elif direction == 'circle':
-                        if not circle_path:
-                            circle_path = shapeGenerator('circle', 1, 12)
-                            count = 0
-                        
-                        Pr = (0,0) #circle_path[count]
-                        count = (count + 1) % len(circle_path)
-                        automat_control(Pc, Pr, Tc, Tr)
-                        print("circle")
-
                     elif direction == 'point':
-                        Pr = (0,0)
-                        automat_control(Pc, Pr, Tc, Tr)
-                        print("point")
+                        target = robot_server.get_point()
+                        if target is not None:
+                            Tr = (target["theta"])
+                            Pr = (target["x"], target["y"])
+                            automat_control(Pc, Pr, Tc, Tr)
+                            print("point:", Pr)
+                        else:
+                            print("No point data received")
+
+                    elif direction == 'circle':
+                        target = robot_server.get_circle()
+                        if target is not None:
+                            center = (target["x"], target["y"])
+                            radius = target["radius"]
+
+                            if last_target is None or target != last_target:
+                                circle_path = circleGenerator(center, radius, 12)
+                                count = 0
+                                last_target = target.copy() 
+                            Pr = circle_path[count]
+                            Tr = target["theta"]
+
+                            dist = math.hypot(Pc[0] - Pr[0], Pc[1] - Pr[1])
+                            if dist < 0.3:
+                                count = (count + 1) % len(circle_path)
+                                Pr = circle_path[count]
+
+                            automat_control(Pc, Pr, Tc, Tr)
+                            print("circle:", Pr)
+                        else:
+                            print("No circle data received")
+                            circle_path = []
+                            count = 0
+                            last_target = None
 
             else:
                 sleep(1)
