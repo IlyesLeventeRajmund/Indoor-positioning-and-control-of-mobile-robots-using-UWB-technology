@@ -2,7 +2,7 @@ import json
 import matplotlib.pyplot as plt
 
 # JSON fájl beolvasása
-file_path = "maxPWMMeasures/measures/m14_max_PWM_22.json"
+file_path = "max_PWM_measurements_short_distance/measures/m19_max_PWM_22.json"
 
 data = []
 with open(file_path, "r") as f:
@@ -30,7 +30,7 @@ plt.grid()
 plt.legend()
 plt.xlim(x_min, x_max)
 plt.ylim(y_min, y_max)
-plt.savefig("plot_m14_1_Po.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m19_1_Po.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 2. ábra - Pb pontok
@@ -43,7 +43,7 @@ plt.grid()
 plt.legend()
 plt.xlim(x_min, x_max)
 plt.ylim(y_min, y_max)
-plt.savefig("plot_m14_2_Pb.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m19_2_Pb.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
@@ -55,7 +55,7 @@ plt.ylabel("Xo koordináta")
 plt.title("Xo idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_m14_3_Xo_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m19_3_Xo_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 4. ábra - Yo idő függvényében
@@ -66,7 +66,7 @@ plt.ylabel("Yo koordináta")
 plt.title("Yo idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_m14_4_Yo_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m19_4_Yo_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 5. ábra - Xb idő függvényében
@@ -77,7 +77,7 @@ plt.ylabel("Xb koordináta")
 plt.title("Xb idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_m14_5_Xb_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m19_5_Xb_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # 6. ábra - Yb idő függvényében
@@ -88,5 +88,5 @@ plt.ylabel("Yb koordináta")
 plt.title("Yb idő függvényében")
 plt.grid()
 plt.legend()
-plt.savefig("plot_m14_6_Yb_vs_time.png", dpi=300, bbox_inches="tight")
+plt.savefig("plot_m19_6_Yb_vs_time.png", dpi=300, bbox_inches="tight")
 plt.close()

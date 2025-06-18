@@ -2,7 +2,7 @@ import json
 import matplotlib.pyplot as plt
 
 # JSON fájl beolvasása
-file_path = "measurements/thrid_measurement_line_log.json" 
+file_path = "max_PWM_measurements_short_distance/thrid_measurement_line_log.json" 
 
 data = []
 with open(file_path, "r") as f:
