@@ -13,6 +13,32 @@ import math
 from appFastapi import RobotServer  # Import the server class we created
 import atexit
 
+def safe_cleanup(pwm_list):
+    """Safely clean up GPIO resources while avoiding lgpio errors"""
+    try:
+        # First set all duty cycles to 0
+        for p in pwm_list:
+            try:
+                p.ChangeDutyCycle(0)
+            except:
+                pass
+        
+        # Then explicitly set all pins to input mode rather than calling stop()
+        pins = [22, 23, 17, 27, 12, 16, 20, 21]
+        for pin in pins:
+            try:
+                GPIO.setup(pin, GPIO.IN)
+            except:
+                pass
+        
+        # Call cleanup but catch any exceptions
+        try:
+            GPIO.cleanup()
+        except:
+            pass
+    except Exception as e:
+        print(f"Error during safe cleanup: {e}")
+
 def gpioInit():
     GPIO.setmode(GPIO.BCM)
 
@@ -47,53 +73,11 @@ def gpioInit():
 
     return pwm1, pwm2, pwm3, pwm4, pwm5, pwm6, pwm7, pwm8
 
-def safe_cleanup(pwm_list):
-    """Safely clean up GPIO resources while avoiding lgpio errors"""
-    try:
-        # First set all duty cycles to 0
-        for p in pwm_list:
-            try:
-                p.ChangeDutyCycle(0)
-            except:
-                pass
-        
-        # Then explicitly set all pins to input mode rather than calling stop()
-        pins = [22, 23, 17, 27, 12, 16, 20, 21]
-        for pin in pins:
-            try:
-                GPIO.setup(pin, GPIO.IN)
-            except:
-                pass
-        
-        # Call cleanup but catch any exceptions
-        try:
-            GPIO.cleanup()
-        except:
-            pass
-    except Exception as e:
-        print(f"Error during safe cleanup: {e}")
 
 def main():
-    # Initialize the FastAPI server in a separate thread
-    print("Initializing FastAPI server...")
-    robot_server = RobotServer(host="0.0.0.0", port=5001)
-    server_thread = robot_server.start()
-
-    # Initialize GPIO
-    print("Initializing GPIO...")
-    pwm = gpioInit()
-
-    # Initialize and start OptiTracker
-    print("Initializing OptiTracker...")
-    OptiTracker = OptitrackData.RobotLocationOptitrack()
+    circle_path = None
+    count = 0
     
-    # Initialize and start BeaconTracker in a separate thread
-    print("Initializing and starting BeaconTracker...")
-    BeaconTracker = BeaconLocalization.RobotLocationBeacon(0, 0)
-    BeaconTracker.start_tracking()  # This starts its own thread
-    
-    start_time = time()
-
     # Define Robot Parameters
     L1 = 0.06  # Distance between the center and the wheels (meters)
     L2 = 0.07
@@ -110,6 +94,45 @@ def main():
         [-L2, -L1], # Bal hátsó kerék
         [L2, -L1],  # Jobb hátsó kerék
     ])
+
+    LOG_FILE = "log.json"
+
+    # Initialize the FastAPI server in a separate thread
+    print("Initializing FastAPI server...")
+    robot_server = RobotServer(host="0.0.0.0", port=5001)
+    server_thread = robot_server.start()
+
+    # Initialize GPIO
+    print("Initializing GPIO...")
+    pwm = gpioInit()
+
+    # Initialize and start OptiTracker
+    print("Initializing OptiTracker...")
+    OptiTracker = OptitrackData.RobotLocationOptitrack()
+
+    # Initialize and start BeaconTracker in a separate thread
+    print("Initializing and starting BeaconTracker...")
+    BeaconTracker = BeaconLocalization.RobotLocationBeacon(0, 0)
+    BeaconTracker.start_tracking()  # This starts its own thread
+
+    start_time = time()
+
+    initial_ref_position = None
+    max_allowed_error = 0.71
+
+    def saturate_beacon_position(beacon_pos, reference_pos, max_error):
+            dx = beacon_pos[0] - reference_pos[0]
+            dy = beacon_pos[1] - reference_pos[1]
+            distance = math.hypot(dx, dy)
+
+            if distance <= max_error:
+                return beacon_pos  
+
+            angle = math.atan2(dy, dx)
+            corrected_x = reference_pos[0] + max_error * math.cos(angle)
+            corrected_y = reference_pos[1] + max_error * math.sin(angle)
+            return (corrected_x, corrected_y)
+
 
     def quaternion_multiply(q1, q2):
         w1, x1, y1, z1 = q1
@@ -202,13 +225,11 @@ def main():
 
         return points
 
-    LOG_FILE = "log.json"
-
     def calculate_2d_distance(pos1, pos2):
         return math.sqrt((pos2[0] - pos1[0])**2 + (pos2[1] - pos1[1])**2)
 
     def log_beacon_data(beacon_data, optitrack_position, beacon_positions):
-        target_macs = ["EC:7F:50:BE:D2:D1"]
+        target_macs = ["D1:DC:74:F2:C7:05"]
 
         log_entry = {
             "timestamp": datetime.now().isoformat(),
@@ -241,11 +262,6 @@ def main():
             json.dump(log_entry, f)
             f.write("\n")
 
-
-
-
-
-    # This replaces the HTTP request with direct access to the server data
     def direction_call():
         direction = robot_server.get_direction()
         speed = robot_server.get_speed()
@@ -253,17 +269,18 @@ def main():
         #print("a sebesseg:", speed)
         return speed, direction
 
-    # Initialize path variables
-    circle_path = None
-    square_path = None
-    triangle_path = None
-    hexagon_path = None
-    count = 0
-
     try:
         print("Main control loop starting...")
+        prev_time = time()
         while True:
-            # delay 10ms
+            current_time = time()
+            dt = current_time - prev_time
+            prev_time = current_time
+
+            speed, direction = direction_call()
+
+            max_error = (speed / 50.0) * max_allowed_error * dt
+
             sleep(0.1)  # 100ms
             
             beacon_positions = {
@@ -326,7 +343,18 @@ def main():
             last_target = None
             #print("Tr",Tr)
             # Get direction and speed directly from the server instance
-            speed, direction = direction_call()
+            
+
+            if initial_ref_position is None and direction != "stop":
+                initial_ref_position = Po
+                print("Initial reference position set to:", initial_ref_position)
+
+            if initial_ref_position is not None:
+                corrected_Pb = saturate_beacon_position(Pb, initial_ref_position, max_error)
+                if corrected_Pb != Pb:
+                    print(f"Beacon pozition corrigated: {Pb} -> {corrected_Pb}")
+                    Pb = corrected_Pb
+                    initial_ref_position = Pb
 
             if direction:
                 if control_mode:
