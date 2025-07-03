@@ -87,7 +87,6 @@ class RobotServer:
         self._setup_routes()
         
     def _setup_routes(self):
-        # Optitrack data routes
         @self.app.post("/Optitracking_marker_data")
         async def receive_Optitracking_marker_data(data: OptiTrackMarkerData):
             if not data.data:

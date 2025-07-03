@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Útvonala</title>
+    <style>
+        body {
+            background-color: #f0f0f5;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            color: #444;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .controls {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button-row {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+        }
+        .button-row button:not(:last-child) {
+            margin-right: 10px;
+        }
+        .control-button {
+            width: 80px;
+            height: 80px;
+            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .stop-button {
+            background-color: #ff4d4d;
+        }
+        .stop-button:hover {
+            background-color: #d63333;
+        }
+        .move-button {
+            background-color: #007acc;
+        }
+        .move-button:hover {
+            background-color: #005fa3;
+        }
+        .combined-button {
+            background-color: #28a745;
+        }
+        .combined-button:hover {
+            background-color: #218838;
+        }
+        .presetted-button {
+            background-color: #d863fc;
+        }
+        .presetted-button:hover {
+            background-color: #db6bfd;
+        }
+        #speedControl {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        #speedControl label {
+            font-size: 14px;
+            margin-right: 10px;
+            color: #555;
+        }
+        #speedInput {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background-color: #ddd;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        #speedInput:hover {
+            opacity: 1;
+        }
+        .beacon1 {
+            background-color: #f8f876;
+            display: flex; 
+            align-items: center; 
+            padding: 5px;
+            max-width: 550px;
+        }
+        .beacon2 {
+            background-color: #d863fc;
+            display: flex; 
+            align-items: center; 
+            padding: 5px;
+            max-width: 550px;
+        }
+        .beacon3 {
+            background-color: #fd5858;
+            display: flex; 
+            align-items: center; 
+            padding: 5px;
+            max-width: 550px;
+        }
+        .beacon4 {
+            background-color: #7ddbfa;
+            display: flex; 
+            align-items: center; 
+            padding: 5px;
+            max-width: 550px;
+        }
+    </style>
+</head>
+<body>
+        
+        <div class="controls">
+            <h2>Robot Irányítása</h2>
+        
+            <div style="margin-bottom: 10px;">
+                <label for="modeSwitch">Mód:</label>
+                <label><input type="radio" name="mode" value="manual" checked onchange="toggleMode()"> Manuális</label>
+                <label><input type="radio" name="mode" value="auto" onchange="toggleMode()"> Automata</label>
+            </div>
+        
+            <div id="manualControls">
+                <div class="button-row">
+                    <button class="combined-button control-button" onclick="moveRobot('up-left')">Előre-balra</button>
+                    <button class="move-button control-button" onclick="moveRobot('up')">Előre</button>
+                    <button class="combined-button control-button" onclick="moveRobot('up-right')">Előre-jobbra</button>
+                </div>
+                <div class="button-row">
+                    <button class="move-button control-button" onclick="moveRobot('left')">Balra</button>
+                    <button class="stop-button control-button" onclick="moveRobot('stop')">Stop</button>
+                    <button class="move-button control-button" onclick="moveRobot('right')">Jobbra</button>
+                </div>
+                <div class="button-row">
+                    <button class="combined-button control-button" onclick="moveRobot('down-left')">Hátra-balra</button>
+                    <button class="move-button control-button" onclick="moveRobot('down')">Hátra</button>
+                    <button class="combined-button control-button" onclick="moveRobot('down-right')">Hátra-jobbra</button>
+                </div>
+                <div id="speedControl">
+                    <label for="speedText">Robot sebessége:</label>
+                    <input type="number" id="speedText" required>
+                    <button type="button" onclick="updateSpeed()">Sebesség Frissítése</button>
+                </div>
+            </div>
+        
+            <label>Előre konfigurált alakzatok:</label>
+            <div id="autoControls">
+                <div class="button-row" style="display: flex; gap: 60px; flex-wrap: wrap; align-items: flex-start;">
+                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <div style="margin-bottom: 10px;">
+                            <button class="presetted-button control-button" onclick="moveRobot('point')">Pont</button>
+                        </div>
+                        <div style="margin-bottom: 8px;"><label for="pointX">x=</label><input type="number" id="pointX" style="width: 50px; margin-left: 4px;"></div>
+                        <div style="margin-bottom: 8px;"><label for="pointY">y=</label><input type="number" id="pointY" style="width: 50px; margin-left: 4px;"></div>
+                        <div style="margin-bottom: 8px;"><label for="pointTheta">t=</label><input type="number" id="pointTheta" style="width: 50px; margin-left: 4px;"></div>
+                        <div><button onclick="updatePoint()">Frissítés</button></div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <div style="margin-bottom: 10px;">
+                            <button class="presetted-button control-button" onclick="moveRobot('circle')">Kör</button>
+                        </div>
+                        <div style="margin-bottom: 8px;"><label for="circleX">x=</label><input type="number" id="circleX" style="width: 50px; margin-left: 4px;"></div>
+                        <div style="margin-bottom: 8px;"><label for="circleY">y=</label><input type="number" id="circleY" style="width: 50px; margin-left: 4px;"></div>
+                        <div style="margin-bottom: 8px;"><label for="circleTheta">t=</label><input type="number" id="circleTheta" style="width: 50px; margin-left: 4px;"></div>
+                        <div style="margin-bottom: 8px;"><label for="circleR">r=</label><input type="number" id="circleR" style="width: 50px; margin-left: 4px;"></div>
+                        <div><button onclick="updateCircle()">Frissítés</button></div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <div style="margin-top: 44px;">
+                            <button class="stop-button control-button" onclick="moveRobot('stop')">Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+        </div>
+    </div>
+
+    <script>
+        async function updatePoint() {
+            const x = parseFloat(document.getElementById("pointX").value);
+            const y = parseFloat(document.getElementById("pointY").value);
+            const theta = parseFloat(document.getElementById("pointTheta").value);
+
+            const response = await fetch('http://10.42.0.1:5001/point', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ x: x, y: y, theta: theta })
+            });
+
+            const result = await response.json();
+            console.log("Point update result:", result);
+        }
+
+
+        async function updateCircle() {
+            const x = parseFloat(document.getElementById("circleX").value);
+            const y = parseFloat(document.getElementById("circleY").value);
+            const theta = parseFloat(document.getElementById("circleTheta").value);
+            const r = parseFloat(document.getElementById("circleR").value);
+
+            const response = await fetch('http://10.42.0.1:5001/circle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ x: x, y: y, radius: r, theta: theta })
+            });
+
+            const result = await response.json();
+            console.log("Circle update result:", result);
+        }
+
+        async function toggleMode() {
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const isManual = mode === 'manual';
+
+            document.getElementById('manualControls').style.opacity = isManual ? '1' : '0.3';
+            document.getElementById('manualControls').style.pointerEvents = isManual ? 'auto' : 'none';
+            document.getElementById('autoControls').style.opacity = isManual ? '0.3' : '1';
+            document.getElementById('autoControls').style.pointerEvents = isManual ? 'none' : 'auto';
+
+            await fetch("http://10.42.0.1:5001/controll_mode", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ manual: isManual })
+            });
+        }
+
+        window.onload = toggleMode;
+
+
+        async function fetchAndDrawPath() {
+            const l_response = await fetch("http://10.42.0.1:5001/locations");
+            const locations = await l_response.json();
+            drawPath(locations, "blue");
+            const o_response = await fetch("http://10.42.0.1:5001/Optitracking_data_forward");
+            const o_locations = await extractMarkerPositions(o_response);
+            const formattedLocations = o_locations.map(location => ({
+                x: location.position.x,  
+                y: location.position.y
+            }));
+
+            drawPath(formattedLocations, "red");
+        }
+
+        function drawPath(locations, color) {
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.strokeStyle = color;  // A szín beállítása
+            locations.forEach((loc, index) => {
+                const x = Math.min(Math.max(loc.x * 500, 0), canvas.width);
+                const y = Math.min(Math.max(loc.y * 500, 0), canvas.height);
+
+                if (index === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            });
+            ctx.stroke();
+        }
+
+        function extractMarkerPositions(data) {
+            const optiData = data.Opti_data;
+            if (!optiData) {
+                return [];
+            }
+            const markers = optiData.markers || [];
+            return markers.length > 0 ? [{ id: markers[0].id, position: markers[0].position }] : [];
+        }
+
+
+        async function updateBeaconPositions() {
+            const beaconData = {
+                beacon1: { x: parseFloat(document.getElementById("beacon1X").value), y: parseFloat(document.getElementById("beacon1Y").value) },
+                beacon2: { x: parseFloat(document.getElementById("beacon2X").value), y: parseFloat(document.getElementById("beacon2Y").value) },
+                beacon3: { x: parseFloat(document.getElementById("beacon3X").value), y: parseFloat(document.getElementById("beacon3Y").value) },
+                beacon4: { x: parseFloat(document.getElementById("beacon4X").value), y: parseFloat(document.getElementById("beacon4Y").value) },
+            };
+
+            const response = await fetch("http://10.42.0.1:5001/beacons", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(beaconData)
+            });
+
+        }
+
+        async function updateSpeed() {
+            const speedData = {
+                speed: parseFloat(document.getElementById("speedText").value)
+            };
+
+            const response = await fetch("http://10.42.0.1:5001/speed", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(speedData) // A sebesség adatot JSON formátumban küldjük
+            });
+
+        }
+
+
+        async function clearLocations() {
+            const response = await fetch("http://10.42.0.1:5001/clear", {
+                method: "DELETE"
+            });
+
+            if (response.ok) {
+                alert("Kirajzolt adatok sikeresen törölve!");
+                fetchAndDrawPath();
+            } else {
+                alert("Hiba a kirajzolt adatok törlése során.");
+            }
+        }
+
+        async function moveRobot(direction) {
+            const response = await fetch("http://10.42.0.1:5001/move", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ direction: direction })
+            });
+
+        }
+
+    </script>
+</body>
+</html>
