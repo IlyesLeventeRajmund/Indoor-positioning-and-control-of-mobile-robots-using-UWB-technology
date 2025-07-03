@@ -5,9 +5,9 @@ from datetime import datetime
 import numpy as np
 import json
 import threading
-import OptitrackData
-import BeaconLocalization
-import ManualModeData
+import optitrack_data
+import beacon_localization
+import manual_mode
 import random
 import math
 from app_fastapi import RobotServer  # Import the server class we created
@@ -108,11 +108,11 @@ def main():
 
     # Initialize and start OptiTracker
     print("Initializing OptiTracker...")
-    OptiTracker = OptitrackData.RobotLocationOptitrack()
+    OptiTracker = optitrack_data.RobotLocationOptitrack()
 
     # Initialize and start BeaconTracker in a separate thread
     print("Initializing and starting BeaconTracker...")
-    BeaconTracker = BeaconLocalization.RobotLocationBeacon(0, 0)
+    BeaconTracker = beacon_localization.RobotLocationBeacon(0, 0)
     BeaconTracker.start_tracking()  # This starts its own thread
 
     start_time = time()
@@ -358,7 +358,7 @@ def main():
 
             if direction:
                 if control_mode:
-                    ManualModeData.Manual_Controling(pwm, direction, speed)
+                    manual_mode.Manual_Controling(pwm, direction, speed)
                 else:
                     if direction == 'stop':
                         for i in range(8):

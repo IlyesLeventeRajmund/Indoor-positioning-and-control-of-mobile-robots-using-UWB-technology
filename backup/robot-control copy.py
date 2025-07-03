@@ -5,9 +5,9 @@ from datetime import datetime
 import requests
 import numpy as np
 import json
-import OptitrackData
-import BeaconLocalization
-import ManualModeData
+import optitrack_data
+import beacon_localization
+import manual_mode
 import random
 import math
 import httpx
@@ -46,8 +46,8 @@ def gpioInit():
 
 pwm= gpioInit()
 
-OptiTracker = OptitrackData.RobotLocationOptitrack()
-BeaconTracker = BeaconLocalization.RobotLocationBeacon(0,0)
+OptiTracker = optitrack_data.RobotLocationOptitrack()
+BeaconTracker = beacon_localization.RobotLocationBeacon(0,0)
 
 start_time = time()
 
@@ -202,7 +202,7 @@ while True:
 
     if direction:
         if manual_mode:
-            ManualModeData.Manual_Controling(pwm,direction,speed)
+            manual_mode.Manual_Controling(pwm,direction,speed)
         else:
             if direction == 'stop' :
                 pwm[0].ChangeDutyCycle(0)   #jh

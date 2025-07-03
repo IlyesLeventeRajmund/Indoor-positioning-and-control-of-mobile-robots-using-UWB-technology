@@ -65,7 +65,7 @@ class RobotLocationBeacon:
         }
         
         # Load target devices
-        self.TARGET_DEVICES = self.load_target_devices("eszkozok.txt")
+        self.TARGET_DEVICES = self.load_target_devices("beacons.txt")
     
     def set_coordinates(self, x: float, y: float):
         """Set robot coordinates with thread safety"""
